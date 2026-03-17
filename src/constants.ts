@@ -3,40 +3,16 @@ import { Project, Tool } from './types';
 export const PROJECTS: Project[] = [
   {
     id: '1',
-    title: 'Masala Design System',
-    company: 'INNOVACCER',
-    category: 'dashboard',
-    description: 'Building the design system at Innovaccer from scratch to speed up design/development and ensure consistency.',
-    image: 'https://picsum.photos/seed/masala/1200/800',
-    tags: ['Design System', 'B2B', 'Healthcare'],
-    caseStudy: 'The Masala Design System was born out of a need for speed and consistency. As Innovaccer grew, the design and engineering teams faced significant challenges in maintaining a unified look and feel across multiple product lines. We embarked on a journey to build a robust, scalable system that would serve as the single source of truth for all digital products.',
-    time: '2020 - 22',
-    role: 'Lead Designer, Product Owner, Content Writer',
-    featuredOn: 'Zeroheight',
-    challenge: 'Designers were spending 40% of their time recreating basic components, leading to inconsistencies and slower release cycles. Developers were often confused by varying design specs for the same functional elements.',
-    solution: 'We developed a comprehensive library of atomic components, patterns, and guidelines. This included a custom icon set, a refined color palette optimized for accessibility, and a flexible grid system.',
-    process: [
-      {
-        title: 'Audit & Research',
-        description: 'We audited over 50 existing screens to identify common patterns and inconsistencies. This helped us prioritize which components to build first.',
-        image: 'https://picsum.photos/seed/audit/800/600'
-      },
-      {
-        title: 'Atomic Design',
-        description: 'Using Brad Frost\'s atomic design methodology, we built everything from basic buttons (atoms) to complex data tables (organisms).',
-        image: 'https://picsum.photos/seed/atomic/800/600'
-      },
-      {
-        title: 'Documentation',
-        description: 'We created detailed documentation for every component, including usage guidelines, accessibility notes, and code snippets.',
-        image: 'https://picsum.photos/seed/docs/800/600'
-      }
-    ],
-    results: [
-      'Reduced design-to-development time by 60%',
-      'Achieved 100% component reuse across 4 major product lines',
-      'Improved accessibility compliance to WCAG 2.1 Level AA'
-    ]
+    title: 'Balance Nutrition Product Design',
+    company: 'BALANCE NUTRITION',
+    category: 'mobile',
+    description: 'A complete product design journey: mobile app UX, campaign website, and the introduction of Clara AI an intelligent nutrition, lifestyle & diet companion built for real people.',
+    image: '/images/img30.png',
+    tags: ['Mobile UX', 'Campaign Website', 'AI Companion'],
+    caseStudy: 'A complete product design journey: mobile app UX, campaign website, and the introduction of Clara AI an intelligent nutrition, lifestyle & diet companion built for real people.',
+    time: '2025 to present',
+    role: 'Senior and Lead Product Designer\nFeature Clara Ai',
+    externalLink: 'https://suyashshirsat521.wixstudio.com/my-site/blank-3'
   },
   {
     id: '2',

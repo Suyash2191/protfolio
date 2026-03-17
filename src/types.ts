@@ -12,6 +12,7 @@ export interface Project {
   category: 'mobile' | 'website' | 'dashboard';
   challenge?: string;
   solution?: string;
+  externalLink?: string;
   process?: {
     title: string;
     description: string;

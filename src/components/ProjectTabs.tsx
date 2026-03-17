@@ -2,14 +2,17 @@ import React, { useRef } from 'react';
 import { motion } from 'motion/react';
 
 const ASSETS = [
-  { id: 2, type: 'website', title: 'Aditya Birla', img: '/images/img8.png', x: '10%', y: '10%', rotate: 2 },
-  { id: 3, type: 'website', title: 'NMACC Experience', img: '/images/img9.png', x: '45%', y: '12%', rotate: -4 },
-  { id: 4, type: 'website', title: 'Oz Jewelry', img: '/images/img10.png', x: '75%', y: '15%', rotate: 6 },
-  { id: 5, type: 'website', title: 'Portfolio Project', img: '/images/img11.png', x: '15%', y: '45%', rotate: -3 },
-  { id: 6, type: 'dashboard', title: 'SaaS Platform', img: '/images/img12.png', x: '50%', y: '50%', rotate: 5 },
-  { id: 7, type: 'website', title: 'Enterprise Web', img: '/images/img13.png', x: '80%', y: '45%', rotate: -6 },
-  { id: 8, type: 'dashboard', title: 'Aurix Al', img: '/images/img14.png', x: '25%', y: '75%', rotate: 4 },
-  { id: 9, type: 'dashboard', title: 'My First Board', img: '/images/img15.png', x: '65%', y: '78%', rotate: -2 },
+  { id: 2, type: 'website', title: 'Aditya Birla', img: '/images/img8.png', x: '5%', y: '5%', rotate: 2 },
+  { id: 3, type: 'website', title: 'NMACC Experience', img: '/images/img9.png', x: '35%', y: '12%', rotate: -4 },
+  { id: 4, type: 'website', title: 'Oz Jewelry', img: '/images/img10.png', x: '65%', y: '8%', rotate: 6 },
+  { id: 5, type: 'website', title: 'Portfolio Project', img: '/images/img11.png', x: '10%', y: '40%', rotate: -3 },
+  { id: 6, type: 'dashboard', title: 'Aurix Al', img: '/images/img14.png', x: '30%', y: '70%', rotate: 4 },
+  { id: 7, type: 'dashboard', title: 'My First Board', img: '/images/img15.png', x: '70%', y: '75%', rotate: -2 },
+  { id: 8, type: 'mobile', title: 'Porter Delivery', img: '/images/img24.png', x: '45%', y: '35%', rotate: 5 },
+  { id: 9, type: 'mobile', title: 'Crypto Wallet', img: '/images/img25.png', x: '80%', y: '40%', rotate: -5 },
+  { id: 10, type: 'website', title: 'AI Automation', img: '/images/img26.png', x: '5%', y: '70%', rotate: 3 },
+  { id: 11, type: 'website', title: 'AI Platform', img: '/images/img27.png', x: '50%', y: '65%', rotate: -3 },
+  { id: 12, type: 'website', title: 'Digital Solutions', img: '/images/img28.png', x: '85%', y: '15%', rotate: 2 },
 ];
 
 const ProjectTabs = () => {
@@ -54,12 +57,7 @@ const ProjectTabs = () => {
           >
             <div className="relative w-full h-full">
               {/* Mockup Frame Overlay */}
-              {asset.type === 'mobile' ? (
-                /* iPhone Mockup Frame */
-                <div className="absolute inset-0 pointer-events-none z-20 border-[8px] border-gray-800 rounded-[2.5rem] shadow-inner">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-5 bg-gray-800 rounded-b-xl" />
-                </div>
-              ) : asset.type === 'website' || asset.type === 'dashboard' ? (
+              {asset.type === 'website' || asset.type === 'dashboard' ? (
                 /* Browser Mockup Header */
                 <div className="absolute top-0 inset-x-0 h-6 bg-gray-800/90 z-20 flex items-center px-3 space-x-1.5 pointer-events-none">
                   <div className="w-1.5 h-1.5 rounded-full bg-red-500/50" />
@@ -72,7 +70,7 @@ const ProjectTabs = () => {
               <img 
                 src={asset.img} 
                 alt={asset.title}
-                className={`w-full h-full object-cover pointer-events-none grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500 ${asset.type === 'mobile' ? 'p-1 rounded-[2rem]' : ''}`}
+                className={`w-full h-full object-cover pointer-events-none grayscale-[0.3] group-hover:grayscale-0 transition-all duration-500`}
                 referrerPolicy="no-referrer"
               />
               

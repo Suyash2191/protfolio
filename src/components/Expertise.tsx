@@ -52,14 +52,18 @@ const Expertise = () => {
             <img 
               src="/images/meditation.png" 
               alt="Expertise Meditation"
-              className="w-full h-auto max-w-[700px] object-cover"
+              className="w-full h-auto max-w-[700px] object-cover mix-blend-lighten"
+              style={{
+                maskImage: 'radial-gradient(circle at center, black 50%, transparent 100%)',
+                WebkitMaskImage: 'radial-gradient(circle at center, black 50%, transparent 100%)'
+              }}
             />
             
             {/* Advanced Blending Overlays */}
-            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#050505] to-transparent" />
-            <div className="absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-[#050505] to-transparent" />
-            <div className="absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#050505] to-transparent" />
-            <div className="absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#050505] to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-1/3 pointer-events-none bg-gradient-to-t from-[#050505] to-transparent" />
+            <div className="absolute inset-x-0 top-0 h-1/4 pointer-events-none bg-gradient-to-b from-[#050505] to-transparent" />
+            <div className="absolute inset-y-0 left-0 w-1/4 pointer-events-none bg-gradient-to-r from-[#050505] to-transparent" />
+            <div className="absolute inset-y-0 right-0 w-1/4 pointer-events-none bg-gradient-to-l from-[#050505] to-transparent" />
           </motion.div>
 
           {/* Floating Icon Accents */}

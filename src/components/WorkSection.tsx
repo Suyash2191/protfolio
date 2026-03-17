@@ -51,12 +51,25 @@ const WorkSection = () => {
 
                 <div className="flex flex-row justify-center gap-2 md:gap-4 pt-4">
                   <button 
-                    onClick={() => setSelectedProject(project)}
+                    onClick={() => {
+                      if (project.externalLink) {
+                        window.open(project.externalLink, '_blank');
+                      } else {
+                        setSelectedProject(project);
+                      }
+                    }}
                     className="flex-1 md:flex-none px-4 md:px-8 h-12 md:h-14 bg-white/5 hover:bg-white/10 text-white text-[10px] md:text-sm font-bold uppercase tracking-widest rounded-full border border-white/10 transition-all whitespace-nowrap"
                   >
                     Case Study
                   </button>
-                  <button className="flex-1 md:flex-none px-4 md:px-8 h-12 md:h-14 bg-transparent hover:bg-white/5 text-white text-[10px] md:text-sm font-bold uppercase tracking-widest rounded-full border border-white/10 transition-all flex items-center justify-center gap-2 whitespace-nowrap">
+                  <button 
+                    onClick={() => {
+                      if (project.externalLink) {
+                        window.open(project.externalLink, '_blank');
+                      }
+                    }}
+                    className="flex-1 md:flex-none px-4 md:px-8 h-12 md:h-14 bg-transparent hover:bg-white/5 text-white text-[10px] md:text-sm font-bold uppercase tracking-widest rounded-full border border-white/10 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
+                  >
                     Visit <ExternalLink className="w-3 h-3 md:w-4 md:h-4" />
                   </button>
                 </div>
@@ -90,7 +103,13 @@ const WorkSection = () => {
               {/* Project Image */}
               <div 
                 className="mt-3 relative group cursor-pointer overflow-hidden rounded-2xl aspect-video bg-gray-900 border border-white/5"
-                onClick={() => setSelectedProject(project)}
+                onClick={() => {
+                  if (project.externalLink) {
+                    window.open(project.externalLink, '_blank');
+                  } else {
+                    setSelectedProject(project);
+                  }
+                }}
               >
                 <img 
                   src={project.image} 
