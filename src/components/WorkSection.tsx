@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { useNavigate } from 'react-router-dom';
 import { PROJECTS } from '../constants';
 import { Project } from '../types';
-import { ExternalLink, X } from 'lucide-react';
+import { ExternalLink, X, MessageSquare, Lock } from 'lucide-react';
 
 const WorkSection = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (selectedProject) {
@@ -17,6 +19,18 @@ const WorkSection = () => {
       document.body.style.overflow = 'unset';
     };
   }, [selectedProject]);
+
+  const handleProjectClick = (project: Project) => {
+    if (project.id === '1') {
+      navigate('/projects/balance-nutrition');
+    } else if (project.id === '2') {
+      navigate('/projects/project-ai');
+    } else if (project.externalLink) {
+      window.open(project.externalLink, '_blank');
+    } else {
+      setSelectedProject(project);
+    }
+  };
 
   return (
     <section id="work" className="py-24 bg-[#050505]">
@@ -38,86 +52,89 @@ const WorkSection = () => {
               transition={{ duration: 0.8 }}
               className="flex flex-col"
             >
-              {/* Project Header */}
-              <div className="space-y-6 max-w-4xl mb-12 mx-auto text-center flex flex-col items-center">
-                <div className="flex items-center space-x-3 text-gray-500 font-mono text-sm tracking-[0.2em] uppercase">
-                  <span>[{String(idx + 1).padStart(3, '0')}]</span>
-                  <span>{project.company}</span>
-                </div>
-                
-                <h4 className="text-[30px] font-bold text-white tracking-tight leading-tight">
-                  {project.title}
-                </h4>
+              {/* Project Info & Controls Grid */}
+              <div className="flex flex-col lg:grid lg:grid-cols-4 gap-8 lg:gap-12 mb-8 md:mb-12 items-start">
+                {/* Left Side: Index, Company, Title, Description, Metadata */}
+                <div className="lg:col-span-3 space-y-6 md:space-y-8">
+                  <div className="flex items-center space-x-3 text-white/40 font-mono text-[10px] md:text-[11px] tracking-[0.2em] uppercase">
+                    <span className="text-white">[{String(idx + 1).padStart(3, '0')}]</span>
+                    <span>{project.company}</span>
+                  </div>
+                  
+                  <div className="space-y-4 md:space-y-6">
+                    <h4 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1] max-w-4xl">
+                      {project.title}
+                    </h4>
 
-                <div className="flex flex-row justify-center gap-2 md:gap-4 pt-4">
+                    {/* Mobile-only Buttons (Above Description) */}
+                    <div className="flex lg:hidden flex-row flex-wrap gap-2 pt-2">
+                      <button 
+                        onClick={() => handleProjectClick(project)}
+                        className="px-4 h-10 bg-white/10 hover:bg-white/20 text-white text-[9px] font-bold uppercase tracking-widest rounded-full border border-white/10 transition-all flex items-center justify-center gap-2"
+                      >
+                        REQUEST ACCESS <MessageSquare className="w-3 h-3" />
+                      </button>
+                      <button 
+                        onClick={() => handleProjectClick(project)}
+                        className="px-4 h-10 bg-white/5 hover:bg-white/10 text-white text-[9px] font-bold uppercase tracking-widest rounded-full border border-white/10 transition-all flex items-center justify-center gap-2"
+                      >
+                        I HAVE THE PASSWORD <Lock className="w-3 h-3" />
+                      </button>
+                    </div>
+                    
+                    <p className="text-gray-400 text-lg md:text-xl leading-relaxed max-w-3xl font-light">
+                      {project.description}
+                    </p>
+                  </div>
+
+                  {/* Project Metadata */}
+                  <div className="flex flex-wrap gap-x-12 md:gap-x-16 gap-y-6 pt-2 md:pt-4">
+                    <div className="space-y-1">
+                      <span className="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] font-mono">Time</span>
+                      <p className="text-gray-300 text-xs md:text-base">{project.time}</p>
+                    </div>
+                    <div className="space-y-1">
+                      <span className="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] font-mono">Role</span>
+                      <p className="text-gray-300 text-xs md:text-base whitespace-pre-line leading-snug">{project.role}</p>
+                    </div>
+                    {project.featuredOn && (
+                      <div className="space-y-1">
+                        <span className="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] font-mono">Featured On</span>
+                        <p className="text-gray-300 text-xs md:text-base">{project.featuredOn}</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Desktop-only Buttons (Right Side) */}
+                <div className="hidden lg:flex flex-row lg:flex-row gap-3 lg:justify-end lg:pt-14">
                   <button 
-                    onClick={() => {
-                      if (project.externalLink) {
-                        window.open(project.externalLink, '_blank');
-                      } else {
-                        setSelectedProject(project);
-                      }
-                    }}
-                    className="flex-1 md:flex-none px-4 md:px-8 h-12 md:h-14 bg-white/5 hover:bg-white/10 text-white text-[10px] md:text-sm font-bold uppercase tracking-widest rounded-full border border-white/10 transition-all whitespace-nowrap"
+                    onClick={() => handleProjectClick(project)}
+                    className="flex-none px-8 h-12 bg-white/5 hover:bg-white/10 text-white text-[11px] font-bold uppercase tracking-widest rounded-full border border-white/10 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
                   >
                     Case Study
                   </button>
                   <button 
-                    onClick={() => {
-                      if (project.externalLink) {
-                        window.open(project.externalLink, '_blank');
-                      }
-                    }}
-                    className="flex-1 md:flex-none px-4 md:px-8 h-12 md:h-14 bg-transparent hover:bg-white/5 text-white text-[10px] md:text-sm font-bold uppercase tracking-widest rounded-full border border-white/10 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
+                    onClick={() => handleProjectClick(project)}
+                    className="flex-none px-8 h-12 bg-white/5 hover:bg-white/10 text-white text-[11px] font-bold uppercase tracking-widest rounded-full border border-white/10 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
                   >
                     Visit <ExternalLink className="w-3 h-3 md:w-4 md:h-4" />
                   </button>
                 </div>
               </div>
 
-              {/* Project Description */}
-              <div className="max-w-3xl mb-12 mx-auto text-center">
-                <p className="text-gray-400 text-xl md:text-2xl leading-relaxed font-light">
-                  {project.description}
-                </p>
-              </div>
-
-              {/* Project Metadata Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 py-6 border-y border-white/5">
-                <div className="flex flex-row sm:flex-col justify-between sm:justify-start items-center sm:items-start">
-                  <span className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Time</span>
-                  <p className="text-gray-300 text-base sm:text-lg">{project.time}</p>
-                </div>
-                <div className="flex flex-row sm:flex-col justify-between sm:justify-start items-center sm:items-start">
-                  <span className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Role</span>
-                  <p className="text-gray-300 text-base sm:text-lg">{project.role}</p>
-                </div>
-                {project.featuredOn && (
-                  <div className="flex flex-row sm:flex-col justify-between sm:justify-start items-center sm:items-start">
-                    <span className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em]">Featured On</span>
-                    <p className="text-gray-300 text-base sm:text-lg">{project.featuredOn}</p>
-                  </div>
-                )}
-              </div>
-
               {/* Project Image */}
               <div 
-                className="mt-3 relative group cursor-pointer overflow-hidden rounded-2xl aspect-video bg-gray-900 border border-white/5"
-                onClick={() => {
-                  if (project.externalLink) {
-                    window.open(project.externalLink, '_blank');
-                  } else {
-                    setSelectedProject(project);
-                  }
-                }}
+                className="relative group cursor-pointer overflow-hidden rounded-2xl md:rounded-[3rem] aspect-video bg-gray-900 border border-white/5"
+                onClick={() => handleProjectClick(project)}
               >
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.02]"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
               </div>
             </motion.div>
           ))}
@@ -272,7 +289,7 @@ const WorkSection = () => {
               <div className="text-center py-24 border-t border-white/10">
                 <p className="text-gray-500 uppercase tracking-widest text-xs font-bold mb-8">Next Project</p>
                 <h4 className="text-4xl md:text-6xl font-bold text-white hover:text-blue-500 transition-colors cursor-pointer mb-12">
-                  AI-Powered Health Assistant
+                  AI-Powered Team Command Center
                 </h4>
                 <button 
                   onClick={() => setSelectedProject(null)}
