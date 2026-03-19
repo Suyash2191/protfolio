@@ -19,7 +19,7 @@ const ProjectTabs = () => {
   const constraintsRef = useRef(null);
 
   return (
-    <section className="py-24 bg-[#050505] border-t border-white/5 relative overflow-hidden min-h-[900px]">
+    <section id="playground" className="py-24 bg-[#050505] border-t border-white/5 relative overflow-hidden min-h-[900px]">
       <div className="max-w-7xl mx-auto px-6 relative z-10 pointer-events-none">
         <div className="text-center mb-16">
           <h2 className="text-sm font-bold text-blue-500 uppercase tracking-[0.3em] mb-4">Interactive Playground</h2>
@@ -53,7 +53,7 @@ const ProjectTabs = () => {
               transition: { delay: asset.id * 0.05 }
             }}
             viewport={{ once: true }}
-            className={`absolute ${asset.type === 'mobile' ? 'w-48 md:w-64 aspect-[9/19]' : 'w-80 md:w-[500px] aspect-[4/3] md:aspect-video'} bg-gray-900 rounded-2xl md:rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl cursor-grab active:cursor-grabbing group`}
+            className={`absolute ${asset.type === 'mobile' ? 'w-48 md:w-64 aspect-[9/19]' : 'w-80 md:w-[500px] aspect-[4/3] md:aspect-video'} bg-gray-900 rounded-[8px] overflow-hidden border border-white/10 shadow-2xl cursor-grab active:cursor-grabbing group`}
           >
             <div className="relative w-full h-full">
               {/* Mockup Frame Overlay */}

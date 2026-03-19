@@ -1,32 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Home, Folder, Briefcase, Instagram, Bookmark, Zap, FileText } from 'lucide-react';
 
-interface NavbarProps {
-  onOpenResume: () => void;
-}
+interface NavbarProps {}
 
-const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
+const Navbar: React.FC<NavbarProps> = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
-      // Basic scrolled state for scale
       setIsScrolled(currentScrollY > 20);
-
-      // Determine visibility based on scroll direction
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down
         setIsVisible(false);
       } else {
-        // Scrolling up
         setIsVisible(true);
       }
-      
       setLastScrollY(currentScrollY);
     };
 
@@ -34,23 +28,53 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
+  // Handle cross-page hash scrolls
+  useEffect(() => {
+    if (location.pathname === '/' && location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   interface MenuItem {
     name: string;
     icon: React.ReactNode;
-    href?: string;
-    onClick?: () => void;
-    target?: string;
+    id?: string;
+    path?: string;
   }
 
   const menuItems: MenuItem[] = [
-    { name: 'Home', icon: <Home size={20} />, href: '#' },
-    { name: 'Projects', icon: <Folder size={20} />, href: '#work' },
-    { name: 'Work', icon: <Briefcase size={20} />, href: '#expertise' },
-    { name: 'Social', icon: <Instagram size={20} />, href: '#' },
-    { name: 'Saved', icon: <Bookmark size={20} />, href: '#' },
-    { name: 'Contact', icon: <Zap size={20} />, href: '#contact' },
-    { name: 'Resume', icon: <FileText size={20} />, onClick: onOpenResume },
+    { name: 'Home', icon: <Home size={20} />, id: 'hero' },
+    { name: 'Projects', icon: <Folder size={20} />, id: 'work' },
+    { name: 'Work', icon: <Briefcase size={20} />, id: 'playground' },
+    { name: 'Social', icon: <Instagram size={20} />, id: 'instagram' },
+    { name: 'Saved', icon: <Bookmark size={20} />, id: 'contact' },
+    { name: 'Contact', icon: <Zap size={20} />, id: 'contact' },
+    { name: 'Resume', icon: <FileText size={20} />, path: '/resume' },
   ];
+
+  const handleNavClick = (item: MenuItem) => {
+    if (item.path) {
+      navigate(item.path);
+      return;
+    }
+
+    if (item.id) {
+      if (location.pathname !== '/') {
+        navigate(`/#${item.id}`);
+      } else {
+        const element = document.getElementById(item.id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+  };
 
   return (
     <nav className="fixed top-8 left-0 right-0 z-50 flex justify-center w-full px-4 pointer-events-none">
@@ -85,7 +109,11 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className={`flex items-center w-full h-6 ${isVisible ? 'justify-center' : 'justify-between'}`}
         >
-          <motion.div layout className="flex items-center space-x-2">
+          <motion.div 
+            layout 
+            className="flex items-center space-x-2 cursor-pointer"
+            onClick={() => handleNavClick({ name: 'Home', icon: null, id: 'hero' })}
+          >
             <div className="w-6 h-6 bg-white/10 rounded-md flex items-center justify-center border border-white/10">
               <div className="w-3 h-3 border-2 border-white rounded-sm rotate-45" />
             </div>
@@ -95,8 +123,8 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
           </motion.div>
 
           {!isVisible && (
-            <motion.a
-              href="#contact"
+            <motion.button
+              onClick={() => handleNavClick({ name: 'Contact', icon: null, id: 'contact' })}
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
@@ -104,7 +132,7 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
               className="text-[11px] font-bold text-blue-500 uppercase tracking-[0.2em] hover:text-white transition-colors"
             >
               Hire Me
-            </motion.a>
+            </motion.button>
           )}
         </motion.div>
 
@@ -125,17 +153,9 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
           {/* Navigation Icons */}
           <div className="flex items-center space-x-1 md:space-x-2">
             {menuItems.map((item) => (
-              <motion.a
+              <motion.button
                 key={item.name}
-                href={item.href}
-                onClick={(e) => {
-                  if (item.onClick) {
-                    e.preventDefault();
-                    item.onClick();
-                  }
-                }}
-                target={item.target}
-                rel={item.target === '_blank' ? 'noopener noreferrer' : undefined}
+                onClick={() => handleNavClick(item)}
                 className="relative flex items-center justify-center w-10 h-10 text-gray-400 hover:text-white transition-all rounded-xl hover:bg-white/5 group cursor-pointer"
                 whileHover={{ 
                   scale: 1.2, 
@@ -150,7 +170,7 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                 <span className="absolute -bottom-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-black/90 backdrop-blur-md text-[10px] text-white rounded-md opacity-0 group-hover:opacity-100 transition-all pointer-events-none border border-white/10 whitespace-nowrap font-poppins translate-y-2 group-hover:translate-y-0">
                   {item.name}
                 </span>
-              </motion.a>
+              </motion.button>
             ))}
           </div>
         </motion.div>

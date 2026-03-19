@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Sparkles, ArrowRight } from 'lucide-react';
 
 const Hero = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
   const images = [
     '/images/img1.jpg',
     '/images/img2.jpg',
@@ -13,7 +15,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-16 overflow-hidden bg-[#050505]">
+    <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-16 overflow-hidden bg-[#050505]">
       {/* Gradient Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-900/10 blur-[120px] rounded-full" />
@@ -62,20 +64,23 @@ const Hero = () => {
             {images.map((src, idx) => {
               const rotations = [-12, -6, -2, 4, 8, 14];
               const yOffsets = [25, 10, 0, 5, 15, 30];
+              const isActive = activeIndex === idx;
+
               return (
                 <motion.div
                   key={idx}
                   initial={{ opacity: 0, scale: 0.5, x: -100, rotate: -30 }}
                   animate={{ 
                     opacity: 1, 
-                    scale: 1, 
+                    scale: isActive ? 1.2 : 1, 
                     x: 0, 
-                    rotate: rotations[idx % rotations.length],
-                    y: yOffsets[idx % yOffsets.length]
+                    rotate: isActive ? 0 : rotations[idx % rotations.length],
+                    y: isActive ? -50 : yOffsets[idx % yOffsets.length],
+                    zIndex: isActive ? 100 : idx
                   }}
                   transition={{ 
-                    duration: 1, 
-                    delay: 0.5 + (idx * 0.1),
+                    duration: 0.6, 
+                    delay: isActive ? 0 : 0.5 + (idx * 0.1),
                     ease: [0.23, 1, 0.32, 1]
                   }}
                   whileHover={{ 
@@ -85,10 +90,14 @@ const Hero = () => {
                     zIndex: 100,
                     transition: { duration: 0.3 }
                   }}
-                  className="relative w-40 h-40 md:w-72 md:h-72 flex-shrink-0 overflow-hidden rounded-[24px] border-2 border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-gray-900 group"
-                  style={{ zIndex: idx }}
+                  onClick={() => {
+                    setActiveIndex(idx);
+                    setTimeout(() => setActiveIndex(null), 1000);
+                  }}
+                  className={`relative w-40 h-40 md:w-72 md:h-72 flex-shrink-0 overflow-hidden rounded-[24px] border-2 border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-gray-900 group cursor-pointer transition-colors duration-300`}
+                  style={{ zIndex: isActive ? 100 : idx }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
+                  <div className={`absolute inset-0 bg-gradient-to-t from-black/40 to-transparent ${isActive ? 'opacity-0' : 'opacity-0 group-hover:opacity-100'} transition-opacity duration-300 z-10`} />
                   <img 
                     src={src} 
                     alt={`Suyash Work ${idx + 1}`}
@@ -109,8 +118,9 @@ const Hero = () => {
           className="max-w-4xl mx-auto px-4"
         >
           <p className="font-sans font-light text-[14px] md:text-[18px] text-gray-300 leading-[1.5] tracking-tight">
-            Starting as a Computer Science Engineer gave me the structure; design gave me the soul. 
-            Over the last 3+ years, I've evolved from a lone startup designer to architecting advanced <span className="font-bold text-white">AI ecosystems</span> for <span className="font-bold text-white">Google</span>, <span className="font-bold text-white">Microsoft</span> and <span className="font-bold text-white">Amazon</span>.
+            I find UX in everything around me and a visual story in everything I build. <br className="hidden md:block" />
+            From scratch to shipped, 3+ years of <span className="font-bold text-white">Product Designer</span> turning ideas into products <br className="hidden md:block" />
+            Build <span className="font-bold text-white">AI Ecosystem</span> in starups actually feel.
           </p>
         </motion.div>
 
@@ -121,12 +131,12 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 1 }}
           className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mt-10"
         >
-          <button className="w-full sm:w-auto group px-10 h-[56px] bg-white text-black text-[16px] font-bold rounded-full hover:bg-gray-200 transition-all flex items-center justify-center space-x-2 font-poppins">
-            <span>View my work</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          <button className="w-full sm:w-auto px-10 h-[56px] bg-white text-black text-[16px] font-bold rounded-full hover:bg-gray-200 transition-all flex items-center justify-center font-poppins">
+            Book an Appointment
           </button>
-          <button className="w-full sm:w-auto px-10 h-[56px] bg-transparent border border-white/20 text-white text-[16px] font-medium rounded-full hover:bg-white/5 transition-all flex items-center justify-center font-poppins">
-            Contact me
+          <button className="w-full sm:w-auto group px-10 h-[56px] bg-transparent border border-white/20 text-white text-[16px] font-medium rounded-full hover:bg-white/5 transition-all flex items-center justify-center space-x-2 font-poppins">
+            <span>View My Work</span>
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
         </motion.div>
       </div>

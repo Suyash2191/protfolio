@@ -6,7 +6,7 @@ import WorkSection from './components/WorkSection';
 import ProjectTabs from './components/ProjectTabs';
 import Expertise from './components/Expertise';
 import Footer from './components/Footer';
-import ResumeView from './components/ResumeView';
+import ResumePage from './pages/ResumePage';
 import BalanceNutritionCaseStudy from './components/BalanceNutritionCaseStudy';
 import ProjectAICaseStudy from './components/ProjectAICaseStudy';
 
@@ -18,7 +18,7 @@ const ScrollToTop = () => {
   return null;
 };
 
-const Home = ({ onOpenResume }: { onOpenResume: () => void }) => (
+const Home = () => (
   <main>
     <Hero />
     <WorkSection />
@@ -28,38 +28,20 @@ const Home = ({ onOpenResume }: { onOpenResume: () => void }) => (
 );
 
 export default function App() {
-  const [showResume, setShowResume] = useState(false);
-
-  // Lock scroll when resume is open
-  useEffect(() => {
-    if (showResume) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [showResume]);
-
   return (
     <Router>
       <ScrollToTop />
       <div className="bg-[#050505] text-white selection:bg-blue-500 selection:text-white min-h-screen">
-        <Navbar onOpenResume={() => setShowResume(true)} />
+        <Navbar />
         
         <Routes>
-          <Route path="/" element={<Home onOpenResume={() => setShowResume(true)} />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/resume" element={<ResumePage />} />
           <Route path="/projects/balance-nutrition" element={<BalanceNutritionCaseStudy />} />
           <Route path="/projects/project-ai" element={<ProjectAICaseStudy />} />
         </Routes>
 
-        <Footer onOpenResume={() => setShowResume(true)} />
-        
-        <ResumeView 
-          isOpen={showResume} 
-          onClose={() => setShowResume(false)} 
-        />
+        <Footer />
       </div>
     </Router>
   );

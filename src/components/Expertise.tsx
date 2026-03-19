@@ -73,13 +73,14 @@ const Expertise = () => {
 
         {/* Instagram CTA */}
         <motion.div
+          id="instagram"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="relative z-20 flex flex-col items-center space-y-6"
+          className="relative z-20 flex flex-col items-center space-y-4"
         >
-          <div className="flex flex-col items-center space-y-2">
+          <div className="flex flex-col items-center space-y-4">
             <span className="text-gray-500 font-mono text-xs uppercase tracking-[0.3em]">Stay Connected</span>
             <h4 className="text-2xl md:text-3xl font-bold text-white">Follow my creative journey</h4>
           </div>

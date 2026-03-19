@@ -1,14 +1,15 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { useNavigate } from 'react-router-dom';
 import { Mail, Phone, Download, Send, Linkedin, Twitter, Github } from 'lucide-react';
 
-interface FooterProps {
-  onOpenResume: () => void;
-}
+interface FooterProps {}
 
-const Footer: React.FC<FooterProps> = ({ onOpenResume }) => {
+const Footer: React.FC<FooterProps> = () => {
+  const navigate = useNavigate();
+
   return (
-    <footer id="contact-us" className="bg-[#050505] pt-24 pb-12 border-t border-white/5">
+    <footer id="contact" className="bg-[#050505] pt-24 pb-12 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 mb-24">
           <div className="text-center lg:text-left flex flex-col items-center lg:items-start">
@@ -37,8 +38,8 @@ const Footer: React.FC<FooterProps> = ({ onOpenResume }) => {
 
             <div className="mt-12 flex justify-center lg:justify-start space-x-6">
               <button 
-                onClick={onOpenResume}
-                className="flex items-center space-x-2 px-6 py-3 bg-white text-black font-bold rounded-full hover:bg-blue-500 hover:text-white transition-all"
+                onClick={() => navigate('/resume')}
+                className="flex items-center space-x-2 px-6 py-3 bg-white text-black font-bold rounded-full hover:bg-blue-500 hover:text-white transition-all transform hover:scale-105 active:scale-95"
               >
                 <Download className="w-4 h-4" />
                 <span>View Resume</span>

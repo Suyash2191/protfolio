@@ -89,11 +89,11 @@ const WorkSection = () => {
 
                   {/* Project Metadata */}
                   <div className="flex flex-wrap gap-x-12 md:gap-x-16 gap-y-6 pt-2 md:pt-4">
-                    <div className="space-y-1">
+                    <div className="space-y-4">
                       <span className="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] font-mono">Time</span>
                       <p className="text-gray-300 text-xs md:text-base">{project.time}</p>
                     </div>
-                    <div className="space-y-1">
+                    <div className="space-y-4">
                       <span className="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] font-mono">Role</span>
                       <p className="text-gray-300 text-xs md:text-base whitespace-pre-line leading-snug">{project.role}</p>
                     </div>
@@ -125,7 +125,7 @@ const WorkSection = () => {
 
               {/* Project Image */}
               <div 
-                className="relative group cursor-pointer overflow-hidden rounded-2xl md:rounded-[3rem] aspect-video bg-gray-900 border border-white/5"
+                className="relative group cursor-pointer overflow-hidden rounded-[8px] aspect-video bg-gray-900 border border-white/5"
                 onClick={() => handleProjectClick(project)}
               >
                 <img 
@@ -207,7 +207,7 @@ const WorkSection = () => {
                 initial={{ y: 40, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
-                className="aspect-video rounded-[40px] overflow-hidden mb-32 border border-white/10"
+                className="aspect-video rounded-[8px] overflow-hidden mb-32 border border-white/10"
               >
                 <img 
                   src={selectedProject.image} 
@@ -253,7 +253,7 @@ const WorkSection = () => {
                           <h4 className="text-2xl font-bold text-white">{step.title}</h4>
                           <p className="text-gray-400 text-lg leading-relaxed">{step.description}</p>
                         </div>
-                        <div className="flex-1 aspect-square md:aspect-video rounded-3xl overflow-hidden bg-white/5 border border-white/10">
+                        <div className="flex-1 aspect-square md:aspect-video rounded-[8px] overflow-hidden bg-white/5 border border-white/10">
                           {step.image && (
                             <img 
                               src={step.image} 
@@ -271,12 +271,12 @@ const WorkSection = () => {
 
               {/* Results */}
               {selectedProject.results && (
-                <div className="bg-white/5 rounded-[40px] p-12 md:p-24 border border-white/10 mb-32">
+                <div className="bg-white/5 rounded-[8px] p-3 border border-white/10 mb-32">
                   <div className="max-w-3xl mx-auto text-center">
                     <h3 className="text-3xl font-bold text-white mb-12 font-display">Impact & Results</h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                       {selectedProject.results.map((result, index) => (
-                        <div key={index} className="p-6 bg-black/40 rounded-2xl border border-white/5">
+                        <div key={index} className="p-3 rounded-[8px] bg-black/40 border border-white/5">
                           <p className="text-white font-medium">{result}</p>
                         </div>
                       ))}
