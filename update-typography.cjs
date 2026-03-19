@@ -16,10 +16,10 @@ content = content.replace(/text-center flex flex-col items-center/g, 'text-left 
 content = content.replace(/<h3 className=\"[^\"]*font-bold[^\"]*\">/g, '<h3 className=\"text-4xl md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]\">');
 
 // 3. Card headings and subheadings: Medium and consistent
-content = content.replace(/<h4 className=\"[^\"]*\">/g, '<h4 className=\"text-[22px] md:text-3xl font-bold text-white tracking-tight relative z-10 text-left\">');
+content = content.replace(/<h4 className=\"[^\"]*\">/g, '<h4 className=\"text-lg md:text-xl font-bold text-white tracking-tight relative z-10 text-left\">');
 
 // 4. Card Paragraphs (subheadings inside cards). They are typically p tags with smaller fonts.
-content = content.replace(/<p className=\"text-(sm|xs|\[13px\]|\[14px\]) text-white\/[0-9]+[^\"]*\">/g, '<p className=\"text-base md:text-lg text-white/60 leading-relaxed font-light relative z-10 text-left\">');
+content = content.replace(/<p className=\"text-(sm|xs|\[13px\]|\[14px\]) text-white\/[0-9]+[^\"]*\">/g, '<p className=\"text-[14px] md:text-[14px] text-white/60 leading-relaxed font-light relative z-10 text-left\">');
 
 fs.writeFileSync(file, content);
 console.log('Update applied');

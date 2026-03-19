@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'motion/react';
-import { ArrowLeft, Clock, User, Award, CheckCircle2, Target, AlertCircle, Users, Zap, Activity, Globe, TrendingUp, TrendingDown, LayoutGrid, Search, MessageSquare, ListChecks, ShoppingCart, ClipboardCheck, Star, Salad, MessageCircle, BarChart3, Rocket, ArrowUp, ArrowDown } from 'lucide-react';
+import { ArrowLeft, Clock, User, Award, CheckCircle2, Target, AlertCircle, Users, Zap, Activity, Globe, TrendingUp, TrendingDown, LayoutGrid, Search, MessageSquare, ListChecks, ShoppingCart, ClipboardCheck, Star, Salad, MessageCircle, BarChart3, Rocket, ArrowUp, ArrowDown, Check, Quote } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const BalanceNutritionCaseStudy = () => {
@@ -81,7 +81,7 @@ const BalanceNutritionCaseStudy = () => {
             <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
               The Balance Nutrition <span className="italic">Experience.</span>
             </h3>
-            <p className="text-base md:text-xl text-white/60 leading-relaxed font-light max-w-3xl">
+            <p className="text-base md:text-[16px] text-white/60 leading-relaxed font-light max-w-3xl">
               From first contact to a personalized diet plan — here's how every client moves through the platform, guided by nutritionists and AI.
             </p>
           </div>
@@ -100,9 +100,9 @@ const BalanceNutritionCaseStudy = () => {
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-baseline gap-2">
-                    <h4 className="text-lg md:text-3xl font-bold text-white tracking-tight relative z-10 text-left">{step.title}</h4>
+                    <h4 className="text-lg md:text-xl font-bold text-white tracking-tight relative z-10 text-left">{step.title}</h4>
                   </div>
-                  <p className="text-[14px] md:text-lg text-white/60 leading-relaxed font-light relative z-10 text-left">{step.desc}</p>
+                  <p className="text-[14px] md:text-[14px] text-white/60 leading-relaxed font-light relative z-10 text-left">{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -118,7 +118,7 @@ const BalanceNutritionCaseStudy = () => {
             <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
               Three Tiers for <span className="italic">Every Client.</span>
             </h3>
-            <p className="text-base md:text-xl text-white/60 leading-relaxed font-light max-w-3xl">
+            <p className="text-base md:text-[16px] text-white/60 leading-relaxed font-light max-w-3xl">
               Balance Nutrition offers standard programs for everyday clients and an exclusive Platinum plan for personalized care.
             </p>
           </div>
@@ -152,8 +152,8 @@ const BalanceNutritionCaseStudy = () => {
                   <span className={`text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded border inline-block ${i === 2 ? 'border-yellow-500/40 text-yellow-500' : 'border-white/10 text-white/40'}`}>
                     {item.tier}
                   </span>
-                  <h4 className="text-lg md:text-3xl font-bold text-white tracking-tight relative z-10 text-left">{item.title}</h4>
-                  <p className="text-[14px] md:text-lg text-white/60 leading-relaxed font-light relative z-10 text-left">{item.desc}</p>
+                  <h4 className="text-lg md:text-xl font-bold text-white tracking-tight relative z-10 text-left">{item.title}</h4>
+                  <p className="text-[14px] md:text-[14px] text-white/60 leading-relaxed font-light relative z-10 text-left">{item.desc}</p>
                 </div>
                 <div className="space-y-3">
                   {item.features.map((f, j) => (
@@ -176,7 +176,7 @@ const BalanceNutritionCaseStudy = () => {
             <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
               Bridging the gap in <span className="italic">personal nutrition.</span>
             </h3>
-            <p className="text-base md:text-xl text-white/60 leading-relaxed font-light mt-6 max-w-2xl">
+            <p className="text-base md:text-[18px] text-white/60 leading-relaxed font-light mt-6 max-w-2xl">
               Despite having access to countless diet plans, users struggled to maintain consistency due to a lack of personalization and real-time guidance.
             </p>
           </div>
@@ -211,7 +211,7 @@ const BalanceNutritionCaseStudy = () => {
               <div key={i} className="bg-[#0c0c0c] border border-white/5 rounded-[32px] p-4 md:p-8 flex flex-col items-center text-left gap-12 group items-start hover:border-white/10 transition-all duration-700 h-full relative overflow-hidden">
                 <div className={`absolute inset-0 bg-gradient-to-b ${item.color} opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
                 
-                <h4 className="text-lg md:text-3xl font-bold text-white tracking-tight relative z-10 text-left">{item.title}</h4>
+                <h4 className="text-lg md:text-xl font-bold text-white tracking-tight relative z-10 text-left">{item.title}</h4>
                 
                 {/* Topic-Related Visual Element */}
                 <div className="relative w-48 h-40 flex items-center justify-center z-10">
@@ -289,7 +289,7 @@ const BalanceNutritionCaseStudy = () => {
                   )}
                 </div>
 
-                <p className="text-[14px] md:text-lg text-white/60 leading-relaxed font-light relative z-10 text-left">
+                <p className="text-[14px] md:text-[14px] text-white/60 leading-relaxed font-light relative z-10 text-left">
                   {item.desc}
                 </p>
               </div>
@@ -335,7 +335,7 @@ const BalanceNutritionCaseStudy = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-emerald-500/10 blur-[80px] rounded-full"></div>
                 
-                <h4 className="text-lg md:text-3xl font-bold text-white tracking-tight relative z-10 text-left">{item.title}</h4>
+                <h4 className="text-lg md:text-xl font-bold text-white tracking-tight relative z-10 text-left">{item.title}</h4>
                 
                 {/* Topic-Related Iconography */}
                 <div className="relative flex-1 flex items-center justify-center z-10">
@@ -397,7 +397,7 @@ const BalanceNutritionCaseStudy = () => {
                   )}
                 </div>
 
-                <p className="text-[14px] md:text-lg text-white/60 leading-relaxed font-light relative z-10 text-left">
+                <p className="text-[14px] md:text-[14px] text-white/60 leading-relaxed font-light relative z-10 text-left">
                   {item.desc}
                 </p>
                 
@@ -416,7 +416,7 @@ const BalanceNutritionCaseStudy = () => {
             <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
               The User-First <br /><span className="italic">Deep Dive.</span>
             </h3>
-            <p className="text-base md:text-xl text-white/60 leading-relaxed font-light max-w-3xl">
+            <p className="text-base md:text-[16px] text-white/60 leading-relaxed font-light max-w-3xl">
               18 user interviews, 3 nutritionist sessions, and analysis of 120 WhatsApp chat transcripts from real client conversations.
             </p>
           </div>
@@ -442,7 +442,7 @@ const BalanceNutritionCaseStudy = () => {
               <div key={i} className="group relative bg-[#0d0a15] border border-white/10 rounded-[14px] md:rounded-[40px] p-4 md:p-8 flex flex-col gap-8 hover:border-violet-500/30 transition-all duration-700 overflow-hidden min-h-[280px] md:min-h-[480px]">
                 <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 
-                <h4 className="text-lg md:text-3xl font-bold text-white tracking-tight relative z-10 text-left">{item.title}</h4>
+                <h4 className="text-lg md:text-xl font-bold text-white tracking-tight relative z-10 text-left">{item.title}</h4>
                 
                 {/* Topic-Related Visuals */}
                 <div className="relative flex-1 flex items-center justify-center z-10 min-h-[160px]">
@@ -526,7 +526,7 @@ const BalanceNutritionCaseStudy = () => {
                    <div className="w-12 h-12 rounded-2xl bg-violet-500/20 border border-violet-500/30 flex items-center justify-center">
                      <Users className="w-6 h-6 text-violet-400" />
                    </div>
-                   <h4 className="text-lg md:text-3xl font-bold text-white tracking-tight relative z-10 text-left">Primary Audience</h4>
+                   <h4 className="text-lg md:text-xl font-bold text-white tracking-tight relative z-10 text-left">Primary Audience</h4>
                  </div>
                  <p className="text-white/40 leading-relaxed">
                    Women (70% of client base) aged 25-55, primarily Indian diaspora.
@@ -566,7 +566,7 @@ const BalanceNutritionCaseStudy = () => {
                    <div className="w-12 h-12 rounded-2xl bg-violet-500/20 border border-violet-500/30 flex items-center justify-center">
                      <Globe className="w-6 h-6 text-violet-400" />
                    </div>
-                   <h4 className="text-lg md:text-3xl font-bold text-white tracking-tight relative z-10 text-left">Global Reach</h4>
+                   <h4 className="text-lg md:text-xl font-bold text-white tracking-tight relative z-10 text-left">Global Reach</h4>
                  </div>
                  <p className="text-white/40 leading-relaxed">
                    Active in 94+ countries, requiring 24/7 support powered by <span className="text-violet-400">Clara AI</span>.
@@ -639,16 +639,197 @@ const BalanceNutritionCaseStudy = () => {
         </div>
       </section>
 
-      {/* 07. Clara AI Section */}
+      {/* 07. User Persona */}
+      <section className="py-[50px] md:py-24 px-6 md:px-12 lg:px-24 bg-[#050505]">
+        <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
+          {/* Header */}
+          <div className="space-y-6 text-left">
+            <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-white/40">07. User Persona</h2>
+            <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
+              Understanding the <br /><span className="italic">Busy Professional.</span>
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-auto">
+            {/* Widget 1: Bio & Intro (Top Left) */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="md:col-span-8 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 md:p-12 flex flex-col justify-center relative overflow-hidden group hover:border-purple-500/30 transition-all duration-500"
+            >
+              <div className="absolute top-0 left-0 w-64 h-64 bg-purple-600/10 blur-[100px] -z-10 group-hover:bg-purple-600/20 transition-all duration-700"></div>
+              <div className="space-y-6 relative z-10">
+                <div className="space-y-2">
+                  <p className="text-purple-500 font-mono text-[10px] uppercase tracking-widest font-bold px-2 py-1 rounded border border-purple-500/20 inline-block">Primary User</p>
+                  <h4 className="text-lg md:text-xl font-bold text-white tracking-tight relative z-10 text-left">Priya Sharma</h4>
+                  <p className="text-[14px] md:text-[14px] text-white/60 leading-relaxed font-light relative z-10 text-left">Marketing Executive & Busy Professional</p>
+                </div>
+                <div className="h-px w-24 bg-purple-500/50"></div>
+                <p className="text-white/60 text-base md:text-lg leading-relaxed max-w-2xl font-light">
+                  "Priya is a busy professional who wants to improve her health and fitness. She has tried generic diet plans but struggled to follow them consistently due to lack of personalization."
+                </p>
+              </div>
+              <div className="absolute bottom-8 right-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                <Users className="w-32 h-32 text-purple-500" />
+              </div>
+            </motion.div>
+
+            {/* Widget 2: Portrait (Top Right) */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="md:col-span-4 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-4 flex items-center justify-center relative overflow-hidden group hover:border-purple-500/30 transition-all duration-500 min-h-[400px]"
+            >
+              {/* Corner decoration similar to BentoX */}
+              <div className="absolute top-6 left-6 w-3 h-3 border-t-2 border-l-2 border-purple-500/40"></div>
+              <div className="absolute top-6 right-6 w-3 h-3 border-t-2 border-r-2 border-purple-500/40"></div>
+              <div className="absolute bottom-6 left-6 w-3 h-3 border-b-2 border-l-2 border-purple-500/40"></div>
+              <div className="absolute bottom-6 right-6 w-3 h-3 border-b-2 border-r-2 border-purple-500/40"></div>
+
+              <div className="relative w-full h-full rounded-[2rem] overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" 
+                  alt="Priya Sharma" 
+                  className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-6 left-6">
+                   <div className="bg-purple-500 p-2 rounded-lg shadow-[0_0_20px_rgba(168,85,247,0.4)]">
+                      <Activity className="w-5 h-5 text-white" />
+                   </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Widget 3: User Goals (Bottom Left) */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="md:col-span-4 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 flex flex-col gap-8 hover:border-purple-500/30 transition-all duration-500"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center">
+                  <Target className="w-5 h-5 text-purple-400" />
+                </div>
+                <h4 className="text-lg md:text-xl font-bold text-white tracking-tight relative z-10 text-left">User Goals</h4>
+              </div>
+              <div className="space-y-4">
+                {[
+                  "Lose 5–7 kg in 3 months.",
+                  "Plan that fits lifestyle.",
+                  "Track progress regularly.",
+                  "Expert human guidance."
+                ].map((goal, i) => (
+                  <div key={i} className="flex gap-4 group/goal items-center">
+                    <div className="h-2 w-2 rounded-full bg-purple-500 group-hover/goal:scale-150 transition-transform" />
+                    <span className="text-white/60 text-sm font-medium tracking-tight">{goal}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-auto pt-8 border-t border-white/5">
+                 <p className="text-[10px] uppercase tracking-widest text-white/20 font-bold">Strategic Focus Area</p>
+              </div>
+            </motion.div>
+
+            {/* Widget 4: Personality (Bottom Center) */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="md:col-span-4 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 flex flex-col gap-8 hover:border-purple-500/30 transition-all duration-500"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center">
+                  <Zap className="w-5 h-5 text-purple-400" />
+                </div>
+                <h4 className="text-lg md:text-xl font-bold text-white tracking-tight relative z-10 text-left">Personality</h4>
+              </div>
+              <div className="space-y-6">
+                {[
+                  { label: "Tech-Savvy", val: "85%", icon: <Globe className="w-3 h-3"/> },
+                  { label: "Busy Schedule", val: "90%", icon: <Clock className="w-3 h-3"/> },
+                  { label: "Health Focus", val: "75%", icon: <Activity className="w-3 h-3"/> }
+                ].map((trait, i) => (
+                  <div key={i} className="space-y-2">
+                    <div className="flex justify-between items-center text-[10px] uppercase tracking-widest text-white/40 font-bold">
+                      <div className="flex items-center gap-2">
+                         {trait.icon}
+                         {trait.label}
+                      </div>
+                      <span className="text-purple-400">{trait.val}</span>
+                    </div>
+                    <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden relative">
+                       <motion.div 
+                        initial={{ width: 0 }}
+                        whileInView={{ width: trait.val }}
+                        transition={{ duration: 1.5, delay: 0.5 + (i * 0.1) }}
+                        className="h-full bg-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.4)]"
+                       />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Widget 5: Stats & Quote (Bottom Right) */}
+            <div className="md:col-span-4 grid grid-cols-2 gap-6">
+               <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+                className="bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-6 flex flex-col justify-center items-center gap-2 hover:border-purple-500/30 transition-all"
+               >
+                  <p className="text-purple-500 font-black text-3xl tracking-tighter">28+</p>
+                  <p className="text-white/20 text-[10px] uppercase font-bold tracking-widest">Years Old</p>
+               </motion.div>
+               <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5 }}
+                className="bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-6 flex flex-col justify-center items-center gap-2 hover:border-purple-500/30 transition-all"
+               >
+                  <p className="text-purple-500 font-black text-3xl tracking-tighter">IN</p>
+                  <p className="text-white/20 text-[10px] uppercase font-bold tracking-widest">Location</p>
+               </motion.div>
+               
+               <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.6 }}
+                className="col-span-2 bg-purple-600 rounded-[2.5rem] p-8 flex items-center justify-center relative overflow-hidden group"
+               >
+                  <div className="absolute top-0 right-0 p-4 opacity-10 rotate-12">
+                     <Quote className="w-16 h-16 text-black" />
+                  </div>
+                  <p className="text-white font-bold italic text-lg md:text-[18px] text-center z-10 leading-snug">
+                    “I need a plan that fits me — <br />
+                    <span className="text-white/60">not the other way around.</span>”
+                  </p>
+               </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 08. Clara AI Section */}
       <section className="py-[50px] md:py-24 px-6 md:px-12 lg:px-24 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center">
             <div className="lg:col-span-6 space-y-8">
-              <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-white/40">07. Clara AI</h2>
+              <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-white/40">08. Clara AI</h2>
               <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
                 The AI That <br /><span className="italic">Never Sleeps.</span>
               </h3>
-              <p className="text-base md:text-xl text-white/60 leading-relaxed font-light">
+              <p className="text-base md:text-[18px] text-white/60 leading-relaxed font-light">
                 Clara is Balance Nutrition&apos;s proprietary AI assistant that steps in when a nutritionist is unavailable. It has access to health history, diet plans, and previous doubts.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -685,11 +866,11 @@ const BalanceNutritionCaseStudy = () => {
         </div>
       </section>
 
-      {/* 08. User Journey */}
+      {/* 09. User Journey */}
       <section className="py-[50px] md:py-24 px-6 md:px-12 lg:px-24 bg-[#050505] overflow-hidden">
         <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
           <div className="space-y-6 text-left max-w-4xl">
-            <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-white/40">08. Client Flow</h2>
+            <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-white/40">09. Client Flow</h2>
             <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
               End-to-End <br /><span className="italic">Journey.</span>
             </h3>
@@ -821,7 +1002,7 @@ const BalanceNutritionCaseStudy = () => {
         </div>
       </section>
 
-      {/* 09. Metrics & Impact */}
+      {/* 10. Metrics & Impact */}
       <section className="py-[50px] md:py-24 px-6 md:px-12 lg:px-24 bg-[#030303] overflow-hidden">
         <div className="max-w-7xl mx-auto space-y-20">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 relative">
@@ -829,7 +1010,7 @@ const BalanceNutritionCaseStudy = () => {
             <div className="absolute -top-24 -left-24 w-96 h-96 bg-blue-600/10 blur-[120px] -z-10"></div>
             
             <div className="space-y-6 text-left">
-              <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.4em] text-blue-500">09. Goals & Success</h2>
+              <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.4em] text-blue-500">10. Goals & Success</h2>
               <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
                 Impact by <span className="text-blue-500 italic">Design.</span>
               </h3>
@@ -879,7 +1060,7 @@ const BalanceNutritionCaseStudy = () => {
               </div>
 
               <div className="space-y-4">
-                <h4 className="text-lg md:text-3xl font-bold text-white tracking-tight relative z-10 text-left">Drop-off Reduction</h4>
+                <h4 className="text-lg md:text-xl font-bold text-white tracking-tight relative z-10 text-left">Drop-off Reduction</h4>
                 <p className="text-white/50 text-base max-w-sm leading-relaxed">
                   Day 1–10 churn reduced through automated reminders and personalized follow-up logic.
                 </p>
@@ -924,7 +1105,7 @@ const BalanceNutritionCaseStudy = () => {
               </div>
 
               <div className="space-y-4">
-                <h4 className="text-lg md:text-3xl font-bold text-white tracking-tight relative z-10 text-left">User Satisfaction</h4>
+                <h4 className="text-lg md:text-xl font-bold text-white tracking-tight relative z-10 text-left">User Satisfaction</h4>
                 <div className="flex items-center justify-between mt-4">
                   <div className="text-5xl font-black text-purple-500 tracking-tighter">4.7 / 5</div>
                   <button className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-purple-400 hover:text-purple-300 transition-colors group/btn">
@@ -972,7 +1153,7 @@ const BalanceNutritionCaseStudy = () => {
               </div>
 
               <div className="space-y-4">
-                <h4 className="text-lg md:text-3xl font-bold text-white tracking-tight relative z-10 text-left">AI Engagement</h4>
+                <h4 className="text-lg md:text-xl font-bold text-white tracking-tight relative z-10 text-left">AI Engagement</h4>
                 <div className="flex items-center justify-between mt-4">
                   <div className="text-5xl font-black text-blue-400 tracking-tighter">3× <span className="text-2xl opacity-50">Usage</span></div>
                   <button className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-400 hover:text-blue-300 transition-colors group/btn">
@@ -1011,7 +1192,7 @@ const BalanceNutritionCaseStudy = () => {
               </div>
 
               <div className="space-y-4">
-                <h4 className="text-lg md:text-3xl font-bold text-white tracking-tight relative z-10 text-left">Log Compliance</h4>
+                <h4 className="text-lg md:text-xl font-bold text-white tracking-tight relative z-10 text-left">Log Compliance</h4>
                 <p className="text-white/50 text-base max-w-sm leading-relaxed mt-2">
                   Daily meal logging consistency improved via simplified photo-based logging UI.
                 </p>
@@ -1032,7 +1213,7 @@ const BalanceNutritionCaseStudy = () => {
         <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
           <div className="flex flex-col md:flex-row justify-between items-end gap-8">
             <div className="space-y-6 text-left">
-              <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-white/30">10. The Design System</h2>
+              <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-white/30">11. The Design System</h2>
               <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
                 Consistency <br />at Scale
               </h3>
@@ -1136,15 +1317,15 @@ const BalanceNutritionCaseStudy = () => {
               >
                 <div className="space-y-6 relative z-10">
                   <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-gray-400">Typography / Main</span>
-                  <h4 className="text-lg md:text-3xl font-bold text-gray-900 tracking-tight relative z-10 text-left">Poppins</h4>
+                  <h4 className="text-lg md:text-[19px] font-bold text-gray-900 tracking-tight relative z-10 text-left">Poppins</h4>
                   <p className="text-gray-500 text-sm leading-relaxed max-w-[200px]">
                     Clean, geometric sans-serif for optimal readability across digital interfaces.
                   </p>
                 </div>
                 <div className="flex gap-4 items-end relative z-10 whitespace-nowrap overflow-hidden">
                   <div className="text-5xl md:text-7xl font-black text-black/5 select-none">Aa</div>
-                  <div className="text-lg md:text-2xl font-bold text-black border-b-4 border-[#00858C] pb-1">Bold</div>
-                  <div className="text-lg md:text-2xl font-medium text-black/40">Medium</div>
+                  <div className="text-lg md:text-[19px] font-bold text-black border-b-4 border-[#00858C] pb-1">Bold</div>
+                  <div className="text-lg md:text-[19px] font-medium text-black/40">Medium</div>
                 </div>
                 <div className="absolute -right-12 -bottom-12 w-48 h-48 bg-[#00858C]/5 rounded-full blur-3xl group-hover:bg-[#00858C]/10 transition-colors"></div>
               </motion.div>
@@ -1158,7 +1339,7 @@ const BalanceNutritionCaseStudy = () => {
               >
                 <div className="space-y-4">
                   <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/30">Layout / Grid System</span>
-                  <h4 className="text-lg md:text-3xl font-bold text-white tracking-tight relative z-10 text-left">MODULAR GRID</h4>
+                  <h4 className="text-lg md:text-xl font-bold text-white tracking-tight relative z-10 text-left">MODULAR GRID</h4>
                   <p className="text-white/40 text-xs leading-relaxed">Scalable across all resolutions with an 8px base unit.</p>
                 </div>
                 
@@ -1179,7 +1360,7 @@ const BalanceNutritionCaseStudy = () => {
         <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
             <div className="space-y-6 text-left">
-              <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-[#00858C]">11. Visual Designs</h2>
+              <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-[#00858C]">12. Visual Designs</h2>
               <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
                 The Final <br />Experience
               </h3>
@@ -1265,8 +1446,8 @@ const BalanceNutritionCaseStudy = () => {
               <div className="flex flex-col md:flex-row gap-12 items-center">
                 <div className="md:w-1/3 space-y-6">
                   <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#D19F00]">Web Interface</span>
-                  <h4 className="text-lg md:text-3xl font-bold text-white tracking-tight relative z-10 text-left">Diagnostic <br />Intelligence</h4>
-                  <p className="text-lg text-gray-400 font-light leading-relaxed">
+                  <h4 className="text-lg md:text-xl font-bold text-white tracking-tight relative z-10 text-left">Diagnostic <br />Intelligence</h4>
+                  <p className="text-base text-gray-400 font-light leading-relaxed">
                     Designed to provide instant credibility through interactive diagnostics, converting visitors into health-conscious users.
                   </p>
                   <div className="flex gap-4">

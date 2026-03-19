@@ -11,10 +11,10 @@ content = content.replace(/text-4xl md:text-6xl/g, 'text-[31px] md:text-6xl');
 content = content.replace(/<p className=\"text-xl ([^\"]*)\">/g, '<p className=\"text-base md:text-xl $1\">');
 
 // 3. Card headings: text-[22px] md:text-3xl -> text-lg md:text-3xl
-content = content.replace(/text-\[22px\] md:text-3xl/g, 'text-lg md:text-3xl');
+content = content.replace(/text-lg md:text-xl/g, 'text-lg md:text-xl');
 
 // 4. Card subheadings: text-base md:text-lg -> text-[14px] md:text-lg
-content = content.replace(/text-base md:text-lg/g, 'text-[14px] md:text-lg');
+content = content.replace(/text-[14px] md:text-[14px]/g, 'text-[14px] md:text-[14px]');
 
 fs.writeFileSync(file, content);
 console.log('Update applied');
