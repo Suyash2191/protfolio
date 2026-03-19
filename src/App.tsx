@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -10,6 +10,7 @@ import ResumePage from './pages/ResumePage';
 import BalanceNutritionCaseStudy from './components/BalanceNutritionCaseStudy';
 import ProjectAICaseStudy from './components/ProjectAICaseStudy';
 
+// Scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -18,31 +19,29 @@ const ScrollToTop = () => {
   return null;
 };
 
-const Home = () => (
-  <main>
-    <Hero />
-    <WorkSection />
-    <ProjectTabs />
-    <Expertise />
-  </main>
-);
-
-export default function App() {
+function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="bg-[#050505] text-white selection:bg-blue-500 selection:text-white min-h-screen">
+      <div className="bg-[#050505] min-h-screen">
         <Navbar />
-        
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/resume" element={<ResumePage />} />
+          <Route path="/" element={
+            <main>
+              <Hero />
+              <WorkSection />
+              <ProjectTabs />
+              <Expertise />
+              <Footer />
+            </main>
+          } />
           <Route path="/projects/balance-nutrition" element={<BalanceNutritionCaseStudy />} />
           <Route path="/projects/project-ai" element={<ProjectAICaseStudy />} />
+          <Route path="/resume" element={<ResumePage />} />
         </Routes>
-
-        <Footer />
       </div>
     </Router>
   );
 }
+
+export default App;
