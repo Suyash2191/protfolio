@@ -28,18 +28,8 @@ const ProjectAICaseStudy: React.FC = () => {
         style={noiseOverlayStyle}
       />
 
-      {/* Hero Section with Back Button */}
+      {/* Hero Section with AI Orb */}
       <section className="relative min-h-[90vh] flex flex-col justify-center px-6 md:px-12 pt-32 pb-20 overflow-hidden">
-        {/* Back to Home Button (Top Left) */}
-        <div className="absolute top-[3.2rem] left-6 md:left-12 z-50">
-          <Link 
-            to="/" 
-            className="group flex items-center gap-3 px-6 py-3 bg-[#1E2030]/50 backdrop-blur-xl border border-white/10 rounded-full text-[13px] font-bold text-white hover:bg-white/10 transition-all duration-300 shadow-lg"
-          >
-            <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-            <span>Back to home page</span>
-          </Link>
-        </div>
 
         {/* Animated AI Orb (Top Right) */}
         <motion.div 

@@ -12,21 +12,8 @@ const BalanceNutritionCaseStudy = () => {
 
   return (
     <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-blue-500/30">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 w-full z-50 px-6 py-8 flex justify-between items-center mix-blend-difference">
-        <button 
-          onClick={() => navigate('/')}
-          className="group flex items-center gap-2 text-white/60 hover:text-white transition-colors"
-        >
-          <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center group-hover:border-white/40 transition-colors">
-            <ArrowLeft className="w-4 h-4" />
-          </div>
-          <span className="text-[11px] font-bold uppercase tracking-widest">Back to Portfolio</span>
-        </button>
-      </nav>
-
       {/* Hero Section */}
-      <section className="relative pt-[50px] pb-[30px] md:pt-40 md:pb-20 px-6 md:px-12 lg:px-24 border-b border-white/5">
+      <section className="relative pt-32 pb-[30px] md:pt-48 md:pb-20 px-6 md:px-12 lg:px-24 border-b border-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
