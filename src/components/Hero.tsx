@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Sparkles, ArrowRight } from 'lucide-react';
+import AppointmentModal from './AppointmentModal';
 
 const Hero = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const images = [
     '/images/img1.jpg',
@@ -131,7 +133,10 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 1 }}
           className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mt-10"
         >
-          <button className="w-full sm:w-auto px-10 h-[56px] bg-white text-black text-[16px] font-bold rounded-full hover:bg-gray-200 transition-all flex items-center justify-center font-poppins">
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="w-full sm:w-auto px-10 h-[56px] bg-white text-black text-[16px] font-bold rounded-full hover:bg-gray-200 transition-all flex items-center justify-center font-poppins"
+          >
             Book an Appointment
           </button>
           <button className="w-full sm:w-auto group px-10 h-[56px] bg-transparent border border-white/20 text-white text-[16px] font-medium rounded-full hover:bg-white/5 transition-all flex items-center justify-center space-x-2 font-poppins">
@@ -143,6 +148,9 @@ const Hero = () => {
 
       {/* Decorative Grid */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+      {/* Appointment Modal */}
+      <AppointmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 };
