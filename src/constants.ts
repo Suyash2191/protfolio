@@ -47,30 +47,16 @@ export const PROJECTS: Project[] = [
   },
   {
     id: '3',
-    title: 'AI-Powered Photo & Video Editor',
-    company: 'CREATIVE TOOLS',
+    title: 'Aivory Studio — AI Photo Editing',
+    company: 'CLIENT PROJECT',
     category: 'website',
-    description: 'A professional creative suite that uses AI to automate editing workflows — smart retouching, auto color grading, and one-click video cuts saving creators hours of manual work.',
+    description: 'End-to-end UI design for a web-based AI photo editing software — covering landing pages, editor interface, onboarding, and feature screens.',
     image: '/images/creative-editor.png',
-    tags: ['AI', 'Creative Suite', 'Video Editor'],
-    caseStudy: 'A professional creative suite that uses AI to automate editing workflows — smart retouching, auto color grading, and one-click video cuts saving creators hours of manual work.',
+    tags: ['AI', 'UI Design Only', 'Figma'],
+    caseStudy: 'Aivory Studio is an AI-powered photo editing platform designed for creators, photographers, and marketing professionals. The client needed a complete, production-ready UI for a complex product — one that felt modern, clean, and powerful without overwhelming the user.',
     time: '2024 - 25',
-    role: 'Product Designer',
-    featuredOn: 'Behance',
-    challenge: 'Creative workflows are often bogged down by repetitive manual tasks like color grading and basic cutting.',
-    solution: 'We implemented AI-driven automation that handles the heavy lifting, allowing creators to focus on storytelling.',
-    process: [
-      {
-        title: 'Automation Engine',
-        description: 'Developed an AI engine that analyzes video segments and suggests optimal cuts and color adjustments.',
-        image: 'https://picsum.photos/seed/creative/800/600'
-      }
-    ],
-    results: [
-      'Reduced editing time by up to 60%',
-      'Positive feedback from beta testers in the creative industry',
-      'Fast-tracked workflow for social media content creators'
-    ]
+    role: 'UI Designer',
+    featuredOn: 'Behance'
   }
 ];
 

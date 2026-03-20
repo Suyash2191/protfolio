@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ArrowRight, Check, X, Search, BarChart2, MessageSquare, Clock, Shield, Users, Layout, Zap, Mic, FileText, Smartphone, Globe, Home } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Check, X, Search, BarChart2, MessageSquare, Clock, Shield, Users, Layout, Zap, Mic, FileText, Smartphone, Globe, Home, Github, Trello } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ProjectAICaseStudy: React.FC = () => {
@@ -108,7 +108,9 @@ const ProjectAICaseStudy: React.FC = () => {
       <section id="problem" className="px-6 md:px-12 py-24 border-t border-[#1E2030]/50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-auto">
-            {/* Widget 1: Main Problem Intro (Top Left) */}
+
+            {/* Row 1: Main Problem (8) + 40% Stat (4) = 12 */}
+            {/* Widget 1: Main Problem Intro */}
             <motion.div 
               {...fadeIn}
               className="md:col-span-8 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 md:p-12 flex flex-col justify-center relative overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
@@ -122,7 +124,7 @@ const ProjectAICaseStudy: React.FC = () => {
               </p>
             </motion.div>
 
-            {/* Widget 2: Stat 1 - 40% (Top Right) */}
+            {/* Widget 2: 40% Stat */}
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.1 }}
@@ -147,7 +149,8 @@ const ProjectAICaseStudy: React.FC = () => {
               <p className="text-center text-sm font-medium text-gray-400 uppercase tracking-widest leading-tight">Time lost to <br />coordination</p>
             </motion.div>
 
-            {/* Widget 3: Tool Fragmentation (Middle Left) */}
+            {/* Row 2: Tool Frag (4) + AI Not Integrated (5, row-span-2) + 6-12 Stat (3) = 12 */}
+            {/* Widget 3: Tool Fragmentation */}
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.2 }}
@@ -163,19 +166,42 @@ const ProjectAICaseStudy: React.FC = () => {
                 Teams use Jira, Slack, Notion, HR tools, and spreadsheets separately. Context is lost between every switch, creating friction and errors.
               </p>
               <div className="mt-auto grid grid-cols-4 gap-3">
-                {[1, 2, 3, 4, 5, 6, 7, 8].map(i => (
-                  <div key={i} className="aspect-square rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group/icon hover:bg-[#6C63FF]/10 hover:border-[#6C63FF]/30 transition-all">
-                    <div className="w-4 h-4 rounded-sm bg-gray-500/20 group-hover/icon:bg-[#6C63FF]/30 transition-colors"></div>
+                {[
+                  { name: 'Jira', src: '/images/jira-logo.svg' },
+                  { name: 'Slack', src: '/images/slack-logo.svg' },
+                  { name: 'Notion', src: '/images/notion-logo.svg' },
+                  { name: 'Excel', src: '/images/excel-logo.svg' },
+                  { name: 'HR Tools', src: '/images/hr-icon.png' },
+                  { name: 'Figma', src: '/images/figma-logo.svg' },
+                  { name: 'GitHub', src: '/images/github-logo.svg' },
+                  { name: 'Trello', src: '/images/trello-logo.svg' }
+                ].map((tool, i) => (
+                  <div 
+                    key={i} 
+                    className="aspect-square rounded-[12px] bg-white/5 border border-white/[0.08] flex items-center justify-center group/icon hover:bg-white/10 hover:border-[#6C63FF]/30 transition-all duration-500 relative overflow-hidden shadow-[0_4px_24px_-1px_rgba(0,0,0,0.2)] p-2.5"
+                  >
+                    {/* Subtle Inner Glow */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#6C63FF]/5 to-transparent opacity-0 group-hover/icon:opacity-100 transition-opacity duration-500" />
+                    
+                    {/* High-Fidelity Color Logo Image */}
+                    <img 
+                      src={tool.src} 
+                      className="w-full h-full object-contain opacity-100 transition-all duration-500 scale-[1.05]" 
+                      alt={tool.name}
+                    />
+
+                    {/* Outer Border Glow Effect on Hover */}
+                    <div className="absolute inset-0 rounded-[12px] opacity-0 group-hover/icon:opacity-100 transition-opacity duration-500 pointer-events-none border border-[#6C63FF]/20 blur-[1px]" />
                   </div>
                 ))}
               </div>
             </motion.div>
 
-            {/* Widget 4: AI Not Integrated (Middle Vertical) */}
+            {/* Widget 4: AI Not Integrated (spans rows 2 & 3 in middle) */}
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.3 }}
-              className="md:col-span-5 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-10 flex flex-col relative overflow-hidden group hover:border-[#FF6584]/30 transition-all duration-500 md:row-span-2"
+              className="md:col-span-5 md:row-span-2 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-10 flex flex-col relative overflow-hidden group hover:border-[#FF6584]/30 transition-all duration-500"
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#FF6584]/10 blur-[100px] -z-10 group-hover:bg-[#FF6584]/20 transition-all duration-700"></div>
               <div className="flex items-center gap-4 mb-8">
@@ -202,7 +228,7 @@ const ProjectAICaseStudy: React.FC = () => {
               </div>
             </motion.div>
 
-            {/* Widget 5: Tools Stat (Middle Right Small) */}
+            {/* Widget 5: 6-12 Tools Stat */}
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.4 }}
@@ -212,7 +238,8 @@ const ProjectAICaseStudy: React.FC = () => {
               <p className="text-xs font-bold uppercase tracking-widest text-white/40 leading-tight">Tools managed <br />simultaneously</p>
             </motion.div>
 
-            {/* Widget 6: Context Loss Stat (Small Right Below Tools) */}
+            {/* Row 3: 2.5h Stat (3) + [AI cont. (5)] + No Voice (4) = 12 */}
+            {/* Widget 6: Context Loss Stat */}
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.5 }}
@@ -222,7 +249,7 @@ const ProjectAICaseStudy: React.FC = () => {
               <p className="text-xs font-bold uppercase tracking-widest text-white/40 leading-tight">Lost daily to <br />context switching</p>
             </motion.div>
 
-            {/* Widget 7: No Voice Interface (Bottom Left) */}
+            {/* Widget 7: No Voice Interface */}
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.6 }}
@@ -249,15 +276,21 @@ const ProjectAICaseStudy: React.FC = () => {
               </div>
             </motion.div>
 
-            {/* Widget 8: Unified Dashboard Stat (Bottom Right Big) */}
+            {/* Row 4: 68% Stat — Full Width (12) */}
+            {/* Widget 8: Unified Dashboard Stat */}
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.7 }}
-              className="md:col-span-3 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 flex flex-col justify-center relative overflow-hidden group hover:border-[#F7971E]/30 transition-all duration-500"
+              className="md:col-span-12 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between relative overflow-hidden group hover:border-[#F7971E]/30 transition-all duration-500"
             >
-              <div className="absolute bottom-[-20%] right-[-10%] w-32 h-32 bg-[#F7971E]/10 blur-3xl rounded-full group-hover:bg-[#F7971E]/20 transition-all duration-700"></div>
-              <div className="text-6xl font-black text-[#F7971E] tracking-tighter mb-2">68%</div>
-              <p className="text-xs font-bold uppercase tracking-widest text-white/40 leading-tight">Managers want <br />unified AI dashboards</p>
+              <div className="absolute bottom-[-20%] right-[-5%] w-64 h-64 bg-[#F7971E]/10 blur-3xl rounded-full group-hover:bg-[#F7971E]/20 transition-all duration-700"></div>
+              <div className="relative z-10">
+                <div className="text-7xl md:text-8xl font-black text-[#F7971E] tracking-tighter mb-2">68%</div>
+                <p className="text-xs font-bold uppercase tracking-widest text-white/40 leading-tight">Managers want unified AI dashboards</p>
+              </div>
+              <p className="text-[14px] md:text-[16px] text-gray-500 font-light max-w-md leading-relaxed relative z-10 mt-6 md:mt-0">
+                Across 180 surveyed managers, the overwhelming demand is for a single intelligent platform that brings tasks, attendance, communication, and AI insights together.
+              </p>
             </motion.div>
           </div>
         </div>
@@ -284,7 +317,9 @@ const ProjectAICaseStudy: React.FC = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-auto">
-            {/* Widget 1: Arjun Persona (Tall Left) */}
+
+            {/* Row 1: Arjun (tall, left) + Priya (right) */}
+            {/* Widget 1: Arjun Persona (col-span-5 row-span-2 — tall left pillar) */}
             <motion.div 
               {...fadeIn}
               className="md:col-span-5 md:row-span-2 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-10 flex flex-col relative overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
@@ -301,7 +336,7 @@ const ProjectAICaseStudy: React.FC = () => {
               </div>
               
               <blockquote className="text-[15px] md:text-[17px] font-light text-gray-300 leading-relaxed italic mb-10 relative z-10">
-                "I need to know who’s blocked, what’s behind, and what’s shipping — without opening 4 different tools every morning."
+                "I need to know who's blocked, what's behind, and what's shipping — without opening 4 different tools every morning."
               </blockquote>
 
               <div className="mt-auto relative z-10">
@@ -315,7 +350,7 @@ const ProjectAICaseStudy: React.FC = () => {
               </div>
             </motion.div>
 
-            {/* Widget 2: Priya Persona (Wide Top Right) */}
+            {/* Widget 2: Priya Persona (col-span-7 — wide top right) */}
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.1 }}
@@ -335,17 +370,17 @@ const ProjectAICaseStudy: React.FC = () => {
                   "Sharing Figma links, feedback, and file versions across chat and email wastes hours. I need a central place my AI can access everything."
                 </blockquote>
               </div>
-              <div className="w-full md:w-32 aspect-square rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center relative group-hover:scale-105 transition-transform duration-500 overflow-hidden shrink-0">
+              <div className="w-full md:w-36 aspect-square rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center relative group-hover:scale-105 transition-transform duration-500 overflow-hidden shrink-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#FF6584]/10 to-transparent"></div>
                 <div className="relative text-[#FF6584]/40 group-hover:text-[#FF6584]/60 transition-colors font-black text-4xl italic px-4 text-center leading-none">FIGMA DATA</div>
               </div>
             </motion.div>
 
-            {/* Widget 3: Rohan Persona (Modern Square Mid Right) */}
+            {/* Widget 3: Rohan Persona (col-span-7 — wide bottom right, fills Arjun's second row) */}
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.2 }}
-              className="md:col-span-4 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 flex flex-col group hover:border-[#43E97B]/30 transition-all duration-500"
+              className="md:col-span-7 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 flex flex-col group hover:border-[#43E97B]/30 transition-all duration-500"
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-[#43E97B]/10 flex items-center justify-center border border-[#43E97B]/20">
@@ -356,7 +391,7 @@ const ProjectAICaseStudy: React.FC = () => {
                   <p className="text-[10px] font-medium text-[#43E97B] uppercase tracking-widest leading-none mt-1">Backend developer</p>
                 </div>
               </div>
-              <blockquote className="text-[13px] md:text-[14px] text-gray-400 font-light leading-relaxed italic mb-6">
+              <blockquote className="text-[13px] md:text-[15px] text-gray-400 font-light leading-relaxed italic mb-6">
                 "When I report a bug or code issue, it takes 3 days to reach the right person. I want to just describe it to an AI and have it routed instantly."
               </blockquote>
               <div className="mt-auto p-3 rounded-xl bg-[#43E97B]/5 border border-[#43E97B]/10 flex items-center gap-3">
@@ -365,11 +400,12 @@ const ProjectAICaseStudy: React.FC = () => {
               </div>
             </motion.div>
 
-            {/* Widget 4: Survey Data (Bottom Left Med) */}
+            {/* Row 3: Survey Data (col-span-4) + Key Insights (col-span-8) */}
+            {/* Widget 4: Survey Data */}
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.3 }}
-              className="md:col-span-3 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 flex flex-col relative overflow-hidden group hover:border-[#F7971E]/30 transition-all duration-500"
+              className="md:col-span-4 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 flex flex-col relative overflow-hidden group hover:border-[#F7971E]/30 transition-all duration-500"
             >
               <div className="flex items-center justify-between mb-8">
                 <div className="w-10 h-10 rounded-xl bg-[#F7971E]/10 flex items-center justify-center border border-[#F7971E]/20">
@@ -412,11 +448,11 @@ const ProjectAICaseStudy: React.FC = () => {
               </p>
             </motion.div>
 
-            {/* Widget 5: Key Insights (Bottom Right Big) */}
+            {/* Widget 5: Key Insights (col-span-8 — wide right) */}
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.4 }}
-              className="md:col-span-7 md:row-span-1 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 md:p-10 flex flex-col relative overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
+              className="md:col-span-8 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 md:p-10 flex flex-col relative overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
             >
               <div className="absolute top-[-20%] right-[-10%] w-32 h-32 bg-[#6C63FF]/10 blur-3xl rounded-full group-hover:bg-[#6C63FF]/20 transition-all duration-700"></div>
               <div className="flex items-center gap-4 mb-8">

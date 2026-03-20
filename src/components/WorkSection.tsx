@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
 import { PROJECTS } from '../constants';
 import { Project } from '../types';
-import { ExternalLink, X, MessageSquare, Lock, ArrowRight } from 'lucide-react';
+import { ExternalLink, MessageSquare, Lock, ArrowRight } from 'lucide-react';
 
 const WorkSection = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -14,17 +14,28 @@ const WorkSection = () => {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
+      // Reset navbar when modal closes
+      (window as any).__modalScrollY = 0;
+      window.dispatchEvent(new CustomEvent('modalscroll', { detail: { scrollTop: 0 } }));
     }
     return () => {
       document.body.style.overflow = 'unset';
     };
   }, [selectedProject]);
 
+  useEffect(() => {
+    const handleCloseModal = () => setSelectedProject(null);
+    window.addEventListener('close-modal', handleCloseModal);
+    return () => window.removeEventListener('close-modal', handleCloseModal);
+  }, []);
+
   const handleProjectClick = (project: Project) => {
     if (project.id === '1') {
       navigate('/projects/balance-nutrition');
     } else if (project.id === '2') {
       navigate('/projects/project-ai');
+    } else if (project.id === '3') {
+      navigate('/projects/aivory-studio');
     } else if (project.externalLink) {
       window.open(project.externalLink, '_blank');
     } else {
@@ -87,23 +98,8 @@ const WorkSection = () => {
                     </p>
                   </div>
 
-                  {/* Project Metadata */}
-                  <div className="flex flex-wrap gap-x-12 md:gap-x-16 gap-y-6 pt-2 md:pt-4">
-                    <div className="space-y-4">
-                      <span className="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] font-mono">Time</span>
-                      <p className="text-gray-300 text-xs md:text-base">{project.time}</p>
-                    </div>
-                    <div className="space-y-4">
-                      <span className="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] font-mono">Role</span>
-                      <p className="text-gray-300 text-xs md:text-base whitespace-pre-line leading-snug">{project.role}</p>
-                    </div>
-                    {project.featuredOn && (
-                      <div className="space-y-1">
-                        <span className="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase tracking-[0.2em] font-mono">Featured On</span>
-                        <p className="text-gray-300 text-xs md:text-base">{project.featuredOn}</p>
-                      </div>
-                    )}
-                  </div>
+
+
                 </div>
 
                 {/* Desktop-only Buttons (Right Side) */}
@@ -149,56 +145,25 @@ const WorkSection = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] bg-[#050505] overflow-y-auto"
+            onScroll={(e) => {
+              const scrollTop = e.currentTarget.scrollTop;
+              (window as any).__modalScrollY = scrollTop;
+              window.dispatchEvent(new CustomEvent('modalscroll', { detail: { scrollTop } }));
+            }}
           >
-            {/* Modal Header / Controls */}
-            <div className="sticky top-0 z-[110] flex justify-between items-center px-6 md:px-12 py-6 bg-[#050505]/80 backdrop-blur-xl border-b border-white/5">
-              <div className="flex items-center space-x-4">
-                <div className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center border border-white/10">
-                  <div className="w-4 h-4 border-2 border-white rounded-sm rotate-45" />
-                </div>
-                <span className="text-sm font-bold text-white uppercase tracking-widest">Case Study</span>
-              </div>
-              <button 
-                onClick={() => setSelectedProject(null)}
-                className="group flex items-center space-x-3 px-6 py-3 bg-white/5 hover:bg-white/10 rounded-full text-white transition-all border border-white/10"
-              >
-                <span className="text-xs font-bold uppercase tracking-widest">Close</span>
-                <X className="w-5 h-5 group-hover:rotate-90 transition-transform duration-300" />
-              </button>
-            </div>
 
-            <div className="max-w-7xl mx-auto px-6 md:px-12 py-24">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 pt-36 pb-24">
               {/* Hero Section */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-end mb-24">
-                <div>
-                  <h2 className="text-5xl md:text-8xl font-bold text-white tracking-tighter leading-[0.9] mb-8">
-                    {selectedProject.title}
-                  </h2>
-                  <div className="flex flex-wrap gap-3">
-                    {selectedProject.tags.map(tag => (
-                      <span key={tag} className="px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-xs font-bold uppercase tracking-widest border border-blue-500/20">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-8 border-l border-white/10 pl-8">
-                  <div>
-                    <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2 block">Role</span>
-                    <p className="text-white text-sm font-medium">{selectedProject.role}</p>
-                  </div>
-                  <div>
-                    <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2 block">Timeline</span>
-                    <p className="text-white text-sm font-medium">{selectedProject.time}</p>
-                  </div>
-                  <div>
-                    <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2 block">Company</span>
-                    <p className="text-white text-sm font-medium">{selectedProject.company}</p>
-                  </div>
-                  <div>
-                    <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2 block">Featured</span>
-                    <p className="text-white text-sm font-medium">{selectedProject.featuredOn || 'N/A'}</p>
-                  </div>
+              <div className="mb-24 mt-10">
+                <h2 className="text-[38px] md:text-[86px] font-bold text-white tracking-tighter leading-[1.1] mb-8">
+                  {selectedProject.title}
+                </h2>
+                <div className="flex flex-wrap gap-3">
+                  {selectedProject.tags.map(tag => (
+                    <span key={tag} className="px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-xs font-bold uppercase tracking-widest border border-blue-500/20">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
               </div>
 
@@ -207,15 +172,36 @@ const WorkSection = () => {
                 initial={{ y: 40, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
-                className="aspect-video rounded-[8px] overflow-hidden mb-32 border border-white/10"
+                className="w-full rounded-[14px] overflow-hidden mb-16 border border-white/10 flex justify-center bg-[#0a0a0a]"
               >
                 <img 
                   src={selectedProject.image} 
                   alt={selectedProject.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto object-contain rounded-[14px]"
+                  style={{ maxHeight: '85vh' }}
                   referrerPolicy="no-referrer"
                 />
               </motion.div>
+
+              {/* Metadata */}
+              <div className="grid grid-cols-2 gap-8 border-l border-white/10 pl-8 mb-32 max-w-xl">
+                <div>
+                  <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2 block">Role</span>
+                  <p className="text-white text-sm font-medium whitespace-pre-line leading-relaxed">{selectedProject.role}</p>
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2 block">Timeline</span>
+                  <p className="text-white text-sm font-medium">{selectedProject.time}</p>
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2 block">Company</span>
+                  <p className="text-white text-sm font-medium">{selectedProject.company}</p>
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-2 block">Featured</span>
+                  <p className="text-white text-sm font-medium">{selectedProject.featuredOn || 'N/A'}</p>
+                </div>
+              </div>
 
               {/* Overview */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-24 mb-32">

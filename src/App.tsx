@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import ResumePage from './pages/ResumePage';
 import BalanceNutritionCaseStudy from './components/BalanceNutritionCaseStudy';
 import ProjectAICaseStudy from './components/ProjectAICaseStudy';
+import AivoryStudioCaseStudy from './components/AivoryStudioCaseStudy';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -37,6 +38,7 @@ function App() {
           } />
           <Route path="/projects/balance-nutrition" element={<BalanceNutritionCaseStudy />} />
           <Route path="/projects/project-ai" element={<ProjectAICaseStudy />} />
+          <Route path="/projects/aivory-studio" element={<AivoryStudioCaseStudy />} />
           <Route path="/resume" element={<ResumePage />} />
         </Routes>
       </div>

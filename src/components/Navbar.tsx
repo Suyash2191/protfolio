@@ -24,8 +24,23 @@ const Navbar: React.FC<NavbarProps> = () => {
       setLastScrollY(currentScrollY);
     };
 
+    const handleModalScroll = (e: Event) => {
+      const scrollTop = (e as CustomEvent).detail?.scrollTop ?? 0;
+      setIsScrolled(scrollTop > 20);
+      if (scrollTop > lastScrollY && scrollTop > 100) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      setLastScrollY(scrollTop);
+    };
+
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('modalscroll', handleModalScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('modalscroll', handleModalScroll);
+    };
   }, [lastScrollY]);
 
   // Handle cross-page hash scrolls
@@ -59,6 +74,9 @@ const Navbar: React.FC<NavbarProps> = () => {
   ];
 
   const handleNavClick = (item: MenuItem) => {
+    // Dispatch event to close any open modal
+    window.dispatchEvent(new CustomEvent('close-modal'));
+
     if (item.path) {
       navigate(item.path);
       return;
@@ -68,16 +86,18 @@ const Navbar: React.FC<NavbarProps> = () => {
       if (location.pathname !== '/') {
         navigate(`/#${item.id}`);
       } else {
-        const element = document.getElementById(item.id);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
+        setTimeout(() => {
+          const element = document.getElementById(item.id as string);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 50);
       }
     }
   };
 
   return (
-    <nav className="fixed top-8 left-0 right-0 z-50 flex justify-center w-full px-4 pointer-events-none">
+    <nav className="fixed top-8 left-0 right-0 z-[200] flex justify-center w-full px-4 pointer-events-none">
       <motion.div 
         initial={{ y: -100, opacity: 0 }}
         animate={{ 
