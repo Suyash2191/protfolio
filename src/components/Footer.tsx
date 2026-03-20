@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
 import { Mail, Phone, Download, Send, Linkedin, Twitter, Github } from 'lucide-react';
 
 interface FooterProps {}
 
+const WHATSAPP_NUMBER = '919167575880';
+
 const Footer: React.FC<FooterProps> = () => {
   const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const { name, email, phone, message } = formData;
+    const text = `Hello Suyash! 👋\n\nI came across your portfolio and would love to connect.\n\n*Name:* ${name}\n*Email:* ${email}\n*Phone:* ${phone}\n\n*Message:*\n${message}`;
+    const encoded = encodeURIComponent(text);
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`, '_blank');
+  };
 
   return (
     <footer id="contact" className="bg-[#050505] pt-24 pb-12 border-t border-white/5">
@@ -48,12 +69,16 @@ const Footer: React.FC<FooterProps> = () => {
           </div>
 
           <div className="bg-white/5 p-8 md:p-12 rounded-3xl border border-white/10">
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-gray-400 uppercase tracking-widest">Full Name</label>
                   <input 
-                    type="text" 
+                    type="text"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
                     placeholder="John Doe"
                     className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
                   />
@@ -61,7 +86,11 @@ const Footer: React.FC<FooterProps> = () => {
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-gray-400 uppercase tracking-widest">Email Address</label>
                   <input 
-                    type="email" 
+                    type="email"
+                    name="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="john@example.com"
                     className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
                   />
@@ -70,7 +99,11 @@ const Footer: React.FC<FooterProps> = () => {
               <div className="space-y-2">
                 <label className="text-xs font-bold text-gray-400 uppercase tracking-widest">Phone Number</label>
                 <input 
-                  type="tel" 
+                  type="tel"
+                  name="phone"
+                  required
+                  value={formData.phone}
+                  onChange={handleChange}
                   placeholder="+91 00000 00000"
                   className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors"
                 />
@@ -79,12 +112,19 @@ const Footer: React.FC<FooterProps> = () => {
                 <label className="text-xs font-bold text-gray-400 uppercase tracking-widest">Message</label>
                 <textarea 
                   rows={4}
+                  name="message"
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Tell me about your project..."
                   className="w-full bg-black/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500 transition-colors resize-none"
                 />
               </div>
-              <button className="w-full py-4 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 transition-all flex items-center justify-center space-x-2">
-                <span>Send Message</span>
+              <button
+                type="submit"
+                className="w-full py-4 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 transition-all flex items-center justify-center space-x-2"
+              >
+                <span>Send Message on WhatsApp</span>
                 <Send className="w-4 h-4" />
               </button>
             </form>
