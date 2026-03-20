@@ -5,7 +5,7 @@ import { Mail, Phone, Download, Send, Linkedin, Twitter, Github } from 'lucide-r
 
 interface FooterProps {}
 
-const WHATSAPP_NUMBER = '919167575880';
+const WHATSAPP_NUMBER = '919167575889';
 
 const Footer: React.FC<FooterProps> = () => {
   const navigate = useNavigate();
