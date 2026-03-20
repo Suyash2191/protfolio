@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
-import { Mail, Phone, Download, Send, Linkedin, Twitter, Github } from 'lucide-react';
+import { Mail, Phone, Download, Send, Linkedin, Twitter, Github, Instagram } from 'lucide-react';
 
 interface FooterProps {}
 
@@ -139,6 +139,7 @@ const Footer: React.FC<FooterProps> = () => {
             © 2026 Suyash Shirsat. All rights reserved.
           </p>
           <div className="flex space-x-6">
+            <a href="https://www.instagram.com/uiuxsuyash/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><Instagram className="w-5 h-5" /></a>
             <a href="#" className="text-gray-400 hover:text-white transition-colors"><Linkedin className="w-5 h-5" /></a>
             <a href="#" className="text-gray-400 hover:text-white transition-colors"><Twitter className="w-5 h-5" /></a>
             <a href="#" className="text-gray-400 hover:text-white transition-colors"><Github className="w-5 h-5" /></a>

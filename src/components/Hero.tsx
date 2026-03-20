@@ -1,11 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Sparkles, ArrowRight } from 'lucide-react';
-import AppointmentModal from './AppointmentModal';
+import { Sparkles, ArrowRight, X, CheckCircle2 } from 'lucide-react';
 
 const Hero = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const WHATSAPP_NUMBER = '919167575889';
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const { name, email, phone, message } = formData;
+    const text = `Hello Suyash! 👋\n\nI would like to book an appointment with you.\n\n*Name:* ${name}\n*Email:* ${email}\n*Phone:* ${phone}\n\n*Message:*\n${message}`;
+    const encoded = encodeURIComponent(text);
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`, '_blank');
+    setIsSuccess(true);
+    setFormData({ name: '', email: '', phone: '', message: '' });
+  };
 
   const images = [
     '/images/img1.jpg',
@@ -133,24 +155,150 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 1 }}
           className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mt-10"
         >
-          <button
+          <button 
             onClick={() => setIsModalOpen(true)}
-            className="w-full sm:w-auto px-10 h-[56px] bg-white text-black text-[16px] font-bold rounded-full hover:bg-gray-200 transition-all flex items-center justify-center font-poppins"
+            className="w-full sm:w-auto px-10 h-[56px] bg-white text-black text-[16px] font-bold rounded-full hover:bg-gray-200 transition-all flex items-center justify-center font-poppins cursor-pointer"
           >
             Book an Appointment
           </button>
-          <button className="w-full sm:w-auto group px-10 h-[56px] bg-transparent border border-white/20 text-white text-[16px] font-medium rounded-full hover:bg-white/5 transition-all flex items-center justify-center space-x-2 font-poppins">
+          <button className="w-full sm:w-auto group px-10 h-[56px] bg-transparent border border-white/20 text-white text-[16px] font-medium rounded-full hover:bg-white/5 transition-all flex items-center justify-center space-x-2 font-poppins cursor-pointer">
             <span>View My Work</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
         </motion.div>
       </div>
 
+      {/* Appointment Modal */}
+      <AnimatePresence>
+        {isModalOpen && (
+          <div className="fixed inset-0 z-[1000] flex items-center justify-center px-6">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => {
+                setIsModalOpen(false);
+                setIsSuccess(false);
+              }}
+              className="absolute inset-0 bg-black/80 backdrop-blur-xl"
+            />
+            
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              className="relative w-full max-w-xl bg-[#0A0A0A] border border-white/10 rounded-[40px] p-8 md:p-12 shadow-[0_30px_100px_rgba(0,0,0,0.8)] overflow-hidden"
+            >
+              {/* Decorative background element */}
+              <div className="absolute -top-24 -right-24 w-48 h-48 bg-blue-600/20 blur-[80px] rounded-full" />
+              
+              <button 
+                onClick={() => {
+                  setIsModalOpen(false);
+                  setIsSuccess(false);
+                }}
+                className="absolute top-6 right-6 p-2 text-gray-400 hover:text-white transition-colors cursor-pointer"
+              >
+                <X className="w-6 h-6" />
+              </button>
+
+              {!isSuccess ? (
+                <div className="relative z-10">
+                  <div className="mb-10">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Let's build together</h2>
+                    <p className="text-gray-400">Fill in the details below to start our journey.</p>
+                  </div>
+
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold text-gray-500 uppercase tracking-widest ml-1">Full Name</label>
+                      <input 
+                        type="text"
+                        name="name"
+                        required
+                        value={formData.name}
+                        onChange={handleChange}
+                        placeholder="Suyash Shirsat"
+                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-blue-500 transition-colors placeholder:text-gray-700"
+                      />
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label className="text-xs font-bold text-gray-500 uppercase tracking-widest ml-1">Gmail Address</label>
+                        <input 
+                          type="email"
+                          name="email"
+                          required
+                          value={formData.email}
+                          onChange={handleChange}
+                          placeholder="suyash@gmail.com"
+                          className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-blue-500 transition-colors placeholder:text-gray-700"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-xs font-bold text-gray-500 uppercase tracking-widest ml-1">Phone Number</label>
+                        <input 
+                          type="tel"
+                          name="phone"
+                          required
+                          value={formData.phone}
+                          onChange={handleChange}
+                          placeholder="+91 00000 00000"
+                          className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-blue-500 transition-colors placeholder:text-gray-700"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold text-gray-500 uppercase tracking-widest ml-1">Message</label>
+                      <textarea 
+                        rows={3}
+                        name="message"
+                        required
+                        value={formData.message}
+                        onChange={handleChange}
+                        placeholder="Tell me about your project..."
+                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-blue-500 transition-colors resize-none placeholder:text-gray-700"
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="w-full py-5 bg-white text-black font-bold rounded-2xl hover:bg-blue-500 hover:text-white transition-all transform hover:scale-[1.02] active:scale-95 flex items-center justify-center space-x-2 cursor-pointer shadow-lg shadow-white/5"
+                    >
+                      <span className="text-lg">Submit Request</span>
+                      <ArrowRight className="w-5 h-5" />
+                    </button>
+                  </form>
+                </div>
+              ) : (
+                <div className="relative z-10 py-12 flex flex-col items-center text-center">
+                  <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mb-6">
+                    <CheckCircle2 className="w-10 h-10 text-green-500" />
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Done!</h2>
+                  <p className="text-xl text-gray-400 mb-10 max-w-sm">
+                    Your appointment request has been sent successfully. I'll get back to you soon!
+                  </p>
+                  <button
+                    onClick={() => {
+                      setIsModalOpen(false);
+                      setIsSuccess(false);
+                    }}
+                    className="px-12 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-2xl hover:bg-white/10 transition-all cursor-pointer"
+                  >
+                    Close
+                  </button>
+                </div>
+              )}
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
+
       {/* Decorative Grid */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-
-      {/* Appointment Modal */}
-      <AppointmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 };

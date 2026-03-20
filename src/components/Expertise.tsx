@@ -86,7 +86,7 @@ const Expertise = () => {
           </div>
           
           <a 
-            href="https://instagram.com" 
+            href="https://www.instagram.com/uiuxsuyash/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="group relative px-8 py-4 bg-white text-black font-bold rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95 flex items-center gap-3"
