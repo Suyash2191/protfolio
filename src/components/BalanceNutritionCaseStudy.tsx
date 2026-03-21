@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'motion/react';
-import { ArrowLeft, Clock, User, Award, CheckCircle2, Target, AlertCircle, Users, Zap, Activity, Globe, TrendingUp, TrendingDown, LayoutGrid, Search, MessageSquare, ListChecks, ShoppingCart, ClipboardCheck, Star, Salad, MessageCircle, BarChart3, Rocket, ArrowUp, ArrowDown, Check, Quote } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Clock, User, Award, CheckCircle2, Target, AlertCircle, Users, Zap, Activity, Globe, TrendingUp, TrendingDown, LayoutGrid, Search, MessageSquare, ListChecks, ShoppingCart, ClipboardCheck, Star, Salad, MessageCircle, BarChart3, Rocket, ArrowUp, ArrowDown, Check, Quote } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const BalanceNutritionCaseStudy = () => {
@@ -866,11 +866,36 @@ const BalanceNutritionCaseStudy = () => {
         </div>
       </section>
 
-      {/* 09. User Journey */}
-      <section className="py-[50px] md:py-24 px-6 md:px-12 lg:px-24 bg-[#050505] overflow-hidden">
+      {/* 09. 3D Cleanses Section */}
+      <section className="py-[50px] md:py-24 px-6 md:px-12 lg:px-24 bg-[#050505]">
+        <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
+          <div className="space-y-6 text-left">
+            <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-white/40">09. 3D Cleanses</h2>
+            <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
+              Clinically Designed <span className="italic">Detox Plans.</span>
+            </h3>
+            <p className="text-base md:text-[18px] text-white/60 leading-relaxed font-light">
+              A comprehensive view of the 3-day cleanse program documentation and structure.
+            </p>
+          </div>
+          <div className="flex flex-col gap-6 md:gap-10 mt-12 w-full mx-auto max-w-5xl">
+            {[1, 2, 3, 4].map((num) => (
+               <img 
+                 key={num}
+                 src={`/images/3d-cleanses-${num}.png`} 
+                 alt={`3D Cleanses Document Part ${num}`} 
+                 className="w-full h-auto rounded-[14px] md:rounded-[24px] border border-white/10 shadow-2xl"
+               />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 10. User Journey */}
+      <section className="py-[50px] md:py-24 px-6 md:px-12 lg:px-24 bg-[#0a0a0a] overflow-hidden">
         <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
           <div className="space-y-6 text-left max-w-4xl">
-            <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-white/40">09. Client Flow</h2>
+            <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-white/40">10. Client Flow</h2>
             <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
               End-to-End <br /><span className="italic">Journey.</span>
             </h3>
@@ -1002,7 +1027,7 @@ const BalanceNutritionCaseStudy = () => {
         </div>
       </section>
 
-      {/* 10. Metrics & Impact */}
+      {/* 11. Metrics & Impact */}
       <section className="py-[50px] md:py-24 px-6 md:px-12 lg:px-24 bg-[#030303] overflow-hidden">
         <div className="max-w-7xl mx-auto space-y-20">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 relative">
@@ -1010,7 +1035,7 @@ const BalanceNutritionCaseStudy = () => {
             <div className="absolute -top-24 -left-24 w-96 h-96 bg-blue-600/10 blur-[120px] -z-10"></div>
             
             <div className="space-y-6 text-left">
-              <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.4em] text-blue-500">10. Goals & Success</h2>
+              <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.4em] text-blue-500">11. Goals & Success</h2>
               <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
                 Impact by <span className="text-blue-500 italic">Design.</span>
               </h3>
@@ -1213,7 +1238,7 @@ const BalanceNutritionCaseStudy = () => {
         <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
           <div className="flex flex-col md:flex-row justify-between items-end gap-8">
             <div className="space-y-6 text-left">
-              <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-white/30">11. The Design System</h2>
+              <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-white/30">12. The Design System</h2>
               <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
                 Consistency <br />at Scale
               </h3>
@@ -1355,12 +1380,12 @@ const BalanceNutritionCaseStudy = () => {
         </div>
       </section>
 
-      {/* Section 11: Visual Designs */}
+      {/* Section 13: Visual Designs */}
       <section className="py-[50px] md:py-24 px-6 md:px-12 lg:px-24 bg-[#050505]">
         <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
             <div className="space-y-6 text-left">
-              <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-[#00858C]">12. Visual Designs</h2>
+              <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-[#00858C]">13. Visual Designs</h2>
               <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
                 The Final <br />Experience
               </h3>
@@ -1465,6 +1490,44 @@ const BalanceNutritionCaseStudy = () => {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* 14. Prototype Section */}
+      <section className="py-[50px] md:py-32 px-6 md:px-12 lg:px-24 bg-[#050505] border-t border-white/5 relative overflow-hidden">
+        {/* Subtle background glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#00858C]/10 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div className="max-w-4xl mx-auto text-center space-y-10 relative z-10">
+          <div className="space-y-4">
+            <h2 className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#00858C]">
+              14. Interactive Prototype
+            </h2>
+            <h3 className="text-[32px] md:text-6xl font-bold tracking-tight leading-tight text-white">
+              Experience the <br className="hidden md:block" />
+              <span className="italic text-white/50">Final Design.</span>
+            </h3>
+            <p className="text-base md:text-[18px] text-gray-400 font-light leading-relaxed max-w-2xl mx-auto mt-6">
+              Dive into the complete interactive prototype to explore the user flow, micro-interactions, and visual fidelity firsthand.
+            </p>
+          </div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="pt-8 flex justify-center"
+          >
+            <a 
+              href="https://www.figma.com/proto/TTWnJegkrk73a0ZVnubO7v/BN-Website-Design?node-id=6105-58487&viewport=992%2C-23659%2C0.29&t=HAAT1dQ6PwV5q1QC-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=6105%3A58487&page-id=0%3A1" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group relative inline-flex items-center justify-center gap-4 bg-white text-black px-10 py-5 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-[#00858C] hover:text-white transition-all duration-500 overflow-hidden shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_40px_rgba(0,133,140,0.4)]"
+            >
+              <span className="relative z-10">View Prototype</span>
+              <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </motion.div>
         </div>
       </section>
 

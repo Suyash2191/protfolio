@@ -97,12 +97,8 @@ const ProjectAICaseStudy: React.FC = () => {
         </motion.div>
       </section>
 
-      {/* FEATURED IMAGE 1 - KEY VISUAL */}
-      <section className="px-6 md:px-12 py-10">
-        <motion.div {...fadeIn} className="max-w-5xl mx-auto rounded-[8px] overflow-hidden border border-[#1E2030] shadow-2xl bg-[#0F1118]">
-          <img src="/images/cs-dashboard-full.png" alt="Status Overview" className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity duration-700" />
-        </motion.div>
-      </section>
+
+
 
       {/* 01 - PROBLEM STATEMENT */}
       <section id="problem" className="px-6 md:px-12 py-24 border-t border-[#1E2030]/50">
@@ -165,33 +161,24 @@ const ProjectAICaseStudy: React.FC = () => {
               <p className="text-[14px] text-gray-400 leading-relaxed font-light">
                 Teams use Jira, Slack, Notion, HR tools, and spreadsheets separately. Context is lost between every switch, creating friction and errors.
               </p>
-              <div className="mt-auto grid grid-cols-4 gap-3">
+              <div className="mt-auto grid grid-cols-4 gap-3 md:gap-4 pb-2">
                 {[
-                  { name: 'Jira', src: '/images/jira-logo.svg' },
-                  { name: 'Slack', src: '/images/slack-logo.svg' },
-                  { name: 'Notion', src: '/images/notion-logo.svg' },
-                  { name: 'Excel', src: '/images/excel-logo.svg' },
-                  { name: 'HR Tools', src: '/images/hr-icon.png' },
-                  { name: 'Figma', src: '/images/figma-logo.svg' },
+                  { name: 'Monday', src: '/images/new-monday-logo.png' },
+                  { name: 'Excel', src: '/images/new-excel-logo.png' },
+                  { name: 'Linear', src: '/images/new-linear-logo.png' },
                   { name: 'GitHub', src: '/images/github-logo.svg' },
-                  { name: 'Trello', src: '/images/trello-logo.svg' }
+                  { name: 'Notion', src: '/images/new-notion-logo.png' },
+                  { name: 'Google Drive', src: '/images/new-gdrive-logo.png' },
+                  { name: 'ClickUp', src: '/images/new-clickup-logo.png' },
+                  { name: 'Trello', src: '/images/new-trello-logo.png' }
                 ].map((tool, i) => (
-                  <div 
-                    key={i} 
-                    className="aspect-square rounded-[12px] bg-white/5 border border-white/[0.08] flex items-center justify-center group/icon hover:bg-white/10 hover:border-[#6C63FF]/30 transition-all duration-500 relative overflow-hidden shadow-[0_4px_24px_-1px_rgba(0,0,0,0.2)] p-2.5"
-                  >
-                    {/* Subtle Inner Glow */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#6C63FF]/5 to-transparent opacity-0 group-hover/icon:opacity-100 transition-opacity duration-500" />
-                    
-                    {/* High-Fidelity Color Logo Image */}
+                  <div key={i} className="aspect-square rounded-[12px] bg-white/[0.02] border border-white/10 flex items-center justify-center relative overflow-hidden group hover:border-[#6C63FF]/40 hover:bg-[#6C63FF]/5 transition-all duration-300 shadow-[0_4px_12px_rgba(0,0,0,0.2)]">
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <img 
                       src={tool.src} 
-                      className="w-full h-full object-contain opacity-100 transition-all duration-500 scale-[1.05]" 
-                      alt={tool.name}
+                      alt={tool.name} 
+                      className="w-8 h-8 md:w-10 md:h-10 object-contain relative z-10 group-hover:scale-110 group-hover:brightness-125 transition-all duration-300" 
                     />
-
-                    {/* Outer Border Glow Effect on Hover */}
-                    <div className="absolute inset-0 rounded-[12px] opacity-0 group-hover/icon:opacity-100 transition-opacity duration-500 pointer-events-none border border-[#6C63FF]/20 blur-[1px]" />
                   </div>
                 ))}
               </div>
@@ -481,12 +468,7 @@ const ProjectAICaseStudy: React.FC = () => {
         </div>
       </section>
 
-       {/* RELEVANT IMAGE CLIP - DASHBOARD TEAM */}
-       <section className="px-6 md:px-12 py-12">
-        <motion.div {...fadeIn} className="max-w-4xl mx-auto rounded-[8px] overflow-hidden border border-[#1E2030] shadow-xl bg-[#0F1118]">
-           <img src="/images/cs-dashboard-team.png" alt="Team Dashboard" className="w-full h-auto opacity-90 transition-opacity hover:opacity-100 duration-700" />
-        </motion.div>
-      </section>
+
 
       {/* 03 - COMPETITIVE */}
       <section className="px-6 md:px-12 py-24">
@@ -976,15 +958,15 @@ const ProjectAICaseStudy: React.FC = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <motion.div {...fadeIn} className="md:col-span-2 rounded-[8px] overflow-hidden border border-[#1E2030] bg-[#0F1118] group">
-              <img src="/images/cs-showcase-1.png" alt="High Fidelity Dashboard" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
+              <img src="/images/cs-ai-assistant-full.png" alt="AI Assistant Full Dashboard" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
             </motion.div>
             
             <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="rounded-[8px] overflow-hidden border border-[#1E2030] bg-[#0F1118] group">
-              <img src="/images/cs-showcase-2.png" alt="Task management interface" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
+              <img src="/images/cs-ai-assistant-orb.png" alt="AI Assistant Interface" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
             </motion.div>
             
             <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="rounded-[8px] overflow-hidden border border-[#1E2030] bg-[#0F1118] group">
-              <img src="/images/cs-showcase-3.png" alt="Board view light theme" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
+              <img src="/images/cs-ai-orb-center.png" alt="AI Assistant Orb" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             </motion.div>
 
             <motion.div {...fadeIn} transition={{ delay: 0.3 }} className="rounded-[8px] overflow-hidden border border-[#1E2030] bg-[#0F1118] group">

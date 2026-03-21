@@ -19,7 +19,7 @@ export const PROJECTS: Project[] = [
     company: 'TEAM AI',
     category: 'website',
     description: 'An intelligent project management dashboard where AI handles your entire company pipeline — tasks, teams, deadlines, attendance, and communication through voice and chat.',
-    image: '/images/cs-dashboard-full.png',
+    image: '/images/cs-ai-greeting.png',
     tags: ['AI', 'Dashboard', 'SaaS'],
     caseStudy: 'An intelligent project management dashboard where AI handles your entire company pipeline — tasks, teams, deadlines, attendance, and communication through voice and chat.',
     time: '2024 - 25',
