@@ -1203,49 +1203,58 @@ const ProjectAICaseStudy: React.FC = () => {
         </div>
       </section>
 
-      {/* 08 - INTERACTIVE PROTOTYPE */}
-      <section id="prototype" className="py-[100px] md:py-32 px-6 md:px-12 lg:px-24 bg-[#07080C] border-t border-white/5 relative overflow-hidden text-center">
-        {/* Subtle background glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#6C63FF]/10 blur-[120px] rounded-full pointer-events-none"></div>
+      {/* 08 - LIVE PROTOTYPE */}
+      <section id="prototype" className="relative px-6 md:px-12 py-32 overflow-hidden bg-[#0a1a1a]">
+        {/* Background decorative elements */}
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#43E97B]/5 to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-[#6C63FF]/5 to-transparent pointer-events-none" />
         
-        {/* Decorative Background Image (Balance Nutrition style carrot as requested) */}
-        <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-[400px] md:w-[600px] opacity-[0.08] pointer-events-none select-none">
-          <img src="/images/clara.png" alt="" className="w-full h-auto filter grayscale grayscale-brightness-150 rotate-[-15deg] transition-all duration-1000" />
-        </div>
-        <div className="absolute -right-20 top-0 w-[400px] md:w-[600px] opacity-[0.05] pointer-events-none select-none">
-          <img src="/images/clara.png" alt="" className="w-full h-auto scale-x-[-1] rotate-[15deg] transition-all duration-1000" />
-        </div>
-        
-        <div className="max-w-4xl mx-auto space-y-10 relative z-10 flex flex-col items-center">
-          <div className="space-y-4">
-            <h2 className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#7ecfef]">
-              08. Interactive Prototype
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+            <div className="text-[12px] font-bold tracking-[0.3em] mb-8 uppercase text-[#43E97B]">
+              14. Interactive prototype
+            </div>
+            
+            <h2 className="text-[40px] md:text-[80px] font-bold text-white mb-8 leading-[1.1] tracking-tighter">
+              Experience the <br /> <span className="italic font-serif font-light text-gray-400">Final Design.</span>
             </h2>
-            <h3 className="text-[32px] md:text-[72px] font-bold tracking-tight leading-tight text-white">
-              Experience the <br className="hidden md:block" />
-              <span className="italic text-white/50">Final Design.</span>
-            </h3>
-            <p className="text-base md:text-[18px] text-gray-400 font-light leading-relaxed max-w-2xl mx-auto mt-6">
-              Dive into the complete interactive prototype to explore the user flow, micro-interactions, and visual fidelity firsthand.
+            
+            <p className="text-lg md:text-xl text-gray-400 font-light mb-16 max-w-2xl leading-relaxed">
+              Dive into the complete interactive prototype to explore the user flow, <br className="hidden md:block" /> 
+              micro-interactions, and visual fidelity firsthand.
             </p>
-          </div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="pt-8 flex justify-center w-full"
-          >
-            <a 
-              href="https://www.figma.com/proto/bJ10VJ0DVgxd4unyzsd7GN/Untitled?node-id=888-9705&viewport=-8380%2C464%2C0.21&t=kZW4dm8jU5LmgyfD-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=888%3A9705&page-id=699%3A11452" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="group relative inline-flex items-center justify-center gap-4 bg-white text-black px-10 py-5 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-[#6C63FF] hover:text-white transition-all duration-500 overflow-hidden shadow-[0_20px_40px_rgba(255,255,255,0.1)] hover:shadow-[0_20px_40px_rgba(108,99,255,0.3)]"
+            
+            {/* CTA Button */}
+            <motion.button
+              whileHover={{ scale: 1.05, y: -5 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => window.open('https://www.figma.com/proto/bJ10VJ0DVgxd4unyzsd7GN/Untitled?node-id=888-9705&viewport=-8380%2C464%2C0.21&t=kZW4dm8jU5LmgyfD-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=888%3A9705&page-id=699%3A11452', '_blank')}
+              className="px-10 h-16 bg-white text-black rounded-full font-bold text-sm tracking-widest uppercase flex items-center gap-4 hover:bg-gray-100 transition-all shadow-[0_20px_40px_rgba(255,255,255,0.1)] mb-24"
             >
-              <span className="relative z-10">View Prototype</span>
-              <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </motion.div>
+              VIEW PROTOTYPE
+              <ArrowRight className="w-5 h-5" />
+            </motion.button>
+            
+            {/* Mockup Preview Area */}
+            <div className="relative w-full max-w-6xl mt-12">
+               <motion.div
+                 initial={{ y: 50, opacity: 0 }}
+                 whileInView={{ y: 0, opacity: 1 }}
+                 transition={{ duration: 0.8 }}
+                 viewport={{ once: true }}
+                 className="relative z-10"
+               >
+                 <img 
+                   src="/images/bn-life-carrot.png" 
+                   alt="Final Design Showcase" 
+                   className="w-full h-auto drop-shadow-[0_50px_100px_rgba(0,0,0,0.5)]"
+                 />
+                 
+                 {/* Decorative glow behind image */}
+                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-[#43E97B]/20 blur-[120px] rounded-full -z-10" />
+               </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
