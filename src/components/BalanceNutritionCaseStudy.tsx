@@ -21,16 +21,16 @@ const BalanceNutritionCaseStudy = () => {
             transition={{ duration: 0.8 }}
             className="space-y-4"
           >
-            <div className="flex items-center gap-4 text-blue-500 font-mono text-xs tracking-[0.3em] uppercase">
-              <span>[001]</span>
+            <div className="flex items-center gap-4 text-blue-500 font-mono text-[11px] tracking-[0.4em] uppercase font-bold mb-10">
+              <span className="bg-blue-500 text-black px-2 py-0.5 rounded-sm">001</span>
               <span>Case Study</span>
             </div>
             
-            <h1 className="text-[34px] md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[1.1] md:leading-[1.05]">
-              <span className="block">Balance Nutrition</span>
-              <span className="text-gray-500 font-light italic block md:inline">Product Design</span>
+            <h1 className="text-[44px] md:text-[110px] lg:text-[120px] font-bold tracking-tighter leading-[0.95]">
+              <span className="block text-white">Balance Nutrition</span>
+              <span className="text-white/20 font-extralight italic block mt-2">Product Design</span>
             </h1>
-            <p className="text-lg md:text-2xl text-gray-400 font-light leading-relaxed max-w-2xl mt-6">
+            <p className="text-lg md:text-2xl text-gray-400 font-light leading-relaxed max-w-2xl mt-12">
               A holistic ecosystem combining expert human counseling, <br className="hidden md:block" />
               AI-driven support, and personalized data tracking.
             </p>

@@ -65,15 +65,14 @@ const ProjectAICaseStudy: React.FC = () => {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-5xl md:mt-12"
         >
-          <div className="inline-flex items-center gap-2 bg-[#6C63FF]/10 border border-[#6C63FF]/30 rounded-full px-4 py-1.5 text-[11px] uppercase tracking-wider text-[#6C63FF] font-semibold mb-8">
-            <span className="w-1.5 h-1.5 bg-[#6C63FF] rounded-full animate-ping" />
-            UX / Product Design Case Study
+          <div className="flex items-center gap-4 text-[#6C63FF] font-mono text-[11px] tracking-[0.4em] uppercase font-bold mb-10">
+            <span className="bg-[#6C63FF] text-white px-2 py-0.5 rounded-sm">002</span>
+            <span>Case Study</span>
           </div>
 
-          <h1 className="text-[48px] md:text-[96px] font-bold leading-[1.15] tracking-tighter text-white mb-6">
-            AI-Powered<br />
-            <span className="bg-gradient-to-r from-[#6C63FF] to-[#FF6584] bg-clip-text text-transparent">Team Command</span><br />
-            Center
+          <h1 className="text-[44px] md:text-[110px] lg:text-[120px] font-bold tracking-tighter leading-[0.95] text-white">
+            <span className="block">Team Command</span>
+            <span className="text-white/20 font-extralight italic block mt-2">Center Intelligence</span>
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl leading-relaxed font-light mb-14">
