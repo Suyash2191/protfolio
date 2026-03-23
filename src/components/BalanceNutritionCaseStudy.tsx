@@ -6,52 +6,53 @@ import { useNavigate, Link } from 'react-router-dom';
 const BalanceNutritionCaseStudy = () => {
   const navigate = useNavigate();
 
-  useEffect(() => {
+  React.useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-blue-500/30">
       {/* Hero Section */}
-      <section className="relative pt-48 md:pt-48 pb-[30px] md:pb-20 px-6 md:px-12 lg:px-24 border-b border-white/5">
+      {/* Hero Section */}
+      <section className="relative pt-48 md:pt-48 pb-20 px-6 md:px-12 lg:px-24 overflow-hidden border-b border-white/5">
+        {/* Animated Glows */}
+        <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-blue-500 rounded-full blur-[120px] opacity-[0.08] pointer-events-none animate-pulse" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-[#00858C] rounded-full blur-[120px] opacity-[0.08] pointer-events-none animate-pulse" style={{ animationDelay: '1s' }} />
+
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-4"
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            className="space-y-8 z-10 relative"
           >
-            <div className="flex items-center gap-4 text-blue-500 font-mono text-[11px] tracking-[0.4em] uppercase font-bold mb-10">
-              <span className="bg-blue-500 text-black px-2 py-0.5 rounded-sm">001</span>
-              <span>Case Study</span>
+            <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/30 rounded-full px-4 py-1.5 text-[11px] uppercase tracking-wider text-blue-500 font-semibold mb-4">
+              <span className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-ping" />
+              UX / Product Design Case Study
             </div>
             
-            <h1 className="text-[44px] md:text-[110px] lg:text-[120px] font-bold tracking-tighter leading-[0.95]">
-              <span className="block text-white">Balance Nutrition</span>
-              <span className="text-white/20 font-extralight italic block mt-2">Product Design</span>
+            <h1 className="text-[48px] md:text-[96px] font-bold leading-[1.1] tracking-tighter text-white">
+              Balance Nutrition<br />
+              <span className="bg-gradient-to-r from-blue-500 to-[#0284c7] bg-clip-text text-transparent italic">Product Design</span>
             </h1>
-            <p className="text-lg md:text-2xl text-gray-400 font-light leading-relaxed max-w-2xl mt-12">
-              A holistic ecosystem combining expert human counseling, <br className="hidden md:block" />
-              AI-driven support, and personalized data tracking.
+
+            <p className="text-lg md:text-2xl text-gray-400 font-light leading-relaxed max-w-3xl mt-6">
+              End-to-end product design for a health platform trusted by thousands. <br className="hidden md:block" />
+              A holistic ecosystem combining expert human counseling, AI-driven support, and personalized data tracking.
             </p>
             
-            <div className="grid grid-cols-2 gap-4 pt-8 border-t border-white/5">
-              <div>
-                <p className="text-[10px] uppercase tracking-widest text-white/30 mb-2">Designer</p>
-                <p className="text-sm font-medium">Suyash Shirsat</p>
-              </div>
-              <div>
-                <p className="text-[10px] uppercase tracking-widest text-white/30 mb-2">Role</p>
-                <p className="text-sm font-medium">Lead Product Designer</p>
-              </div>
-              <div>
-                <p className="text-[10px] uppercase tracking-widest text-white/30 mb-2">Platform</p>
-                <p className="text-sm font-medium">Web · App · AI</p>
-              </div>
-              <div>
-                <p className="text-[10px] uppercase tracking-widest text-white/30 mb-2">Duration</p>
-                <p className="text-sm font-medium">10 Weeks</p>
-              </div>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-10 border-t border-white/5 max-w-4xl">
+              {[
+                { label: 'Designer', value: 'Suyash Shirsat' },
+                { label: 'Role', value: 'Lead Product Designer' },
+                { label: 'Platform', value: 'Web · App · AI' },
+                { label: 'Duration', value: '10 Weeks' }
+              ].map((item, i) => (
+                <div key={i}>
+                  <p className="text-[10px] uppercase tracking-widest text-white/30 mb-2 font-bold">{item.label}</p>
+                  <p className="text-[15px] font-medium text-white/90">{item.value}</p>
+                </div>
+              ))}
             </div>
           </motion.div>
         </div>
