@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ArrowRight, Check, X, Search, BarChart2, MessageSquare, Clock, Shield, Users, Layout, Zap, Mic, FileText, Smartphone, Globe, Home, Github, Trello } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUpRight, Check, X, Search, BarChart2, MessageSquare, Clock, Shield, Users, Layout, Zap, Mic, FileText, Smartphone, Globe, Home, Github, Trello } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ProjectAICaseStudy: React.FC = () => {
@@ -1200,6 +1200,47 @@ const ProjectAICaseStudy: React.FC = () => {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* 09 - LIVE PROTOTYPE */}
+      <section className="px-6 md:px-12 py-32 border-t border-[#1E2030]/50 bg-[#070707]">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] mb-6 text-[#9d7cf0] uppercase">
+            Interactive Experience
+          </div>
+          <h2 className="text-[36px] md:text-[72px] font-bold text-white mb-16 leading-[1.05] tracking-tighter text-left">Live Prototype</h2>
+          
+          <motion.div 
+            {...fadeIn}
+            className="relative rounded-[14px] md:rounded-[2.5rem] overflow-hidden group aspect-[16/9] border border-white/10 bg-[#0F1118]"
+          >
+            <img 
+              src="/images/cs-ai-prototype-preview.png" 
+              alt="Live Prototype Preview" 
+              className="w-full h-full object-cover opacity-80 transition-transform duration-1000 group-hover:scale-105 group-hover:opacity-100"
+            />
+            <div className="absolute inset-0 bg-black/40 md:bg-black/20 group-hover:bg-black/10 transition-colors duration-500 flex items-center justify-center">
+               <motion.div
+                 whileHover={{ scale: 1.05 }}
+                 whileTap={{ scale: 0.95 }}
+                 className="relative z-10"
+               >
+                 <a
+                   href="#" // Placeholder for Figma link
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="px-10 py-5 bg-[#8b5cf6] text-white rounded-full font-bold text-xl md:text-2xl flex items-center gap-4 hover:bg-[#7c3aed] transition-all shadow-[0_20px_50px_rgba(139,92,246,0.3)]"
+                 >
+                   View Prototype
+                   <ArrowUpRight className="w-6 h-6 md:w-8 md:h-8" />
+                 </a>
+               </motion.div>
+            </div>
+            
+            {/* Decorative Overlay */}
+            <div className="absolute inset-0 pointer-events-none border-[12px] md:border-[24px] border-black/5 rounded-[14px] md:rounded-[2.5rem]"></div>
+          </motion.div>
         </div>
       </section>
 

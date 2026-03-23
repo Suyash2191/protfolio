@@ -1495,7 +1495,43 @@ const BalanceNutritionCaseStudy = () => {
         </div>
       </section>
 
-
+      {/* 14. Prototype Section */}
+      <section className="py-[50px] md:py-32 px-6 md:px-12 lg:px-24 bg-[#050505] border-t border-white/5 relative overflow-hidden">
+        {/* Subtle background glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#00858C]/10 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div className="max-w-4xl mx-auto text-center space-y-10 relative z-10">
+          <div className="space-y-4">
+            <h2 className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#00858C]">
+              14. Interactive Prototype
+            </h2>
+            <h3 className="text-[32px] md:text-6xl font-bold tracking-tight leading-tight text-white">
+              Experience the <br className="hidden md:block" />
+              <span className="italic text-white/50">Final Design.</span>
+            </h3>
+            <p className="text-base md:text-[18px] text-gray-400 font-light leading-relaxed max-w-2xl mx-auto mt-6">
+              Dive into the complete interactive prototype to explore the user flow, micro-interactions, and visual fidelity firsthand.
+            </p>
+          </div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="pt-8 flex justify-center"
+          >
+            <a 
+              href="https://www.figma.com/proto/TTWnJegkrk73a0ZVnubO7v/BN-Website-Design?node-id=6105-58487&viewport=992%2C-23659%2C0.29&t=HAAT1dQ6PwV5q1QC-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=6105%3A58487&page-id=0%3A1" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group relative inline-flex items-center justify-center gap-4 bg-white text-black px-10 py-5 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-[#00858C] hover:text-white transition-all duration-500 overflow-hidden shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_40px_rgba(0,133,140,0.4)]"
+            >
+              <span className="relative z-10">View Prototype</span>
+              <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Results / Conclusion Section */}
       {/* Footer Navigation */}
