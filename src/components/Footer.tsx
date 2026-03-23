@@ -68,7 +68,7 @@ const Footer: React.FC<FooterProps> = () => {
             </div>
           </div>
 
-          <div className="bg-white/5 p-8 md:p-12 rounded-3xl border border-white/10">
+          <div className="bg-white/5 p-[12px] md:p-12 rounded-3xl border border-white/10">
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
@@ -124,7 +124,7 @@ const Footer: React.FC<FooterProps> = () => {
                 type="submit"
                 className="w-full py-4 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-700 transition-all flex items-center justify-center space-x-2"
               >
-                <span>Send Message on WhatsApp</span>
+                <span>send the message</span>
                 <Send className="w-4 h-4" />
               </button>
             </form>
