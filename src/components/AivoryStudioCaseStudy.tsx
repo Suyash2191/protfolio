@@ -45,7 +45,7 @@ const AivoryStudioCaseStudy: React.FC = () => {
           </div>
 
           <h1 className="text-[40px] md:text-[86px] font-bold leading-[1.1] tracking-tighter text-white mb-6">
-            Aivory Studio — <br />
+            Aivory Studio <br />
             <span className="bg-gradient-to-r from-[#7c3aed] to-[#a78bfa] bg-clip-text text-transparent">AI Photo Editing</span>
           </h1>
 
@@ -75,7 +75,7 @@ const AivoryStudioCaseStudy: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
             <motion.div {...fadeIn}>
-              <div className="text-[11px] font-bold tracking-[0.2em] mb-4 text-[#a78bfa] uppercase">01 — Overview</div>
+              <div className="text-[11px] font-bold tracking-[0.2em] mb-4 text-[#a78bfa] uppercase">01 Overview</div>
               <h2 className="text-[32px] md:text-5xl font-bold text-white mb-8 tracking-tighter leading-[1.1]">What is Aivory Studio?</h2>
               <p className="text-gray-400 font-light leading-relaxed text-[16px] md:text-lg">
                 Aivory Studio is an AI-powered photo editing platform designed for creators, photographers, and marketing professionals. The client needed a complete, production-ready UI for a complex product — one that felt modern, clean, and powerful without overwhelming the user. I was brought in as the UI Designer to design every screen of the product from scratch.
@@ -105,9 +105,9 @@ const AivoryStudioCaseStudy: React.FC = () => {
       {/* CHALLENGE */}
       <section className="px-6 md:px-12 py-24 bg-[#0F1118]/30 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col items-start md:items-center mb-16 md:mb-20">
-            <div className="text-[11px] font-bold tracking-[0.2em] mb-4 text-[#a78bfa] uppercase">02 — The Challenge</div>
-            <h2 className="text-[32px] md:text-6xl font-bold text-white mb-6 tracking-tighter leading-[1.1] md:text-center text-left">Problem to solve</h2>
+          <div className="flex flex-col items-start mb-16 md:mb-20">
+            <div className="text-[11px] font-bold tracking-[0.2em] mb-4 text-[#a78bfa] uppercase">02 The Challenge</div>
+            <h2 className="text-[32px] md:text-6xl font-bold text-white mb-6 tracking-tighter leading-[1.1] text-left">Problem to solve</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -151,8 +151,8 @@ const AivoryStudioCaseStudy: React.FC = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-[#7c3aed]/5 blur-[120px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto relative">
-          <div className="flex flex-col items-start text-left md:items-center md:text-center mb-16 md:mb-20">
-            <div className="text-[11px] font-bold tracking-[0.3em] mb-4 text-[#a78bfa] uppercase">03 — User Flow</div>
+          <div className="flex flex-col items-start text-left mb-16 md:mb-20">
+            <div className="text-[11px] font-bold tracking-[0.3em] mb-4 text-[#a78bfa] uppercase">03 User Flow</div>
             <h2 className="text-[32px] md:text-7xl font-bold text-white mb-6 tracking-tighter max-w-4xl leading-[1.1]">
               Your workflows,<br />always in motion.
             </h2>
@@ -324,7 +324,7 @@ const AivoryStudioCaseStudy: React.FC = () => {
       <section className="px-6 md:px-12 py-24 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-start mb-16 md:mb-20">
-            <div className="text-[11px] font-bold tracking-[0.2em] mb-4 text-[#a78bfa] uppercase">04 — Interface Modules</div>
+            <div className="text-[11px] font-bold tracking-[0.2em] mb-4 text-[#a78bfa] uppercase">04 Interface Modules</div>
             <h2 className="text-[32px] md:text-7xl font-bold text-white mb-6 tracking-tighter leading-[1.1] text-left">Production-Ready<br />Interface Modules</h2>
           </div>
 
@@ -340,7 +340,7 @@ const AivoryStudioCaseStudy: React.FC = () => {
               { title: 'AI Tools Panel', desc: 'Slide-in left panel with tool cards, thumbnails, and scrollable feature list.', icon: Settings, image: '/images/aivory-toolspanel-ui.png' },
               { title: 'Layers Panel', desc: 'Right-side layers stack with visibility toggle, layer name, and lock icons.', icon: Settings, image: '/images/aivory-layerspanel-ui.png' },
               { title: 'New File Modal', desc: 'Frame size picker with 6 preset options and custom pixel inputs.', icon: Layout, image: '/images/aivory-newfilemodal-ui.png' },
-              { title: 'Auth Flows', desc: 'Split-screen layout — AI visual on right, form on left with social OAuth.', icon: LogIn },
+              { title: 'Auth Flows', desc: 'Split-screen layout — AI visual on right, form on left with social OAuth.', icon: LogIn, image: '/images/aivory-authflows-ui.png' },
               { title: 'Landing Page', desc: 'Full-width hero, AI features showcase, and creators social proof.', icon: Globe, image: '/images/aivory-landingpage-ui.png' }
             ].map((feature: any, idx) => (
               <motion.div 
@@ -438,7 +438,7 @@ const AivoryStudioCaseStudy: React.FC = () => {
       <section className="px-6 md:px-12 py-24 bg-[#0F1118]/30">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-start mb-16 md:mb-20">
-            <div className="text-[11px] font-bold tracking-[0.2em] mb-4 text-[#a78bfa] uppercase">05 — Design Decisions</div>
+            <div className="text-[11px] font-bold tracking-[0.2em] mb-4 text-[#a78bfa] uppercase">05 Design Decisions</div>
             <h2 className="text-[32px] md:text-6xl font-bold text-white mb-6 tracking-tighter text-left leading-[1.1]">Strategic UI Choices</h2>
           </div>
 
@@ -479,7 +479,7 @@ const AivoryStudioCaseStudy: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
             <div className="md:col-span-2 text-left">
-              <div className="text-[11px] font-bold tracking-[0.2em] mb-4 text-[#a78bfa] uppercase">06 — Outcome</div>
+              <div className="text-[11px] font-bold tracking-[0.2em] mb-4 text-[#a78bfa] uppercase">06 Outcome</div>
               <h2 className="text-[32px] md:text-6xl font-bold text-white mb-8 tracking-tighter leading-[1.1] text-left">Handoff-ready ecosystem</h2>
               <p className="text-gray-400 font-light leading-relaxed text-[16px] md:text-xl max-w-2xl mb-12">
                 This project delivered a comprehensive design system and a suite of high-fidelity screens, ready for the development team to implement the next generation of AI photo editing.
@@ -520,7 +520,7 @@ const AivoryStudioCaseStudy: React.FC = () => {
           
           <div className="flex items-center justify-between w-full md:w-auto gap-8">
             <span className="text-gray-600 font-mono text-[10px] uppercase tracking-widest">Next Case Study</span>
-            <Link to="/projects/project-ai" className="text-xl md:text-2xl font-bold text-white hover:text-[#7c3aed] transition-colors tracking-tighter">AI Dashboard &rarr;</Link>
+            <Link to="/projects/balance-nutrition" className="text-xl md:text-2xl font-bold text-white hover:text-[#7c3aed] transition-colors tracking-tighter">Balance Nutrition &rarr;</Link>
           </div>
         </div>
       </section>

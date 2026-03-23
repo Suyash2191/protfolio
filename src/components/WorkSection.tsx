@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { PROJECTS } from '../constants';
 import { Project } from '../types';
 import { ExternalLink, MessageSquare, Lock, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const WorkSection = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -29,13 +30,17 @@ const WorkSection = () => {
     return () => window.removeEventListener('close-modal', handleCloseModal);
   }, []);
 
+  const getProjectLink = (project: Project) => {
+    if (project.id === '1') return '/projects/balance-nutrition';
+    if (project.id === '2') return '/projects/project-ai';
+    if (project.id === '3') return '/projects/aivory-studio';
+    return null;
+  };
+
   const handleProjectClick = (project: Project) => {
-    if (project.id === '1') {
-      navigate('/projects/balance-nutrition');
-    } else if (project.id === '2') {
-      navigate('/projects/project-ai');
-    } else if (project.id === '3') {
-      navigate('/projects/aivory-studio');
+    const link = getProjectLink(project);
+    if (link) {
+      navigate(link);
     } else if (project.externalLink) {
       window.open(project.externalLink, '_blank');
     } else {
@@ -73,24 +78,54 @@ const WorkSection = () => {
                   </div>
                   
                   <div className="space-y-4 md:space-y-6">
-                    <h4 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1] max-w-4xl">
-                      {project.title}
-                    </h4>
+                    {getProjectLink(project) ? (
+                      <Link to={getProjectLink(project)!} className="block group">
+                        <h4 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1] max-w-4xl group-hover:text-blue-500 transition-colors">
+                          {project.title}
+                        </h4>
+                      </Link>
+                    ) : (
+                      <h4 
+                        className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1] max-w-4xl cursor-pointer"
+                        onClick={() => handleProjectClick(project)}
+                      >
+                        {project.title}
+                      </h4>
+                    )}
 
                     {/* Mobile-only Buttons (Above Description) */}
                     <div className="flex lg:hidden flex-row flex-wrap gap-2 pt-2">
-                      <button 
-                        onClick={() => handleProjectClick(project)}
-                        className="px-4 h-10 bg-white/10 hover:bg-white/20 text-white text-[9px] font-bold uppercase tracking-widest rounded-full border border-white/10 transition-all flex items-center justify-center gap-2"
-                      >
-                        Case Study <MessageSquare className="w-3 h-3" />
-                      </button>
-                      <button 
-                        onClick={() => handleProjectClick(project)}
-                        className="px-4 h-10 bg-white/5 hover:bg-white/10 text-white text-[9px] font-bold uppercase tracking-widest rounded-full border border-white/10 transition-all flex items-center justify-center gap-2"
-                      >
-                        View More <ArrowRight className="w-3 h-3" />
-                      </button>
+                      {getProjectLink(project) ? (
+                        <>
+                          <Link 
+                            to={getProjectLink(project)!}
+                            className="px-4 h-10 bg-white/10 hover:bg-white/20 text-white text-[9px] font-bold uppercase tracking-widest rounded-full border border-white/10 transition-all flex items-center justify-center gap-2"
+                          >
+                            Case Study <MessageSquare className="w-3 h-3" />
+                          </Link>
+                          <Link 
+                            to={getProjectLink(project)!}
+                            className="px-4 h-10 bg-white/5 hover:bg-white/10 text-white text-[9px] font-bold uppercase tracking-widest rounded-full border border-white/10 transition-all flex items-center justify-center gap-2"
+                          >
+                            View More <ArrowRight className="w-3 h-3" />
+                          </Link>
+                        </>
+                      ) : (
+                        <>
+                          <button 
+                            onClick={() => handleProjectClick(project)}
+                            className="px-4 h-10 bg-white/10 hover:bg-white/20 text-white text-[9px] font-bold uppercase tracking-widest rounded-full border border-white/10 transition-all flex items-center justify-center gap-2"
+                          >
+                            Case Study <MessageSquare className="w-3 h-3" />
+                          </button>
+                          <button 
+                            onClick={() => handleProjectClick(project)}
+                            className="px-4 h-10 bg-white/5 hover:bg-white/10 text-white text-[9px] font-bold uppercase tracking-widest rounded-full border border-white/10 transition-all flex items-center justify-center gap-2"
+                          >
+                            View More <ArrowRight className="w-3 h-3" />
+                          </button>
+                        </>
+                      )}
                     </div>
                     
                     <p className="text-gray-400 text-lg md:text-xl leading-relaxed max-w-3xl font-light">
@@ -104,34 +139,68 @@ const WorkSection = () => {
 
                 {/* Desktop-only Buttons (Right Side) */}
                 <div className="hidden lg:flex flex-row lg:flex-row gap-3 lg:justify-end lg:pt-14">
-                  <button 
-                    onClick={() => handleProjectClick(project)}
-                    className="flex-none px-8 h-12 bg-white/5 hover:bg-white/10 text-white text-[11px] font-bold uppercase tracking-widest rounded-full border border-white/10 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
-                  >
-                    Case Study
-                  </button>
-                  <button 
-                    onClick={() => handleProjectClick(project)}
-                    className="flex-none px-8 h-12 bg-white/5 hover:bg-white/10 text-white text-[11px] font-bold uppercase tracking-widest rounded-full border border-white/10 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
-                  >
-                    View More <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
-                  </button>
+                  {getProjectLink(project) ? (
+                    <>
+                      <Link 
+                        to={getProjectLink(project)!}
+                        className="flex-none px-8 h-12 bg-white/5 hover:bg-white/10 text-white text-[11px] font-bold uppercase tracking-widest rounded-full border border-white/10 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
+                      >
+                        Case Study
+                      </Link>
+                      <Link 
+                        to={getProjectLink(project)!}
+                        className="flex-none px-8 h-12 bg-white/5 hover:bg-white/10 text-white text-[11px] font-bold uppercase tracking-widest rounded-full border border-white/10 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
+                      >
+                        View More <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
+                      </Link>
+                    </>
+                  ) : (
+                    <>
+                      <button 
+                        onClick={() => handleProjectClick(project)}
+                        className="flex-none px-8 h-12 bg-white/5 hover:bg-white/10 text-white text-[11px] font-bold uppercase tracking-widest rounded-full border border-white/10 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
+                      >
+                        Case Study
+                      </button>
+                      <button 
+                        onClick={() => handleProjectClick(project)}
+                        className="flex-none px-8 h-12 bg-white/5 hover:bg-white/10 text-white text-[11px] font-bold uppercase tracking-widest rounded-full border border-white/10 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
+                      >
+                        View More <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
+                      </button>
+                    </>
+                  )}
                 </div>
               </div>
 
               {/* Project Image */}
-              <div 
-                className="relative group cursor-pointer overflow-hidden rounded-[8px] aspect-video bg-gray-900 border border-white/5"
-                onClick={() => handleProjectClick(project)}
-              >
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.02]"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
-              </div>
+              {getProjectLink(project) ? (
+                <Link 
+                  to={getProjectLink(project)!}
+                  className="relative group cursor-pointer overflow-hidden rounded-[8px] aspect-video bg-gray-900 border border-white/5"
+                >
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.02]"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
+                </Link>
+              ) : (
+                <div 
+                  className="relative group cursor-pointer overflow-hidden rounded-[8px] aspect-video bg-gray-900 border border-white/5"
+                  onClick={() => handleProjectClick(project)}
+                >
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.02]"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
+                </div>
+              )}
             </motion.div>
           ))}
         </div>

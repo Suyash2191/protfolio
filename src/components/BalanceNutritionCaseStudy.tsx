@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'motion/react';
 import { ArrowLeft, ArrowRight, Clock, User, Award, CheckCircle2, Target, AlertCircle, Users, Zap, Activity, Globe, TrendingUp, TrendingDown, LayoutGrid, Search, MessageSquare, ListChecks, ShoppingCart, ClipboardCheck, Star, Salad, MessageCircle, BarChart3, Rocket, ArrowUp, ArrowDown, Check, Quote } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const BalanceNutritionCaseStudy = () => {
   const navigate = useNavigate();
@@ -1532,29 +1532,19 @@ const BalanceNutritionCaseStudy = () => {
       </section>
 
       {/* Results / Conclusion Section */}
-      <section className="py-[50px] md:py-40 px-6 md:px-12 lg:px-24">
-        <div className="max-w-3xl mx-auto text-left md:text-center space-y-12">
-          <motion.div 
-            initial={{ scale: 0.9, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            className="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center md:mx-auto"
-          >
-            <Award className="w-10 h-10 text-white" />
-          </motion.div>
-          <h2 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight">
-            Designed for <br />
-            <span className="text-white/40 font-light italic uppercase">Real Impact.</span>
-          </h2>
-          <p className="text-base md:text-xl text-gray-400 leading-relaxed font-light">
-            Through the introduction of Clara AI and a complete UI overhaul, Balance Nutrition transitioned into a market leader in personalized health technology.
-          </p>
-          <div className="pt-8">
-            <button 
-              onClick={() => navigate('/')}
-              className="px-10 py-5 bg-white text-black rounded-full text-xs font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors"
-            >
-              Back to Portfolio
-            </button>
+      {/* Footer Navigation */}
+      <section className="px-6 md:px-12 py-24 border-t border-white/5 bg-[#0a0a0a]">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12 md:gap-8">
+          <Link to="/" className="group flex items-center gap-4 self-start md:self-auto">
+            <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
+              <ArrowLeft className="w-5 h-5" />
+            </div>
+            <span className="text-white/40 group-hover:text-white transition-colors">Back to Portfolio</span>
+          </Link>
+          
+          <div className="flex items-center justify-between w-full md:w-auto gap-8">
+            <span className="text-gray-600 font-mono text-[10px] uppercase tracking-widest">Next Case Study</span>
+            <Link to="/projects/project-ai" className="text-[20px] md:text-2xl font-bold text-white hover:text-blue-500 transition-colors tracking-tighter">Team AI Command Center &rarr;</Link>
           </div>
         </div>
       </section>

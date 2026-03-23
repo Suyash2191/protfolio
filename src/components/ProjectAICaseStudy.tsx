@@ -77,7 +77,7 @@ const ProjectAICaseStudy: React.FC = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl leading-relaxed font-light mb-14">
-            A complete product design journey — intelligent project management platform where AI handles your entire company pipeline. Tasks, teams, deadlines, attendance, and communication.
+            A complete product design journey intelligent project management platform where AI handles your entire company pipeline. Tasks, teams, deadlines, attendance, and communication.
           </p>
 
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-x-10 gap-y-8 border-t border-[#1E2030] pt-10">
@@ -146,43 +146,7 @@ const ProjectAICaseStudy: React.FC = () => {
             </motion.div>
 
             {/* Row 2: Tool Frag (4) + AI Not Integrated (5, row-span-2) + 6-12 Stat (3) = 12 */}
-            {/* Widget 3: Tool Fragmentation */}
-            <motion.div 
-              {...fadeIn}
-              transition={{ delay: 0.2 }}
-              className="md:col-span-4 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 flex flex-col gap-6 hover:border-[#6C63FF]/30 transition-all duration-500 min-h-[400px]"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#6C63FF]/10 flex items-center justify-center border border-[#6C63FF]/20">
-                  <Layout className="w-5 h-5 text-[#6C63FF]" />
-                </div>
-                <h3 className="text-xl font-bold text-white tracking-tight">Tool fragmentation</h3>
-              </div>
-              <p className="text-[14px] text-gray-400 leading-relaxed font-light">
-                Teams use Jira, Slack, Notion, HR tools, and spreadsheets separately. Context is lost between every switch, creating friction and errors.
-              </p>
-              <div className="mt-auto grid grid-cols-4 gap-3 md:gap-4 pb-2">
-                {[
-                  { name: 'Monday', src: '/images/new-monday-logo.png' },
-                  { name: 'Excel', src: '/images/new-excel-logo.png' },
-                  { name: 'Linear', src: '/images/new-linear-logo.png' },
-                  { name: 'GitHub', src: '/images/github-logo.svg' },
-                  { name: 'Notion', src: '/images/new-notion-logo.png' },
-                  { name: 'Google Drive', src: '/images/new-gdrive-logo.png' },
-                  { name: 'ClickUp', src: '/images/new-clickup-logo.png' },
-                  { name: 'Trello', src: '/images/new-trello-logo.png' }
-                ].map((tool, i) => (
-                  <div key={i} className="aspect-square rounded-[12px] bg-white/[0.02] border border-white/10 flex items-center justify-center relative overflow-hidden group hover:border-[#6C63FF]/40 hover:bg-[#6C63FF]/5 transition-all duration-300 shadow-[0_4px_12px_rgba(0,0,0,0.2)]">
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <img 
-                      src={tool.src} 
-                      alt={tool.name} 
-                      className="w-8 h-8 md:w-10 md:h-10 object-contain relative z-10 group-hover:scale-110 group-hover:brightness-125 transition-all duration-300" 
-                    />
-                  </div>
-                ))}
-              </div>
-            </motion.div>
+
 
             {/* Widget 4: AI Not Integrated (spans rows 2 & 3 in middle) */}
             <motion.div 
@@ -294,7 +258,7 @@ const ProjectAICaseStudy: React.FC = () => {
       <section className="relative px-6 md:px-12 py-24 bg-[#0F1118]/30">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] mb-6" style={{ color: '#7ecfef' }}>
-            02 — Research
+            02 Research
           </div>
           <h2 className="text-[36px] md:text-[72px] font-bold text-white mb-6 leading-[1.05] tracking-tighter">
             What teams actually<br />need from their tools
@@ -474,7 +438,7 @@ const ProjectAICaseStudy: React.FC = () => {
       <section className="px-6 md:px-12 py-24">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] mb-6" style={{ color: '#7ecfef' }}>
-            03 — Competitive analysis
+            03 Competitive analysis
           </div>
           <h2 className="text-[30px] md:text-[56px] font-bold text-white mb-10 leading-[1.05] tracking-tighter">Where existing tools fall short</h2>
           
@@ -521,7 +485,7 @@ const ProjectAICaseStudy: React.FC = () => {
       <section className="px-6 md:px-12 py-24">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] mb-6" style={{ color: '#7ecfef' }}>
-            04 — Success metrics
+            04 Success metrics
           </div>
           <h2 className="text-[30px] md:text-[56px] font-bold text-white mb-4 leading-[1.05] tracking-tighter">What success looks like</h2>
           <p className="font-light text-[14px] md:text-[17px] text-gray-400 mb-14 leading-[1.7] tracking-tight max-w-2xl">
@@ -627,8 +591,8 @@ const ProjectAICaseStudy: React.FC = () => {
       {/* 05 - SOLUTION */}
       <section className="px-6 md:px-12 py-24 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <div className="text-[11px] uppercase tracking-[0.3em] font-bold mb-6" style={{ color: '#7ecfef' }}>05 — The solution</div>
+          <div className="text-left mb-20">
+            <div className="text-[11px] uppercase tracking-[0.3em] font-bold mb-6" style={{ color: '#7ecfef' }}>05 The solution</div>
             <h2 className="text-[30px] md:text-[58px] font-bold text-white mb-4 leading-[1.05] tracking-tighter">One platform that<br />thinks with your team</h2>
           </div>
 
@@ -768,7 +732,7 @@ const ProjectAICaseStudy: React.FC = () => {
       <section className="px-6 md:px-12 py-24 bg-[#0a0a0a] overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] mb-6" style={{ color: '#7ecfef' }}>
-            06 — User flow
+            06 User flow
           </div>
           <h2 className="text-[36px] md:text-[72px] font-bold text-white mb-16 leading-[1.05] tracking-tighter">The core AI interaction loop</h2>
 
@@ -949,45 +913,148 @@ const ProjectAICaseStudy: React.FC = () => {
 
 
       {/* 07 - UI DESIGN SHOWCASE */}
-      <section className="px-6 md:px-12 py-32 border-t border-[#1E2030]/50">
+      <section id="visual-showcase" className="px-6 md:px-12 py-32 border-t border-[#1E2030]/50">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] mb-6" style={{ color: '#7ecfef' }}>
-            07 — UI design
+            07 UI design
           </div>
           <h2 className="text-[36px] md:text-[72px] font-bold text-white mb-16 leading-[1.05] tracking-tighter">Visual Showcase</h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <motion.div {...fadeIn} className="md:col-span-2 rounded-[8px] overflow-hidden border border-[#1E2030] bg-[#0F1118] group">
-              <img src="/images/cs-ai-assistant-full.png" alt="AI Assistant Full Dashboard" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
-            </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-auto">
             
-            <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="rounded-[8px] overflow-hidden border border-[#1E2030] bg-[#0F1118] group">
-              <img src="/images/cs-ai-assistant-orb.png" alt="AI Assistant Interface" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
-            </motion.div>
-            
-            <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="rounded-[8px] overflow-hidden border border-[#1E2030] bg-[#0F1118] group">
-              <img src="/images/cs-ai-orb-center.png" alt="AI Assistant Orb" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-            </motion.div>
-
-            <motion.div {...fadeIn} transition={{ delay: 0.3 }} className="rounded-[8px] overflow-hidden border border-[#1E2030] bg-[#0F1118] group">
-              <img src="/images/cs-showcase-4.png" alt="Board view dark theme" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
-            </motion.div>
-
-            <motion.div {...fadeIn} transition={{ delay: 0.4 }} className="rounded-[8px] overflow-hidden border border-[#1E2030] bg-[#0F1118] group">
-              <img src="/images/cs-showcase-5.png" alt="Problem analysis detail" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
-            </motion.div>
-
-            <motion.div {...fadeIn} transition={{ delay: 0.5 }} className="rounded-[8px] overflow-hidden border border-[#1E2030] bg-[#0F1118] group">
-              <img src="/images/cs-showcase-6.png" alt="Data visualization charts" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
+            {/* Main Dashboard - Wide (8/12) */}
+            <motion.div 
+              {...fadeIn}
+              className="md:col-span-8 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
+            >
+              <div className="p-8 pb-0">
+                <h3 className="text-xl font-bold text-white mb-2">Command Center</h3>
+                <p className="text-sm text-gray-400 font-light mb-6">The primary workspace where AI analyzes team velocity and blocks in real-time.</p>
+              </div>
+              <div className="px-8 pb-8">
+                <div className="rounded-[1.5rem] overflow-hidden border border-white/5 bg-[#0F1118]">
+                   <img src="/images/cs-ai-assistant-full.png" alt="AI Assistant Full Dashboard" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
+                </div>
+              </div>
             </motion.div>
 
-            <motion.div {...fadeIn} transition={{ delay: 0.6 }} className="rounded-[8px] overflow-hidden border border-[#1E2030] bg-[#0F1118] group">
-              <img src="/images/cs-showcase-7.png" alt="Dashboard context view" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
+            {/* AI Assistant Orb - Small (4/12) */}
+            <motion.div 
+              {...fadeIn}
+              transition={{ delay: 0.1 }}
+              className="md:col-span-4 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] overflow-hidden group hover:border-[#FF6584]/30 transition-all duration-500 flex flex-col"
+            >
+              <div className="p-8">
+                <h3 className="text-xl font-bold text-white mb-2">AI Interface</h3>
+                <p className="text-sm text-gray-400 font-light">Minimalist interaction patterns.</p>
+              </div>
+              <div className="mt-auto px-4 pb-4">
+                <div className="rounded-[1.5rem] overflow-hidden border border-white/5 bg-[#0F1118]">
+                  <img src="/images/cs-ai-assistant-orb.png" alt="AI Assistant Interface" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
+                </div>
+              </div>
             </motion.div>
 
-            <motion.div {...fadeIn} transition={{ delay: 0.7 }} className="rounded-[8px] overflow-hidden border border-[#1E2030] bg-[#0F1118] group">
-              <img src="/images/cs-showcase-8.png" alt="Project overview layout" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
+            {/* AI Orb Detail - Small (4/12) */}
+            <motion.div 
+              {...fadeIn}
+              transition={{ delay: 0.2 }}
+              className="md:col-span-4 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] overflow-hidden group hover:border-[#43E97B]/30 transition-all duration-500"
+            >
+              <div className="relative h-full min-h-[300px]">
+                <img src="/images/cs-ai-orb-center.png" alt="AI Assistant Orb" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-8 flex flex-col justify-end">
+                  <h3 className="text-xl font-bold text-white mb-2">Dynamic Core</h3>
+                  <p className="text-sm text-gray-300 font-light">Visualizing AI thought processes.</p>
+                </div>
+              </div>
             </motion.div>
+
+            {/* Board View - Wide (8/12) */}
+            <motion.div 
+              {...fadeIn}
+              transition={{ delay: 0.3 }}
+              className="md:col-span-8 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] overflow-hidden group hover:border-[#F7971E]/30 transition-all duration-500"
+            >
+              <div className="p-8 pb-0">
+                <h3 className="text-xl font-bold text-white mb-2">Intelligent Board</h3>
+                <p className="text-sm text-gray-400 font-light mb-6">Kanban views augmented with AI prioritization markers.</p>
+              </div>
+              <div className="px-8 pb-8">
+                <div className="rounded-[1.5rem] overflow-hidden border border-white/5 bg-[#0F1118]">
+                  <img src="/images/cs-showcase-4.png" alt="Board view dark theme" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Analysis Detail - Wide (7/12) */}
+            <motion.div 
+              {...fadeIn}
+              transition={{ delay: 0.4 }}
+              className="md:col-span-7 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
+            >
+              <div className="p-8 pb-0">
+                <h3 className="text-xl font-bold text-white mb-2">Deep Analysis</h3>
+                <p className="text-sm text-gray-400 font-light mb-6">Drill down into individual task blockers and context.</p>
+              </div>
+              <div className="px-8 pb-8">
+                <div className="rounded-[1.5rem] overflow-hidden border border-white/5 bg-[#0F1118]">
+                  <img src="/images/cs-showcase-bars.png" alt="Problem analysis detail" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Visualization - Small (5/12) */}
+            <motion.div 
+              {...fadeIn}
+              transition={{ delay: 0.5 }}
+              className="md:col-span-5 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] overflow-hidden group hover:border-[#FF6584]/30 transition-all duration-500"
+            >
+              <div className="p-8 pb-0">
+                <h3 className="text-xl font-bold text-white mb-2">Insights</h3>
+                <p className="text-sm text-gray-400 font-light mb-6">Automated capacity charts.</p>
+              </div>
+              <div className="px-8 pb-8">
+                <div className="rounded-[1.5rem] overflow-hidden border border-white/5 bg-[#0F1118]">
+                  <img src="/images/cs-showcase-donut.png" alt="Data visualization charts" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Context View - Wide (6/12) */}
+            <motion.div 
+              {...fadeIn}
+              transition={{ delay: 0.6 }}
+              className="md:col-span-6 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] overflow-hidden group hover:border-[#43E97B]/30 transition-all duration-500 flex flex-col"
+            >
+              <div className="p-8 pb-0">
+                <h3 className="text-xl font-bold text-white mb-2">Project Context</h3>
+                <p className="text-sm text-gray-400 font-light mb-6">Unified file and thread context.</p>
+              </div>
+              <div className="px-8 pb-8 flex-1">
+                <div className="rounded-[1.5rem] overflow-hidden border border-white/5 bg-[#0F1118] h-full">
+                   <img src="/images/cs-showcase-7.png" alt="Dashboard context view" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Overview Layout - Wide (6/12) */}
+            <motion.div 
+              {...fadeIn}
+              transition={{ delay: 0.7 }}
+              className="md:col-span-6 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] overflow-hidden group hover:border-[#F7971E]/30 transition-all duration-500"
+            >
+              <div className="p-8 pb-0">
+                <h3 className="text-xl font-bold text-white mb-2">Team Overview</h3>
+                <p className="text-sm text-gray-400 font-light mb-6">Company-wide visibility.</p>
+              </div>
+              <div className="px-8 pb-8">
+                <div className="rounded-[1.5rem] overflow-hidden border border-white/5 bg-[#0F1118]">
+                  <img src="/images/cs-showcase-8.png" alt="Project overview layout" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
+                </div>
+              </div>
+            </motion.div>
+
           </div>
         </div>
       </section>
@@ -996,7 +1063,7 @@ const ProjectAICaseStudy: React.FC = () => {
       <section className="px-6 md:px-12 py-24 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] mb-6" style={{ color: '#7ecfef' }}>
-            08 — Design system
+            08 Design system
           </div>
           <h2 className="text-[36px] md:text-[80px] font-bold text-white mb-4 leading-[1.05] tracking-tighter">Density &amp; Clarity</h2>
           <p className="font-light text-[16px] md:text-[20px] text-gray-400 max-w-2xl mb-16 leading-[1.6] tracking-tight">
@@ -1170,7 +1237,7 @@ const ProjectAICaseStudy: React.FC = () => {
           <div className="flex flex-col items-center md:items-end gap-6 text-white/80">
             <div className="flex items-center gap-8 font-bold">
                <Link to="/" className="text-xs uppercase tracking-[0.2em] hover:text-[#6C63FF] transition-all">Home</Link>
-               <Link to="/" className="text-xs uppercase tracking-[0.2em] hover:text-[#FF6584] transition-all">Next Project</Link>
+               <Link to="/projects/aivory-studio" className="text-xs uppercase tracking-[0.2em] hover:text-[#FF6584] transition-all">Next Project</Link>
             </div>
             <div className="text-[10px] text-[#6B7280] uppercase tracking-widest font-medium">
               © 2024 · Portfolio of Suyash Shirsat · Montserrat Typography
