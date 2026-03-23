@@ -1238,7 +1238,7 @@ const BalanceNutritionCaseStudy = () => {
 
       <section className="py-[50px] md:py-24 px-6 md:px-12 lg:px-24 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
-          <div className="flex flex-col md:flex-row justify-between items-end gap-8">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
             <div className="space-y-6 text-left">
               <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-white/30">12. The Design System</h2>
               <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
@@ -1498,11 +1498,11 @@ const BalanceNutritionCaseStudy = () => {
       {/* 14 - LIVE PROTOTYPE */}
       <section id="prototype" className="px-6 md:px-12 py-32 border-t border-white/5 bg-[#07080C]">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col items-center text-center">
+          <div className="flex flex-col items-start text-left">
             <div className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] mb-6 uppercase" style={{ color: '#00858C' }}>
               Interactive experience
             </div>
-            <h2 className="text-[30px] md:text-[72px] font-bold text-white mb-16 leading-[1.05] tracking-tighter">Live Prototype</h2>
+            <h2 className="text-[28px] md:text-[72px] font-bold text-white mb-16 leading-[1.05] tracking-tighter">Live Prototype</h2>
             
             <div className="relative w-full max-w-5xl group cursor-pointer" onClick={() => window.open('https://www.figma.com/proto/C7wBDgmHz223EhnccwmLzW/balance-nutrition?node-id=69-108207&viewport=-14482%2C-9835%2C0.23&t=lDhiy4QkQAh03dEp-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=69%3A108207&page-id=0%3A1', '_blank')}>
               <div className="rounded-[14px] md:rounded-[2.5rem] overflow-hidden border border-white/10 bg-[#003B40] transition-all duration-500 group-hover:border-[#00858C]/50 shadow-2xl">
