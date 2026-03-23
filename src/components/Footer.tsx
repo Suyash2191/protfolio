@@ -34,8 +34,8 @@ const Footer: React.FC<FooterProps> = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 mb-24">
           <div className="text-center lg:text-left flex flex-col items-center lg:items-start">
-            <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tight mb-8">
-              Let's build something <span className="text-blue-500">extraordinary</span> together.
+            <h2 className="text-[36px] md:text-7xl font-bold text-white tracking-tight mb-8 leading-[1.2]">
+              Let's build something <br className="block md:hidden" /> <span className="text-blue-500">extraordinary</span> together.
             </h2>
             <p className="text-xl text-gray-400 mb-12 max-w-lg mx-auto lg:mx-0">
               Available for full-time roles and high-impact freelance projects. 
