@@ -28,7 +28,7 @@ const AivoryStudioCaseStudy: React.FC = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center px-6 md:px-12 pt-32 pb-20 overflow-hidden">
+      <section className="relative min-h-[90vh] flex flex-col justify-center px-6 md:px-12 pt-48 md:pt-32 pb-20 overflow-hidden">
         {/* Animated Glows */}
         <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-[#7c3aed] rounded-full blur-[120px] opacity-[0.08] pointer-events-none animate-pulse" />
         <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-[#a78bfa] rounded-full blur-[120px] opacity-[0.08] pointer-events-none animate-pulse" style={{ animationDelay: '1s' }} />

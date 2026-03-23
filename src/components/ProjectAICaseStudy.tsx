@@ -29,7 +29,7 @@ const ProjectAICaseStudy: React.FC = () => {
       />
 
       {/* Hero Section with AI Orb */}
-      <section className="relative min-h-[90vh] flex flex-col justify-center px-6 md:px-12 pt-32 pb-20 overflow-hidden">
+      <section className="relative min-h-[90vh] flex flex-col justify-center px-6 md:px-12 pt-48 md:pt-32 pb-20 overflow-hidden">
 
         {/* Animated AI Orb (Top Right) */}
         <motion.div 

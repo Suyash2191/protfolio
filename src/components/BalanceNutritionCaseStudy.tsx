@@ -13,7 +13,7 @@ const BalanceNutritionCaseStudy = () => {
   return (
     <div className="bg-[#050505] text-white min-h-screen font-sans selection:bg-blue-500/30">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-[30px] md:pt-48 md:pb-20 px-6 md:px-12 lg:px-24 border-b border-white/5">
+      <section className="relative pt-48 md:pt-48 pb-[30px] md:pb-20 px-6 md:px-12 lg:px-24 border-b border-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
