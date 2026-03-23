@@ -509,7 +509,7 @@ const ProjectAICaseStudy: React.FC = () => {
                 <div className="w-12 h-12 rounded-2xl bg-[#43E97B]/10 flex items-center justify-center border border-[#43E97B]/20 mb-8">
                   <Check className="w-6 h-6 text-[#43E97B]" />
                 </div>
-                <div className="text-6xl md:text-7xl font-black text-white tracking-tighter leading-none mb-3" style={{ color: '#43E97B' }}>+35%</div>
+                <div className="text-[45px] md:text-7xl font-black text-white tracking-tighter leading-none mb-3" style={{ color: '#43E97B' }}>+35%</div>
                 <p className="text-[14px] font-semibold text-white/60 tracking-wide">Completion rate</p>
                 <p className="text-[12px] text-gray-500 font-light mt-1.5 leading-relaxed">Task completion across all teams post-launch</p>
               </div>
@@ -532,7 +532,7 @@ const ProjectAICaseStudy: React.FC = () => {
                 <div className="w-12 h-12 rounded-2xl bg-[#6C63FF]/10 flex items-center justify-center border border-[#6C63FF]/20 mb-8">
                   <Zap className="w-6 h-6 text-[#6C63FF]" />
                 </div>
-                <div className="text-6xl md:text-7xl font-black text-white tracking-tighter leading-none mb-3" style={{ color: '#6C63FF' }}>8 hrs</div>
+                <div className="text-[45px] md:text-7xl font-black text-white tracking-tighter leading-none mb-3" style={{ color: '#6C63FF' }}>8 hrs</div>
                 <p className="text-[14px] font-semibold text-white/60 tracking-wide">Time saved / week</p>
                 <p className="text-[12px] text-gray-500 font-light mt-1.5 leading-relaxed">Per team member, per week on average</p>
               </div>
@@ -555,7 +555,7 @@ const ProjectAICaseStudy: React.FC = () => {
                 <div className="w-12 h-12 rounded-2xl bg-[#FF6584]/10 flex items-center justify-center border border-[#FF6584]/20 mb-8">
                   <Layout className="w-6 h-6 text-[#FF6584]" />
                 </div>
-                <div className="text-6xl md:text-7xl font-black text-white tracking-tighter leading-none mb-3" style={{ color: '#FF6584' }}>70%+</div>
+                <div className="text-[45px] md:text-7xl font-black text-white tracking-tighter leading-none mb-3" style={{ color: '#FF6584' }}>70%+</div>
                 <p className="text-[14px] font-semibold text-white/60 tracking-wide">Feature adoption</p>
                 <p className="text-[12px] text-gray-500 font-light mt-1.5 leading-relaxed">Key AI features used within first 2 weeks</p>
               </div>
@@ -578,7 +578,7 @@ const ProjectAICaseStudy: React.FC = () => {
                 <div className="w-12 h-12 rounded-2xl bg-[#F7971E]/10 flex items-center justify-center border border-[#F7971E]/20 mb-8">
                   <BarChart2 className="w-6 h-6 text-[#F7971E]" />
                 </div>
-                <div className="text-6xl md:text-7xl font-black text-white tracking-tighter leading-none mb-3" style={{ color: '#F7971E' }}>4.5+</div>
+                <div className="text-[45px] md:text-7xl font-black text-white tracking-tighter leading-none mb-3" style={{ color: '#F7971E' }}>4.5+</div>
                 <p className="text-[14px] font-semibold text-white/60 tracking-wide">User sat score</p>
                 <p className="text-[12px] text-gray-500 font-light mt-1.5 leading-relaxed">NPS and satisfaction out of 5.0 target</p>
               </div>
