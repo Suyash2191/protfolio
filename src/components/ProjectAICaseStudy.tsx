@@ -65,9 +65,9 @@ const ProjectAICaseStudy: React.FC = () => {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-5xl md:mt-12"
         >
-          <div className="inline-flex items-center gap-2 bg-[#6C63FF]/10 border border-[#6C63FF]/30 rounded-full px-4 py-1.5 text-[11px] uppercase tracking-wider text-[#6C63FF] font-semibold mb-8">
-            <span className="w-1.5 h-1.5 bg-[#6C63FF] rounded-full animate-ping" />
-            UX / Product Design Case Study
+          <div className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-8">
+            <span className="w-1.5 h-1.5 bg-[#6C63FF] rounded-full animate-ping mr-2" />
+            UX / PRODUCT DESIGN CASE STUDY
           </div>
 
           <h1 className="text-[40px] md:text-[96px] font-bold leading-[1.15] tracking-tighter text-white mb-6">
@@ -257,8 +257,8 @@ const ProjectAICaseStudy: React.FC = () => {
       {/* 02 - RESEARCH */}
       <section className="relative px-6 md:px-12 py-24 bg-[#0F1118]/30">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] mb-6" style={{ color: '#7ecfef' }}>
-            02 Research
+          <div className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">
+            02 RESEARCH
           </div>
           <h2 className="text-[30px] md:text-[72px] font-bold text-white mb-6 leading-[1.05] tracking-tighter">
             What teams actually<br />need from their tools
@@ -437,8 +437,8 @@ const ProjectAICaseStudy: React.FC = () => {
       {/* 03 - COMPETITIVE */}
       <section className="px-6 md:px-12 py-24">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] mb-6" style={{ color: '#7ecfef' }}>
-            03 Competitive analysis
+          <div className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">
+            03 COMPETITIVE ANALYSIS
           </div>
           <h2 className="text-[30px] md:text-[56px] font-bold text-white mb-10 leading-[1.05] tracking-tighter">Where existing tools fall short</h2>
           
@@ -484,8 +484,8 @@ const ProjectAICaseStudy: React.FC = () => {
       {/* 04 - SUCCESS METRICS */}
       <section className="px-6 md:px-12 py-24">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] mb-6" style={{ color: '#7ecfef' }}>
-            04 Success metrics
+          <div className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">
+            04 SUCCESS METRICS
           </div>
           <h2 className="text-[30px] md:text-[56px] font-bold text-white mb-4 leading-[1.05] tracking-tighter">What success looks like</h2>
           <p className="font-light text-[14px] md:text-[17px] text-gray-400 mb-14 leading-[1.7] tracking-tight max-w-2xl">
@@ -592,7 +592,7 @@ const ProjectAICaseStudy: React.FC = () => {
       <section className="px-6 md:px-12 py-24 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto">
           <div className="text-left mb-20">
-            <div className="text-[11px] uppercase tracking-[0.3em] font-bold mb-6" style={{ color: '#7ecfef' }}>05 The solution</div>
+            <div className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">05 THE SOLUTION</div>
             <h2 className="text-[30px] md:text-[58px] font-bold text-white mb-4 leading-[1.05] tracking-tighter">One platform that<br />thinks with your team</h2>
           </div>
 
@@ -731,8 +731,8 @@ const ProjectAICaseStudy: React.FC = () => {
       {/* 06 - USER FLOW */}
       <section className="px-6 md:px-12 py-24 bg-[#0a0a0a] overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] mb-6" style={{ color: '#7ecfef' }}>
-            06 User flow
+          <div className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">
+            06 USER FLOW
           </div>
           <h2 className="text-[30px] md:text-[72px] font-bold text-white mb-16 leading-[1.05] tracking-tighter">The core AI interaction loop</h2>
 
@@ -1207,8 +1207,8 @@ const ProjectAICaseStudy: React.FC = () => {
       <section id="prototype" className="px-6 md:px-12 py-32 border-t border-[#1E2030]/50 bg-[#07080C]">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center text-center">
-            <div className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] mb-6 uppercase" style={{ color: '#7ecfef' }}>
-              Interactive experience
+            <div className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">
+              INTERACTIVE EXPERIENCE
             </div>
             <h2 className="text-[30px] md:text-[72px] font-bold text-white mb-16 leading-[1.05] tracking-tighter">Live Prototype</h2>
             

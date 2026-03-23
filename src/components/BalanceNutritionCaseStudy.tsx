@@ -79,7 +79,7 @@ const BalanceNutritionCaseStudy = () => {
       <section className="py-[50px] md:py-24 px-6 md:px-12 lg:px-24 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
           <div className="space-y-6 text-left">
-            <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-white/40">01. The Journey</h2>
+            <h2 className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">01. THE JOURNEY</h2>
             <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
               The Balance Nutrition <span className="italic">Experience.</span>
             </h3>
@@ -116,7 +116,7 @@ const BalanceNutritionCaseStudy = () => {
       <section className="py-[50px] md:py-24 px-6 md:px-12 lg:px-24 bg-[#050505]">
         <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
           <div className="space-y-6 text-left">
-            <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-white/40">02. Programs & Pricing</h2>
+            <h2 className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">02. PROGRAMS & PRICING</h2>
             <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
               Three Tiers for <span className="italic">Every Client.</span>
             </h3>
@@ -174,7 +174,7 @@ const BalanceNutritionCaseStudy = () => {
       <section className="py-[50px] md:py-24 px-6 md:px-12 lg:px-24 bg-[#050505] text-white">
         <div className="max-w-7xl mx-auto space-y-20">
           <div className="space-y-6 text-left max-w-4xl">
-            <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-white/40">03. The Challenge</h2>
+            <h2 className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">03. THE CHALLENGE</h2>
             <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
               Bridging the gap in <span className="italic">personal nutrition.</span>
             </h3>
@@ -303,7 +303,7 @@ const BalanceNutritionCaseStudy = () => {
       <section className="py-[50px] md:py-24 px-6 md:px-12 lg:px-24 bg-[#050505] text-white">
         <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
           <div className="space-y-6 text-left max-w-4xl">
-            <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-white/40">04. The Solution</h2>
+            <h2 className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">04. THE SOLUTION</h2>
             <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
               A holistic ecosystem <span className="italic">expert human counseling</span> and <span className="italic">AI-driven support.</span>
             </h3>
@@ -414,7 +414,7 @@ const BalanceNutritionCaseStudy = () => {
       <section className="py-[50px] md:py-24 px-6 md:px-12 lg:px-24 bg-[#050505]">
         <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
           <div className="space-y-6 text-left max-w-4xl">
-            <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-white/40">05. Research & Insights</h2>
+            <h2 className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">05. RESEARCH & INSIGHTS</h2>
             <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
               The User-First <br /><span className="italic">Deep Dive.</span>
             </h3>
@@ -604,7 +604,7 @@ const BalanceNutritionCaseStudy = () => {
       <section className="py-[50px] md:py-24 px-6 md:px-12 lg:px-24 bg-[#050505]">
         <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
           <div className="space-y-6 text-left">
-            <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-white/40">06. Competitive Analysis</h2>
+            <h2 className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">06. COMPETITIVE ANALYSIS</h2>
             <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
               Where Competitors <span className="italic">Fall Short.</span>
             </h3>
@@ -646,7 +646,7 @@ const BalanceNutritionCaseStudy = () => {
         <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
           {/* Header */}
           <div className="space-y-6 text-left">
-            <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-white/40">07. User Persona</h2>
+            <h2 className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">07. USER PERSONA</h2>
             <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
               Understanding the <br /><span className="italic">Busy Professional.</span>
             </h3>
@@ -827,7 +827,7 @@ const BalanceNutritionCaseStudy = () => {
         <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center">
             <div className="lg:col-span-6 space-y-8">
-              <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-white/40">08. Clara AI</h2>
+              <h2 className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">08. CLARA AI</h2>
               <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
                 The AI That <br /><span className="italic">Never Sleeps.</span>
               </h3>
@@ -872,7 +872,7 @@ const BalanceNutritionCaseStudy = () => {
       <section className="py-[50px] md:py-24 px-6 md:px-12 lg:px-24 bg-[#050505]">
         <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
           <div className="space-y-6 text-left">
-            <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-white/40">09. 3D Cleanses</h2>
+            <h2 className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">09. 3D CLEANSES</h2>
             <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
               Clinically Designed <span className="italic">Detox Plans.</span>
             </h3>
@@ -897,7 +897,7 @@ const BalanceNutritionCaseStudy = () => {
       <section className="py-[50px] md:py-24 px-6 md:px-12 lg:px-24 bg-[#0a0a0a] overflow-hidden">
         <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
           <div className="space-y-6 text-left max-w-4xl">
-            <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-white/40">10. Client Flow</h2>
+            <h2 className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">10. CLIENT FLOW</h2>
             <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
               End-to-End <br /><span className="italic">Journey.</span>
             </h3>
@@ -1240,7 +1240,7 @@ const BalanceNutritionCaseStudy = () => {
         <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
             <div className="space-y-6 text-left">
-              <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-white/30">12. The Design System</h2>
+              <h2 className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">12. THE DESIGN SYSTEM</h2>
               <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
                 Consistency <br />at Scale
               </h3>
@@ -1387,7 +1387,7 @@ const BalanceNutritionCaseStudy = () => {
         <div className="max-w-7xl mx-auto space-y-8 md:space-y-16">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
             <div className="space-y-6 text-left">
-              <h2 className="text-sm font-bold capitalize md:uppercase tracking-[0.3em] text-[#00858C]">13. Visual Designs</h2>
+              <h2 className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">13. VISUAL DESIGNS</h2>
               <h3 className="text-[28px] md:text-6xl font-bold tracking-tight leading-tight md:leading-[1.1]">
                 The Final <br />Experience
               </h3>
@@ -1499,9 +1499,7 @@ const BalanceNutritionCaseStudy = () => {
       <section id="prototype" className="px-6 md:px-12 py-32 border-t border-white/5 bg-[#07080C]">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-start text-left">
-            <div className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] mb-6 uppercase" style={{ color: '#00858C' }}>
-              Interactive experience
-            </div>
+            <h2 className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">INTERACTIVE EXPERIENCE</h2>
             <h2 className="text-[28px] md:text-[72px] font-bold text-white mb-16 leading-[1.05] tracking-tighter">Live Prototype</h2>
             
             <div className="relative w-full max-w-5xl group cursor-pointer" onClick={() => window.open('https://www.figma.com/proto/C7wBDgmHz223EhnccwmLzW/balance-nutrition?node-id=69-108207&viewport=-14482%2C-9835%2C0.23&t=lDhiy4QkQAh03dEp-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=69%3A108207&page-id=0%3A1', '_blank')}>

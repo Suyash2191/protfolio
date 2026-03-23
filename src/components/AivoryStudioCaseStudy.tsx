@@ -75,7 +75,7 @@ const AivoryStudioCaseStudy: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
             <motion.div {...fadeIn}>
-              <div className="text-[11px] font-bold tracking-[0.2em] mb-4 text-[#a78bfa] uppercase">01 Overview</div>
+              <div className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">01 OVERVIEW</div>
               <h2 className="text-[32px] md:text-5xl font-bold text-white mb-8 tracking-tighter leading-[1.1]">What is Aivory Studio?</h2>
               <p className="text-gray-400 font-light leading-relaxed text-[16px] md:text-lg">
                 Aivory Studio is an AI-powered photo editing platform designed for creators, photographers, and marketing professionals. The client needed a complete, production-ready UI for a complex product — one that felt modern, clean, and powerful without overwhelming the user. I was brought in as the UI Designer to design every screen of the product from scratch.
@@ -106,7 +106,7 @@ const AivoryStudioCaseStudy: React.FC = () => {
       <section className="px-6 md:px-12 py-24 bg-[#0F1118]/30 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-start mb-16 md:mb-20">
-            <div className="text-[11px] font-bold tracking-[0.2em] mb-4 text-[#a78bfa] uppercase">02 The Challenge</div>
+            <div className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">02 THE CHALLENGE</div>
             <h2 className="text-[32px] md:text-6xl font-bold text-white mb-6 tracking-tighter leading-[1.1] text-left">Problem to solve</h2>
           </div>
           
@@ -152,7 +152,7 @@ const AivoryStudioCaseStudy: React.FC = () => {
 
         <div className="max-w-7xl mx-auto relative">
           <div className="flex flex-col items-start text-left mb-16 md:mb-20">
-            <div className="text-[11px] font-bold tracking-[0.3em] mb-4 text-[#a78bfa] uppercase">03 User Flow</div>
+            <div className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">03 USER FLOW</div>
             <h2 className="text-[32px] md:text-7xl font-bold text-white mb-6 tracking-tighter max-w-4xl leading-[1.1]">
               Your workflows,<br />always in motion.
             </h2>
@@ -324,7 +324,7 @@ const AivoryStudioCaseStudy: React.FC = () => {
       <section className="px-6 md:px-12 py-24 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-start mb-16 md:mb-20">
-            <div className="text-[11px] font-bold tracking-[0.2em] mb-4 text-[#a78bfa] uppercase">04 Interface Modules</div>
+            <div className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">04 INTERFACE MODULES</div>
             <h2 className="text-[32px] md:text-7xl font-bold text-white mb-6 tracking-tighter leading-[1.1] text-left">Production-Ready<br />Interface Modules</h2>
           </div>
 
@@ -385,7 +385,7 @@ const AivoryStudioCaseStudy: React.FC = () => {
       <section className="px-6 md:px-12 py-24 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-start mb-16">
-            <div className="text-[11px] font-bold tracking-[0.2em] mb-4 text-[#a78bfa] uppercase">Interactive Experience</div>
+            <div className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">INTERACTIVE EXPERIENCE</div>
             <h2 className="text-[32px] md:text-7xl font-bold text-white mb-6 tracking-tighter text-left">Live Prototype</h2>
           </div>
 
@@ -438,7 +438,7 @@ const AivoryStudioCaseStudy: React.FC = () => {
       <section className="px-6 md:px-12 py-24 bg-[#0F1118]/30">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-start mb-16 md:mb-20">
-            <div className="text-[11px] font-bold tracking-[0.2em] mb-4 text-[#a78bfa] uppercase">05 Design Decisions</div>
+            <div className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">05 DESIGN DECISIONS</div>
             <h2 className="text-[32px] md:text-6xl font-bold text-white mb-6 tracking-tighter text-left leading-[1.1]">Strategic UI Choices</h2>
           </div>
 
@@ -463,7 +463,7 @@ const AivoryStudioCaseStudy: React.FC = () => {
       {/* TOOLS & STACK */}
       <section className="px-6 md:px-12 py-24 border-t border-white/5">
         <div className="max-w-7xl mx-auto flex flex-col items-start">
-          <div className="text-[11px] font-bold tracking-[0.2em] mb-8 text-[#a78bfa] uppercase">Tools & Stack</div>
+          <div className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">TOOLS & STACK</div>
           <div className="flex flex-wrap justify-start gap-4">
             {['Figma', 'Auto Layout', 'Component system', 'Dark theme', 'Desktop web', 'UI Design only'].map(tool => (
               <span key={tool} className="px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white font-medium text-sm hover:bg-[#7c3aed]/10 hover:border-[#7c3aed]/30 hover:text-[#a78bfa] transition-all cursor-default uppercase tracking-widest text-[10px]">
@@ -479,7 +479,7 @@ const AivoryStudioCaseStudy: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
             <div className="md:col-span-2 text-left">
-              <div className="text-[11px] font-bold tracking-[0.2em] mb-4 text-[#a78bfa] uppercase">06 Outcome</div>
+              <div className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/25 mb-6">06 OUTCOME</div>
               <h2 className="text-[32px] md:text-6xl font-bold text-white mb-8 tracking-tighter leading-[1.1] text-left">Handoff-ready ecosystem</h2>
               <p className="text-gray-400 font-light leading-relaxed text-[16px] md:text-xl max-w-2xl mb-12">
                 This project delivered a comprehensive design system and a suite of high-fidelity screens, ready for the development team to implement the next generation of AI photo editing.
