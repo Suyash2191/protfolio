@@ -1204,55 +1204,39 @@ const ProjectAICaseStudy: React.FC = () => {
       </section>
 
       {/* 08 - LIVE PROTOTYPE */}
-      <section id="prototype" className="relative px-6 md:px-12 py-32 overflow-hidden bg-[#0a1a1a]">
-        {/* Background decorative elements */}
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#43E97B]/5 to-transparent pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-[#6C63FF]/5 to-transparent pointer-events-none" />
-        
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-            <div className="text-[12px] font-bold tracking-[0.3em] mb-8 uppercase text-[#43E97B]">
-              14. Interactive prototype
+      <section id="prototype" className="px-6 md:px-12 py-32 border-t border-[#1E2030]/50 bg-[#07080C]">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col items-center text-center">
+            <div className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] mb-6 uppercase" style={{ color: '#7ecfef' }}>
+              Interactive experience
             </div>
+            <h2 className="text-[30px] md:text-[72px] font-bold text-white mb-16 leading-[1.05] tracking-tighter">Live Prototype</h2>
             
-            <h2 className="text-[40px] md:text-[80px] font-bold text-white mb-8 leading-[1.1] tracking-tighter">
-              Experience the <br /> <span className="italic font-serif font-light text-gray-400">Final Design.</span>
-            </h2>
-            
-            <p className="text-lg md:text-xl text-gray-400 font-light mb-16 max-w-2xl leading-relaxed">
-              Dive into the complete interactive prototype to explore the user flow, <br className="hidden md:block" /> 
-              micro-interactions, and visual fidelity firsthand.
-            </p>
-            
-            {/* CTA Button */}
-            <motion.button
-              whileHover={{ scale: 1.05, y: -5 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => window.open('https://www.figma.com/proto/bJ10VJ0DVgxd4unyzsd7GN/Untitled?node-id=888-9705&viewport=-8380%2C464%2C0.21&t=kZW4dm8jU5LmgyfD-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=888%3A9705&page-id=699%3A11452', '_blank')}
-              className="px-10 h-16 bg-white text-black rounded-full font-bold text-sm tracking-widest uppercase flex items-center gap-4 hover:bg-gray-100 transition-all shadow-[0_20px_40px_rgba(255,255,255,0.1)] mb-24"
-            >
-              VIEW PROTOTYPE
-              <ArrowRight className="w-5 h-5" />
-            </motion.button>
-            
-            {/* Mockup Preview Area */}
-            <div className="relative w-full max-w-6xl mt-12">
-               <motion.div
-                 initial={{ y: 50, opacity: 0 }}
-                 whileInView={{ y: 0, opacity: 1 }}
-                 transition={{ duration: 0.8 }}
-                 viewport={{ once: true }}
-                 className="relative z-10"
-               >
-                 <img 
-                   src="/images/bn-life-carrot.png" 
-                   alt="Final Design Showcase" 
-                   className="w-full h-auto drop-shadow-[0_50px_100px_rgba(0,0,0,0.5)]"
-                 />
-                 
-                 {/* Decorative glow behind image */}
-                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-[#43E97B]/20 blur-[120px] rounded-full -z-10" />
-               </motion.div>
+            <div className="relative w-full max-w-5xl group cursor-pointer" onClick={() => window.open('https://www.figma.com/proto/bJ10VJ0DVgxd4unyzsd7GN/Untitled?node-id=888-9705&viewport=-8380%2C464%2C0.21&t=kZW4dm8jU5LmgyfD-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=888%3A9705&page-id=699%3A11452', '_blank')}>
+              <div className="rounded-[14px] md:rounded-[2.5rem] overflow-hidden border border-white/10 bg-[#0a0a0a] transition-all duration-500 group-hover:border-[#6C63FF]/50 shadow-2xl">
+                <div className="relative aspect-video md:aspect-[16/9]">
+                  <img 
+                    src="/images/cs-ai-greeting.png" 
+                    alt="Project AI Prototype Preview" 
+                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-500 flex items-center justify-center">
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="px-8 md:px-12 py-4 md:py-6 bg-[#6C63FF] text-white rounded-full font-bold text-lg md:text-xl flex items-center gap-3 shadow-[0_20px_40px_rgba(108,99,255,0.3)]"
+                    >
+                      View Prototype
+                      <ArrowRight className="w-5 h-5" />
+                    </motion.div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-8 text-gray-400 text-sm font-light flex items-center justify-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                Click to interact with the high-fidelity Figma prototype
+              </div>
             </div>
           </div>
         </div>

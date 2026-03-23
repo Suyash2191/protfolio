@@ -1495,41 +1495,42 @@ const BalanceNutritionCaseStudy = () => {
         </div>
       </section>
 
-      {/* 14. Prototype Section */}
-      <section className="py-[50px] md:py-32 px-6 md:px-12 lg:px-24 bg-[#050505] border-t border-white/5 relative overflow-hidden">
-        {/* Subtle background glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#00858C]/10 blur-[120px] rounded-full pointer-events-none"></div>
-        
-        <div className="max-w-4xl mx-auto text-center space-y-10 relative z-10">
-          <div className="space-y-4">
-            <h2 className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#00858C]">
-              14. Interactive Prototype
-            </h2>
-            <h3 className="text-[32px] md:text-6xl font-bold tracking-tight leading-tight text-white">
-              Experience the <br className="hidden md:block" />
-              <span className="italic text-white/50">Final Design.</span>
-            </h3>
-            <p className="text-base md:text-[18px] text-gray-400 font-light leading-relaxed max-w-2xl mx-auto mt-6">
-              Dive into the complete interactive prototype to explore the user flow, micro-interactions, and visual fidelity firsthand.
-            </p>
+      {/* 14 - LIVE PROTOTYPE */}
+      <section id="prototype" className="px-6 md:px-12 py-32 border-t border-white/5 bg-[#07080C]">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col items-center text-center">
+            <div className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] mb-6 uppercase" style={{ color: '#00858C' }}>
+              Interactive experience
+            </div>
+            <h2 className="text-[30px] md:text-[72px] font-bold text-white mb-16 leading-[1.05] tracking-tighter">Live Prototype</h2>
+            
+            <div className="relative w-full max-w-5xl group cursor-pointer" onClick={() => window.open('https://www.figma.com/proto/C7wBDgmHz223EhnccwmLzW/balance-nutrition?node-id=69-108207&viewport=-14482%2C-9835%2C0.23&t=lDhiy4QkQAh03dEp-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=69%3A108207&page-id=0%3A1', '_blank')}>
+              <div className="rounded-[14px] md:rounded-[2.5rem] overflow-hidden border border-white/10 bg-[#003B40] transition-all duration-500 group-hover:border-[#00858C]/50 shadow-2xl">
+                <div className="relative aspect-video md:aspect-[16/9]">
+                  <img 
+                    src="/images/bn-life-carrot.png" 
+                    alt="Balance Nutrition Prototype Preview" 
+                    className="w-full h-full object-contain p-8 md:p-12 opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-500 flex items-center justify-center">
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="px-8 md:px-12 py-4 md:py-6 bg-[#00858C] text-white rounded-full font-bold text-lg md:text-xl flex items-center gap-3 shadow-[0_20px_40px_rgba(0,133,140,0.3)]"
+                    >
+                      View Prototype
+                      <ArrowRight className="w-5 h-5" />
+                    </motion.div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-8 text-gray-400 text-sm font-light flex items-center justify-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-[#00858C] animate-pulse"></div>
+                Click to interact with the high-fidelity Figma prototype
+              </div>
+            </div>
           </div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="pt-8 flex justify-center"
-          >
-            <a 
-              href="https://www.figma.com/proto/TTWnJegkrk73a0ZVnubO7v/BN-Website-Design?node-id=6105-58487&viewport=992%2C-23659%2C0.29&t=HAAT1dQ6PwV5q1QC-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=6105%3A58487&page-id=0%3A1" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="group relative inline-flex items-center justify-center gap-4 bg-white text-black px-10 py-5 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-[#00858C] hover:text-white transition-all duration-500 overflow-hidden shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_40px_rgba(0,133,140,0.4)]"
-            >
-              <span className="relative z-10">View Prototype</span>
-              <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </motion.div>
         </div>
       </section>
 
