@@ -80,13 +80,13 @@ const WorkSection = () => {
                   <div className="space-y-4 md:space-y-6">
                     {getProjectLink(project) ? (
                       <Link to={getProjectLink(project)!} className="block group">
-                        <h4 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1] max-w-4xl group-hover:text-blue-500 transition-colors">
+                        <h4 className="text-[30px] md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1] max-w-4xl group-hover:text-blue-500 transition-colors">
                           {project.title}
                         </h4>
                       </Link>
                     ) : (
                       <h4 
-                        className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1] max-w-4xl cursor-pointer"
+                        className="text-[30px] md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1] max-w-4xl cursor-pointer"
                         onClick={() => handleProjectClick(project)}
                       >
                         {project.title}
