@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight, Check, X, Search, BarChart2, MessageSquare, Cloc
 import { Link } from 'react-router-dom';
 
 const ProjectAICaseStudy: React.FC = () => {
-  useEffect(() => {
+  React.useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
@@ -65,14 +65,15 @@ const ProjectAICaseStudy: React.FC = () => {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-5xl md:mt-12"
         >
-          <div className="flex items-center gap-4 text-[#6C63FF] font-mono text-[11px] tracking-[0.4em] uppercase font-bold mb-10">
-            <span className="bg-[#6C63FF] text-white px-2 py-0.5 rounded-sm">002</span>
-            <span>Case Study</span>
+          <div className="inline-flex items-center gap-2 bg-[#6C63FF]/10 border border-[#6C63FF]/30 rounded-full px-4 py-1.5 text-[11px] uppercase tracking-wider text-[#6C63FF] font-semibold mb-8">
+            <span className="w-1.5 h-1.5 bg-[#6C63FF] rounded-full animate-ping" />
+            UX / Product Design Case Study
           </div>
 
-          <h1 className="text-[44px] md:text-[110px] lg:text-[120px] font-bold tracking-tighter leading-[0.95] text-white">
-            <span className="block">Team Command</span>
-            <span className="text-white/20 font-extralight italic block mt-2">Center Intelligence</span>
+          <h1 className="text-[48px] md:text-[96px] font-bold leading-[1.15] tracking-tighter text-white mb-6">
+            AI-Powered<br />
+            <span className="bg-gradient-to-r from-[#6C63FF] to-[#FF6584] bg-clip-text text-transparent">Team Command</span><br />
+            Center
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl leading-relaxed font-light mb-14">
@@ -111,7 +112,7 @@ const ProjectAICaseStudy: React.FC = () => {
               className="md:col-span-8 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 md:p-12 flex flex-col justify-center relative overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
             >
               <div className="absolute top-0 left-0 w-64 h-64 bg-[#6C63FF]/10 blur-[100px] -z-10 group-hover:bg-[#6C63FF]/20 transition-all duration-700"></div>
-              <h2 className="text-[28px] md:text-[52px] font-bold text-white mb-5 leading-[1.1] tracking-tighter relative z-10">
+              <h2 className="text-[20px] md:text-[52px] font-bold text-white mb-5 leading-[1.1] tracking-tighter relative z-10">
                 Teams are drowning in <br /><span className="text-gray-500">management overhead</span>
               </h2>
               <p className="text-[14px] md:text-[17px] font-light text-gray-400 max-w-2xl leading-[1.7] tracking-tight relative z-10">
@@ -259,7 +260,7 @@ const ProjectAICaseStudy: React.FC = () => {
           <div className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] mb-6" style={{ color: '#7ecfef' }}>
             02 Research
           </div>
-          <h2 className="text-[36px] md:text-[72px] font-bold text-white mb-6 leading-[1.05] tracking-tighter">
+          <h2 className="text-[30px] md:text-[72px] font-bold text-white mb-6 leading-[1.05] tracking-tighter">
             What teams actually<br />need from their tools
           </h2>
           <p className="font-light text-[14px] md:text-[17px] text-gray-400 max-w-2xl mb-14 leading-[1.7] tracking-tight">
@@ -733,7 +734,7 @@ const ProjectAICaseStudy: React.FC = () => {
           <div className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] mb-6" style={{ color: '#7ecfef' }}>
             06 User flow
           </div>
-          <h2 className="text-[36px] md:text-[72px] font-bold text-white mb-16 leading-[1.05] tracking-tighter">The core AI interaction loop</h2>
+          <h2 className="text-[30px] md:text-[72px] font-bold text-white mb-16 leading-[1.05] tracking-tighter">The core AI interaction loop</h2>
 
           {/* Node diagram */}
           <div className="relative">
@@ -917,7 +918,7 @@ const ProjectAICaseStudy: React.FC = () => {
           <div className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] mb-6" style={{ color: '#7ecfef' }}>
             07 UI design
           </div>
-          <h2 className="text-[36px] md:text-[72px] font-bold text-white mb-16 leading-[1.05] tracking-tighter">Visual Showcase</h2>
+          <h2 className="text-[30px] md:text-[72px] font-bold text-white mb-16 leading-[1.05] tracking-tighter">Visual Showcase</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-auto">
             
@@ -1064,7 +1065,7 @@ const ProjectAICaseStudy: React.FC = () => {
           <div className="flex items-center gap-3 text-[11px] font-bold tracking-[0.2em] mb-6" style={{ color: '#7ecfef' }}>
             08 Design system
           </div>
-          <h2 className="text-[36px] md:text-[80px] font-bold text-white mb-4 leading-[1.05] tracking-tighter">Density &amp; Clarity</h2>
+          <h2 className="text-[30px] md:text-[80px] font-bold text-white mb-4 leading-[1.05] tracking-tighter">Density &amp; Clarity</h2>
           <p className="font-light text-[16px] md:text-[20px] text-gray-400 max-w-2xl mb-16 leading-[1.6] tracking-tight">
             A dark, data-dense visual system designed for long work sessions. High contrast, calm palette, and AI-first interaction patterns.
           </p>

@@ -36,9 +36,10 @@ const BalanceNutritionCaseStudy = () => {
               <span className="bg-gradient-to-r from-blue-500 to-[#0284c7] bg-clip-text text-transparent italic">Product Design</span>
             </h1>
 
-            <p className="text-lg md:text-2xl text-gray-400 font-light leading-relaxed max-w-3xl mt-6">
-              End-to-end product design for a health platform trusted by thousands. <br className="hidden md:block" />
-              A holistic ecosystem combining expert human counseling, AI-driven support, and personalized data tracking.
+            <p className="text-lg md:text-2xl text-gray-300 font-light leading-relaxed max-w-4xl mt-6">
+              End-to-end product design for a health platform trusted by thousands. <br className="hidden lg:block" />
+              A holistic ecosystem combining expert human counseling, <br className="hidden lg:block" />
+              AI-driven support, and personalized data tracking.
             </p>
             
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-10 border-t border-white/5 max-w-4xl">

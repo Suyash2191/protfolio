@@ -14,7 +14,7 @@ import AivoryStudioCaseStudy from './components/AivoryStudioCaseStudy';
 // Scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
-  useEffect(() => {
+  React.useLayoutEffect(() => {
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
     }
