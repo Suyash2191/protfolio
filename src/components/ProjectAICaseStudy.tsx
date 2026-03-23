@@ -70,7 +70,7 @@ const ProjectAICaseStudy: React.FC = () => {
             UX / Product Design Case Study
           </div>
 
-          <h1 className="text-[48px] md:text-[96px] font-bold leading-[1.15] tracking-tighter text-white mb-6">
+          <h1 className="text-[40px] md:text-[96px] font-bold leading-[1.15] tracking-tighter text-white mb-6">
             AI-Powered<br />
             <span className="bg-gradient-to-r from-[#6C63FF] to-[#FF6584] bg-clip-text text-transparent">Team Command</span><br />
             Center

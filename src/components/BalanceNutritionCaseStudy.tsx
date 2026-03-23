@@ -31,7 +31,7 @@ const BalanceNutritionCaseStudy = () => {
               UX / Product Design Case Study
             </div>
             
-            <h1 className="text-[48px] md:text-[96px] font-bold leading-[1.1] tracking-tighter text-white">
+            <h1 className="text-[40px] md:text-[96px] font-bold leading-[1.1] tracking-tighter text-white">
               Balance Nutrition<br />
               <span className="bg-gradient-to-r from-blue-500 to-[#0284c7] bg-clip-text text-transparent italic">Product Design</span>
             </h1>
