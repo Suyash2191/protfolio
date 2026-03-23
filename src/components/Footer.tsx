@@ -33,16 +33,16 @@ const Footer: React.FC<FooterProps> = () => {
     <footer id="contact" className="bg-[#050505] pt-24 pb-12 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 mb-24">
-          <div className="text-center lg:text-left flex flex-col items-center lg:items-start">
+          <div className="text-left lg:text-left flex flex-col items-start lg:items-start">
             <h2 className="text-[36px] md:text-7xl font-bold text-white tracking-tight mb-8 leading-[1.2]">
               Let's build something <br className="block md:hidden" /> <span className="text-blue-500">extraordinary</span> together.
             </h2>
-            <p className="text-xl text-gray-400 mb-12 max-w-lg mx-auto lg:mx-0">
+            <p className="text-xl text-gray-400 mb-12 max-w-lg mx-auto lg:mx-0 text-left lg:text-left">
               Available for full-time roles and high-impact freelance projects. 
               Let's discuss your next big idea.
             </p>
 
-            <div className="space-y-6 flex flex-col items-center lg:items-start">
+            <div className="space-y-6 flex flex-col items-start lg:items-start">
               <a href="mailto:suyashshirsat21@gmail.com" className="flex items-center space-x-4 text-white hover:text-blue-500 transition-colors group">
                 <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-blue-500 transition-all">
                   <Mail className="w-5 h-5" />
@@ -57,7 +57,7 @@ const Footer: React.FC<FooterProps> = () => {
               </a>
             </div>
 
-            <div className="mt-12 flex justify-center lg:justify-start space-x-6">
+            <div className="mt-12 flex justify-start lg:justify-start space-x-6">
               <button 
                 onClick={() => navigate('/resume')}
                 className="flex items-center space-x-2 px-6 py-3 bg-white text-black font-bold rounded-full hover:bg-blue-500 hover:text-white transition-all transform hover:scale-105 active:scale-95"
