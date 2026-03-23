@@ -109,7 +109,7 @@ const ProjectAICaseStudy: React.FC = () => {
             {/* Widget 1: Main Problem Intro */}
             <motion.div 
               {...fadeIn}
-              className="md:col-span-8 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 md:p-12 flex flex-col justify-center relative overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
+              className="md:col-span-8 bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] p-[18px] md:p-12 flex flex-col justify-center relative overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
             >
               <div className="absolute top-0 left-0 w-64 h-64 bg-[#6C63FF]/10 blur-[100px] -z-10 group-hover:bg-[#6C63FF]/20 transition-all duration-700"></div>
               <h2 className="text-[18px] md:text-[52px] font-bold text-white mb-5 leading-[1.1] tracking-tighter relative z-10">
@@ -124,7 +124,7 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.1 }}
-              className="md:col-span-4 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 flex flex-col items-center justify-center relative overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500 min-h-[300px]"
+              className="md:col-span-4 bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] p-[18px] md:p-8 flex flex-col items-center justify-center relative overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500 min-h-[300px]"
             >
               <div className="relative w-32 h-32 flex items-center justify-center mb-6">
                 <svg className="w-full h-full -rotate-90" viewBox="0 0 100 100">
@@ -152,7 +152,7 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.3 }}
-              className="md:col-span-5 md:row-span-2 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-10 flex flex-col relative overflow-hidden group hover:border-[#FF6584]/30 transition-all duration-500"
+              className="md:col-span-5 md:row-span-2 bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] p-[18px] md:p-10 flex flex-col relative overflow-hidden group hover:border-[#FF6584]/30 transition-all duration-500"
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#FF6584]/10 blur-[100px] -z-10 group-hover:bg-[#FF6584]/20 transition-all duration-700"></div>
               <div className="flex items-center gap-4 mb-8">
@@ -183,7 +183,7 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.4 }}
-              className="md:col-span-3 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 flex flex-col justify-between hover:border-[#FF6584]/30 transition-all duration-500"
+              className="md:col-span-3 bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] p-[18px] md:p-8 flex flex-col justify-between hover:border-[#FF6584]/30 transition-all duration-500"
             >
               <div className="text-5xl font-black text-[#FF6584] tracking-tighter">6-12</div>
               <p className="text-xs font-bold uppercase tracking-widest text-white/40 leading-tight">Tools managed <br />simultaneously</p>
@@ -194,7 +194,7 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.5 }}
-              className="md:col-span-3 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 flex flex-col justify-between hover:border-[#43E97B]/30 transition-all duration-500"
+              className="md:col-span-3 bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] p-[18px] md:p-8 flex flex-col justify-between hover:border-[#43E97B]/30 transition-all duration-500"
             >
               <div className="text-5xl font-black text-[#43E97B] tracking-tighter">2.5h</div>
               <p className="text-xs font-bold uppercase tracking-widest text-white/40 leading-tight">Lost daily to <br />context switching</p>
@@ -204,7 +204,7 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.6 }}
-              className="md:col-span-4 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 flex flex-col gap-6 hover:border-[#43E97B]/30 transition-all duration-500"
+              className="md:col-span-4 bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] p-[18px] md:p-8 flex flex-col gap-6 hover:border-[#43E97B]/30 transition-all duration-500"
             >
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-xl bg-[#43E97B]/10 flex items-center justify-center border border-[#43E97B]/20">
@@ -232,7 +232,7 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.7 }}
-              className="md:col-span-12 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between relative overflow-hidden group hover:border-[#F7971E]/30 transition-all duration-500"
+              className="md:col-span-12 bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] p-[18px] md:p-12 flex flex-col md:flex-row items-center justify-between relative overflow-hidden group hover:border-[#F7971E]/30 transition-all duration-500"
             >
               <div className="absolute bottom-[-20%] right-[-5%] w-64 h-64 bg-[#F7971E]/10 blur-3xl rounded-full group-hover:bg-[#F7971E]/20 transition-all duration-700"></div>
               <div className="relative z-10">
@@ -273,7 +273,7 @@ const ProjectAICaseStudy: React.FC = () => {
             {/* Widget 1: Arjun Persona (col-span-5 row-span-2 — tall left pillar) */}
             <motion.div 
               {...fadeIn}
-              className="md:col-span-5 md:row-span-2 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-10 flex flex-col relative overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
+              className="md:col-span-5 md:row-span-2 bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] p-[18px] md:p-10 flex flex-col relative overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
             >
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#6C63FF]/5 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
               <div className="flex items-center gap-4 mb-8 relative z-10">
@@ -305,7 +305,7 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.1 }}
-              className="md:col-span-7 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 md:p-10 flex flex-col md:flex-row gap-8 relative overflow-hidden group hover:border-[#FF6584]/30 transition-all duration-500"
+              className="md:col-span-7 bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] p-[18px] md:p-10 flex flex-col md:flex-row gap-8 relative overflow-hidden group hover:border-[#FF6584]/30 transition-all duration-500"
             >
               <div className="flex-1 relative z-10">
                 <div className="flex items-center gap-4 mb-6">
@@ -331,7 +331,7 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.2 }}
-              className="md:col-span-7 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 flex flex-col group hover:border-[#43E97B]/30 transition-all duration-500"
+              className="md:col-span-7 bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] p-[18px] flex flex-col group hover:border-[#43E97B]/30 transition-all duration-500"
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-[#43E97B]/10 flex items-center justify-center border border-[#43E97B]/20">
@@ -356,7 +356,7 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.3 }}
-              className="md:col-span-4 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 flex flex-col relative overflow-hidden group hover:border-[#F7971E]/30 transition-all duration-500"
+              className="md:col-span-4 bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] p-[18px] flex flex-col relative overflow-hidden group hover:border-[#F7971E]/30 transition-all duration-500"
             >
               <div className="flex items-center justify-between mb-8">
                 <div className="w-10 h-10 rounded-xl bg-[#F7971E]/10 flex items-center justify-center border border-[#F7971E]/20">
@@ -403,7 +403,7 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.4 }}
-              className="md:col-span-8 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 md:p-10 flex flex-col relative overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
+              className="md:col-span-8 bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] p-[18px] md:p-10 flex flex-col relative overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
             >
               <div className="absolute top-[-20%] right-[-10%] w-32 h-32 bg-[#6C63FF]/10 blur-3xl rounded-full group-hover:bg-[#6C63FF]/20 transition-all duration-700"></div>
               <div className="flex items-center gap-4 mb-8">
@@ -496,7 +496,7 @@ const ProjectAICaseStudy: React.FC = () => {
             {/* Metric 1: Completion Rate */}
             <motion.div
               {...fadeIn}
-              className="relative bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-10 overflow-hidden group hover:border-[#43E97B]/30 transition-all duration-500"
+              className="relative bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] p-[18px] md:p-10 overflow-hidden group hover:border-[#43E97B]/30 transition-all duration-500"
             >
               <div className="absolute bottom-0 right-0 w-48 h-48 bg-[#43E97B]/5 rounded-full blur-3xl group-hover:bg-[#43E97B]/15 transition-all duration-700"></div>
               {/* Decorative icon cluster */}
@@ -519,7 +519,7 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div
               {...fadeIn}
               transition={{ delay: 0.1 }}
-              className="relative bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-10 overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
+              className="relative bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] p-[18px] md:p-10 overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
             >
               <div className="absolute top-0 left-0 w-48 h-48 bg-[#6C63FF]/5 rounded-full blur-3xl group-hover:bg-[#6C63FF]/15 transition-all duration-700"></div>
               {/* Decorative icon cluster */}
@@ -542,7 +542,7 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div
               {...fadeIn}
               transition={{ delay: 0.2 }}
-              className="relative bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-10 overflow-hidden group hover:border-[#FF6584]/30 transition-all duration-500"
+              className="relative bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] p-[18px] md:p-10 overflow-hidden group hover:border-[#FF6584]/30 transition-all duration-500"
             >
               <div className="absolute top-0 right-0 w-48 h-48 bg-[#FF6584]/5 rounded-full blur-3xl group-hover:bg-[#FF6584]/15 transition-all duration-700"></div>
               {/* Decorative icon cluster */}
@@ -565,7 +565,7 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div
               {...fadeIn}
               transition={{ delay: 0.3 }}
-              className="relative bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-10 overflow-hidden group hover:border-[#F7971E]/30 transition-all duration-500"
+              className="relative bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] p-[18px] md:p-10 overflow-hidden group hover:border-[#F7971E]/30 transition-all duration-500"
             >
               <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#F7971E]/5 rounded-full blur-3xl group-hover:bg-[#F7971E]/15 transition-all duration-700"></div>
               {/* Decorative icon cluster */}
@@ -603,7 +603,7 @@ const ProjectAICaseStudy: React.FC = () => {
             {/* Card 1 - AI Voice Assistant (col-span-4) */}
             <motion.div
               {...fadeIn}
-              className="md:col-span-4 relative bg-[#111118] border border-white/8 rounded-[2rem] p-5 md:p-8 overflow-hidden group hover:border-[#6C63FF]/40 transition-all duration-500 min-h-[180px] md:min-h-[220px] flex flex-col"
+              className="md:col-span-4 relative bg-[#111118] border border-white/8 rounded-[14px] md:rounded-[2rem] p-[18px] md:p-8 overflow-hidden group hover:border-[#6C63FF]/40 transition-all duration-500 min-h-[180px] md:min-h-[220px] flex flex-col"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#6C63FF]/20 blur-[60px] rounded-full group-hover:bg-[#6C63FF]/40 transition-all duration-700"></div>
               {/* Glowing icon */}
@@ -621,7 +621,7 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div
               {...fadeIn}
               transition={{ delay: 0.1 }}
-              className="md:col-span-4 relative bg-[#111118] border border-white/8 rounded-[2rem] p-5 md:p-8 overflow-hidden group hover:border-[#43E97B]/40 transition-all duration-500 min-h-[180px] md:min-h-[220px] flex flex-col"
+              className="md:col-span-4 relative bg-[#111118] border border-white/8 rounded-[14px] md:rounded-[2rem] p-[18px] md:p-8 overflow-hidden group hover:border-[#43E97B]/40 transition-all duration-500 min-h-[180px] md:min-h-[220px] flex flex-col"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#43E97B]/15 blur-[60px] rounded-full group-hover:bg-[#43E97B]/30 transition-all duration-700"></div>
               <div className="relative w-10 h-10 md:w-14 md:h-14 mb-4 md:mb-6 flex items-center justify-center">
@@ -638,7 +638,7 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div
               {...fadeIn}
               transition={{ delay: 0.2 }}
-              className="md:col-span-4 relative bg-[#111118] border border-white/8 rounded-[2rem] p-5 md:p-8 overflow-hidden group hover:border-[#FF6584]/40 transition-all duration-500 min-h-[180px] md:min-h-[220px] flex flex-col"
+              className="md:col-span-4 relative bg-[#111118] border border-white/8 rounded-[14px] md:rounded-[2rem] p-[18px] md:p-8 overflow-hidden group hover:border-[#FF6584]/40 transition-all duration-500 min-h-[180px] md:min-h-[220px] flex flex-col"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#FF6584]/15 blur-[60px] rounded-full group-hover:bg-[#FF6584]/30 transition-all duration-700"></div>
               <div className="relative w-10 h-10 md:w-14 md:h-14 mb-4 md:mb-6 flex items-center justify-center">
@@ -656,7 +656,7 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div
               {...fadeIn}
               transition={{ delay: 0.3 }}
-              className="md:col-span-7 relative bg-[#111118] border border-white/8 rounded-[2rem] p-5 md:p-10 overflow-hidden group hover:border-[#F7971E]/40 transition-all duration-500 min-h-[180px] md:min-h-[260px] flex flex-col"
+              className="md:col-span-7 relative bg-[#111118] border border-white/8 rounded-[14px] md:rounded-[2rem] p-[18px] md:p-10 overflow-hidden group hover:border-[#F7971E]/40 transition-all duration-500 min-h-[180px] md:min-h-[260px] flex flex-col"
             >
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#F7971E]/10 blur-[80px] rounded-full group-hover:bg-[#F7971E]/25 transition-all duration-700"></div>
               {/* Large decorative glowing orb */}
@@ -677,7 +677,7 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div
               {...fadeIn}
               transition={{ delay: 0.4 }}
-              className="md:col-span-5 relative bg-[#111118] border border-white/8 rounded-[2rem] p-5 md:p-8 overflow-hidden group hover:border-[#6C63FF]/40 transition-all duration-500 min-h-[180px] md:min-h-[260px] flex flex-col"
+              className="md:col-span-5 relative bg-[#111118] border border-white/8 rounded-[14px] md:rounded-[2rem] p-[18px] md:p-8 overflow-hidden group hover:border-[#6C63FF]/40 transition-all duration-500 min-h-[180px] md:min-h-[260px] flex flex-col"
             >
               <div className="absolute top-0 left-0 w-32 h-32 bg-[#6C63FF]/15 blur-[60px] rounded-full group-hover:bg-[#6C63FF]/30 transition-all duration-700"></div>
               <div className="relative w-10 h-10 md:w-14 md:h-14 mb-4 md:mb-6 flex items-center justify-center">
@@ -694,7 +694,7 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div
               {...fadeIn}
               transition={{ delay: 0.5 }}
-              className="md:col-span-12 relative bg-[#111118] border border-white/8 rounded-[2rem] p-5 md:p-12 overflow-hidden group hover:border-[#43E97B]/40 transition-all duration-500 flex flex-col md:flex-row items-center md:gap-10 gap-4"
+              className="md:col-span-12 relative bg-[#111118] border border-white/8 rounded-[14px] md:rounded-[2rem] p-[18px] md:p-12 overflow-hidden group hover:border-[#43E97B]/40 transition-all duration-500 flex flex-col md:flex-row items-center md:gap-10 gap-4"
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#43E97B]/10 blur-[100px] rounded-full group-hover:bg-[#43E97B]/20 transition-all duration-700"></div>
               {/* Integration glow bubbles */}
@@ -777,7 +777,7 @@ const ProjectAICaseStudy: React.FC = () => {
                     <motion.div
                       {...fadeIn}
                       transition={{ delay: i * 0.1 + 0.05 }}
-                      className={`flex-1 bg-[#111118] border rounded-[1.5rem] p-4 ${isLast ? 'mb-0' : 'mb-2'}`}
+                      className={`flex-1 bg-[#111118] border rounded-[14px] p-[18px] ${isLast ? 'mb-0' : 'mb-2'}`}
                       style={{ borderColor: `${step.col}30` }}
                     >
                       <div className="flex items-center justify-between mb-1">
@@ -798,7 +798,7 @@ const ProjectAICaseStudy: React.FC = () => {
 
               {/* Central node: AI Briefing (top center) */}
               <motion.div {...fadeIn} className="absolute left-1/2 top-0 -translate-x-1/2 w-[260px]">
-                <div className="bg-[#111118] border border-[#6C63FF]/30 rounded-[1.5rem] p-5 shadow-[0_0_30px_rgba(108,99,255,0.15)]">
+                <div className="bg-[#111118] border border-[#6C63FF]/30 rounded-[14px] p-[18px] shadow-[0_0_30px_rgba(108,99,255,0.15)]">
                   <div className="flex items-center gap-2 mb-3">
                     <div className="w-2 h-2 rounded-full bg-[#6C63FF] animate-pulse"></div>
                     <span className="text-[11px] font-bold text-[#6C63FF] uppercase tracking-widest">Start</span>
@@ -817,7 +817,7 @@ const ProjectAICaseStudy: React.FC = () => {
 
               {/* AI Briefing - center */}
               <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="absolute left-1/2 top-[170px] -translate-x-1/2 w-[280px]">
-                <div className="bg-[#111118] border border-white/10 rounded-[1.5rem] p-5">
+                <div className="bg-[#111118] border border-white/10 rounded-[14px] p-[18px]">
                   <div className="text-[13px] font-semibold text-white mb-1">AI Briefing</div>
                   <div className="text-[11px] text-gray-500 mb-3">Morning team summary</div>
                   <div className="flex gap-1.5">
@@ -841,7 +841,7 @@ const ProjectAICaseStudy: React.FC = () => {
 
               {/* Left branch: Voice/Chat */}
               <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="absolute left-[6%] top-[160px] w-[220px]">
-                <div className="bg-[#111118] border border-white/10 rounded-[1.5rem] p-5">
+                <div className="bg-[#111118] border border-white/10 rounded-[14px] p-[18px]">
                   <div className="text-[13px] font-semibold text-white mb-1">Voice/Chat</div>
                   <div className="text-[11px] text-gray-500 mb-3">Ask naturally</div>
                   <div className="flex gap-1.5">
@@ -853,7 +853,7 @@ const ProjectAICaseStudy: React.FC = () => {
               {/* Left lower branch: Send Files */}
               <div className="absolute left-[calc(6%+110px)] top-[290px] w-px h-[100px] border-l-2 border-dashed border-white/10"></div>
               <motion.div {...fadeIn} transition={{ delay: 0.3 }} className="absolute left-[6%] top-[380px] w-[220px]">
-                <div className="bg-[#111118] border border-white/10 rounded-[1.5rem] p-5">
+                <div className="bg-[#111118] border border-white/10 rounded-[14px] p-[18px]">
                   <div className="text-[13px] font-semibold text-white mb-1">Send Files</div>
                   <div className="text-[11px] text-gray-500 mb-3">Attach Figma, code</div>
                   <div className="flex gap-1.5">
@@ -869,7 +869,7 @@ const ProjectAICaseStudy: React.FC = () => {
                 <div className="text-[11px] text-gray-500 font-semibold uppercase tracking-widest mb-3">Assigned Roles</div>
                 
                 {/* AI Action */}
-                <motion.div {...fadeIn} transition={{ delay: 0.4 }} className="bg-[#111118] border border-white/10 rounded-[1.5rem] p-5 mb-4">
+                <motion.div {...fadeIn} transition={{ delay: 0.4 }} className="bg-[#111118] border border-white/10 rounded-[14px] p-[18px] mb-4">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-8 h-8 rounded-full bg-[#6C63FF]/20 border border-[#6C63FF]/30 flex items-center justify-center">
                       <Zap className="w-4 h-4 text-[#6C63FF]" />
@@ -885,7 +885,7 @@ const ProjectAICaseStudy: React.FC = () => {
                 </motion.div>
 
                 {/* Dashboard */}
-                <motion.div {...fadeIn} transition={{ delay: 0.5 }} className="bg-[#111118] border border-[#43E97B]/30 rounded-[1.5rem] p-5 shadow-[0_0_20px_rgba(67,233,123,0.1)]">
+                <motion.div {...fadeIn} transition={{ delay: 0.5 }} className="bg-[#111118] border border-[#43E97B]/30 rounded-[14px] p-[18px] shadow-[0_0_20px_rgba(67,233,123,0.1)]">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-8 h-8 rounded-full bg-[#43E97B]/20 border border-[#43E97B]/30 flex items-center justify-center">
                       <Layout className="w-4 h-4 text-[#43E97B]" />
@@ -925,13 +925,13 @@ const ProjectAICaseStudy: React.FC = () => {
             {/* Main Dashboard - Wide (8/12) */}
             <motion.div 
               {...fadeIn}
-              className="md:col-span-8 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
+              className="md:col-span-8 bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
             >
-              <div className="p-8 pb-0">
+              <div className="p-[18px] md:p-8 md:pb-0">
                 <h3 className="text-[18px] md:text-xl font-bold text-white mb-2">Command Center</h3>
                 <p className="text-sm text-gray-400 font-light mb-6">The primary workspace where AI analyzes team velocity and blocks in real-time.</p>
               </div>
-              <div className="px-8 pb-8">
+              <div className="px-[18px] pb-[18px] md:px-8 md:pb-8">
                 <div className="rounded-[1.5rem] overflow-hidden border border-white/5 bg-[#0F1118]">
                    <img src="/images/cs-ai-assistant-full.png" alt="AI Assistant Full Dashboard" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
                 </div>
@@ -942,9 +942,9 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.1 }}
-              className="md:col-span-4 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] overflow-hidden group hover:border-[#FF6584]/30 transition-all duration-500 flex flex-col"
+              className="md:col-span-4 bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] overflow-hidden group hover:border-[#FF6584]/30 transition-all duration-500 flex flex-col"
             >
-              <div className="p-8">
+              <div className="p-[18px] md:p-8">
                 <h3 className="text-[18px] md:text-xl font-bold text-white mb-2">AI Interface</h3>
                 <p className="text-sm text-gray-400 font-light">Minimalist interaction patterns.</p>
               </div>
@@ -959,7 +959,7 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.2 }}
-              className="md:col-span-4 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] overflow-hidden group hover:border-[#43E97B]/30 transition-all duration-500"
+              className="md:col-span-4 bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] overflow-hidden group hover:border-[#43E97B]/30 transition-all duration-500"
             >
               <div className="relative h-full min-h-[300px]">
                 <img src="/images/cs-ai-orb-center.png" alt="AI Assistant Orb" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
@@ -974,13 +974,13 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.3 }}
-              className="md:col-span-8 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] overflow-hidden group hover:border-[#F7971E]/30 transition-all duration-500"
+              className="md:col-span-8 bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] overflow-hidden group hover:border-[#F7971E]/30 transition-all duration-500"
             >
-              <div className="p-8 pb-0">
+              <div className="p-[18px] md:p-8 md:pb-0">
                 <h3 className="text-[18px] md:text-xl font-bold text-white mb-2">Intelligent Board</h3>
                 <p className="text-sm text-gray-400 font-light mb-6">Kanban views augmented with AI prioritization markers.</p>
               </div>
-              <div className="px-8 pb-8">
+              <div className="px-[18px] pb-[18px] md:px-8 md:pb-8">
                 <div className="rounded-[1.5rem] overflow-hidden border border-white/5 bg-[#0F1118]">
                   <img src="/images/cs-showcase-4.png" alt="Board view dark theme" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
                 </div>
@@ -991,13 +991,13 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.4 }}
-              className="md:col-span-7 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
+              className="md:col-span-7 bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
             >
-              <div className="p-8 pb-0">
+              <div className="p-[18px] md:p-8 md:pb-0">
                 <h3 className="text-[18px] md:text-xl font-bold text-white mb-2">Deep Analysis</h3>
                 <p className="text-sm text-gray-400 font-light mb-6">Drill down into individual task blockers and context.</p>
               </div>
-              <div className="px-8 pb-8">
+              <div className="px-[18px] pb-[18px] md:px-8 md:pb-8">
                 <div className="rounded-[1.5rem] overflow-hidden border border-white/5 bg-[#0F1118]">
                   <img src="/images/cs-showcase-bars.png" alt="Problem analysis detail" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
                 </div>
@@ -1008,13 +1008,13 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.5 }}
-              className="md:col-span-5 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] overflow-hidden group hover:border-[#FF6584]/30 transition-all duration-500"
+              className="md:col-span-5 bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] overflow-hidden group hover:border-[#FF6584]/30 transition-all duration-500"
             >
-              <div className="p-8 pb-0">
+              <div className="p-[18px] md:p-8 md:pb-0">
                 <h3 className="text-xl font-bold text-white mb-2">Insights</h3>
                 <p className="text-sm text-gray-400 font-light mb-6">Automated capacity charts.</p>
               </div>
-              <div className="px-8 pb-8">
+              <div className="px-[18px] pb-[18px] md:px-8 md:pb-8">
                 <div className="rounded-[1.5rem] overflow-hidden border border-white/5 bg-[#0F1118]">
                   <img src="/images/cs-showcase-donut.png" alt="Data visualization charts" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
                 </div>
@@ -1025,9 +1025,9 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.6 }}
-              className="md:col-span-6 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] overflow-hidden group hover:border-[#43E97B]/30 transition-all duration-500 flex flex-col"
+              className="md:col-span-6 bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] overflow-hidden group hover:border-[#43E97B]/30 transition-all duration-500 flex flex-col"
             >
-              <div className="p-8 pb-0">
+              <div className="p-[18px] md:p-8 md:pb-0">
                 <h3 className="text-xl font-bold text-white mb-2">Project Context</h3>
                 <p className="text-sm text-gray-400 font-light mb-6">Unified file and thread context.</p>
               </div>
@@ -1042,13 +1042,13 @@ const ProjectAICaseStudy: React.FC = () => {
             <motion.div 
               {...fadeIn}
               transition={{ delay: 0.7 }}
-              className="md:col-span-6 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] overflow-hidden group hover:border-[#F7971E]/30 transition-all duration-500"
+              className="md:col-span-6 bg-[#0a0a0a] border border-white/10 rounded-[14px] md:rounded-[2.5rem] overflow-hidden group hover:border-[#F7971E]/30 transition-all duration-500"
             >
-              <div className="p-8 pb-0">
+              <div className="p-[18px] md:p-8 md:pb-0">
                 <h3 className="text-[18px] md:text-xl font-bold text-white mb-2">Team Overview</h3>
                 <p className="text-sm text-gray-400 font-light mb-6">Company-wide visibility.</p>
               </div>
-              <div className="px-8 pb-8">
+              <div className="px-[18px] pb-[18px] md:px-8 md:pb-8">
                 <div className="rounded-[1.5rem] overflow-hidden border border-white/5 bg-[#0F1118]">
                   <img src="/images/cs-showcase-8.png" alt="Project overview layout" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
                 </div>
@@ -1074,7 +1074,7 @@ const ProjectAICaseStudy: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
 
             {/* Card 1 - Data density */}
-            <motion.div {...fadeIn} className="bg-[#111118] border border-white/8 rounded-[2rem] overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500">
+            <motion.div {...fadeIn} className="bg-[#111118] border border-white/8 rounded-[14px] md:rounded-[2rem] overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500">
               {/* Visual preview area */}
               <div className="relative h-52 md:h-64 bg-[#0d0d14] overflow-hidden flex items-center justify-center border-b border-white/5">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#6C63FF]/5 to-transparent"></div>
@@ -1098,14 +1098,14 @@ const ProjectAICaseStudy: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-[18px] md:p-6">
                 <h4 className="text-[18px] font-semibold text-white mb-2 tracking-tight">Data density</h4>
                 <p className="text-[13px] text-gray-500 font-light leading-relaxed">Show maximum information without overwhelming user.</p>
               </div>
             </motion.div>
 
             {/* Card 2 - AI-first UI */}
-            <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="bg-[#111118] border border-white/8 rounded-[2rem] overflow-hidden group hover:border-[#43E97B]/30 transition-all duration-500">
+            <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="bg-[#111118] border border-white/8 rounded-[14px] md:rounded-[2rem] overflow-hidden group hover:border-[#43E97B]/30 transition-all duration-500">
               {/* Visual preview area - chat/voice UI mockup */}
               <div className="relative h-52 md:h-64 bg-[#0d0d14] overflow-hidden flex items-center justify-center border-b border-white/5">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#43E97B]/5 to-transparent"></div>
@@ -1130,7 +1130,7 @@ const ProjectAICaseStudy: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-[18px] md:p-6">
                 <h4 className="text-[18px] font-semibold text-white mb-2 tracking-tight">AI-first UI</h4>
                 <p className="text-[13px] text-gray-500 font-light leading-relaxed">Chat and voice are primary navigation patterns.</p>
               </div>
@@ -1141,7 +1141,7 @@ const ProjectAICaseStudy: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
 
             {/* Card 3 - Calm palette */}
-            <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="bg-[#111118] border border-white/8 rounded-[2rem] overflow-hidden group hover:border-[#FF6584]/30 transition-all duration-500">
+            <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="bg-[#111118] border border-white/8 rounded-[14px] md:rounded-[2rem] overflow-hidden group hover:border-[#FF6584]/30 transition-all duration-500">
               {/* Color palette mockup */}
               <div className="relative h-52 md:h-64 bg-[#0d0d14] overflow-hidden border-b border-white/5">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#FF6584]/5 to-transparent"></div>
@@ -1166,14 +1166,14 @@ const ProjectAICaseStudy: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-[18px] md:p-6">
                 <h4 className="text-[18px] font-semibold text-white mb-2 tracking-tight">Calm palette</h4>
                 <p className="text-[13px] text-gray-500 font-light leading-relaxed">Dark background with strict color use for hierarchy.</p>
               </div>
             </motion.div>
 
             {/* Card 4 - Role aware */}
-            <motion.div {...fadeIn} transition={{ delay: 0.3 }} className="bg-[#111118] border border-white/8 rounded-[2rem] overflow-hidden group hover:border-[#F7971E]/30 transition-all duration-500">
+            <motion.div {...fadeIn} transition={{ delay: 0.3 }} className="bg-[#111118] border border-white/8 rounded-[14px] md:rounded-[2rem] overflow-hidden group hover:border-[#F7971E]/30 transition-all duration-500">
               {/* Role adaptation mockup */}
               <div className="relative h-52 md:h-64 bg-[#0d0d14] overflow-hidden border-b border-white/5">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#F7971E]/5 to-transparent"></div>
@@ -1194,7 +1194,7 @@ const ProjectAICaseStudy: React.FC = () => {
                   })}
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-[18px] md:p-6">
                 <h4 className="text-[18px] font-semibold text-white mb-2 tracking-tight">Role aware</h4>
                 <p className="text-[13px] text-gray-500 font-light leading-relaxed">UI adapts instantly based on CEO, Manager, or Dev role.</p>
               </div>
