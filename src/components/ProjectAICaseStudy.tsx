@@ -112,7 +112,7 @@ const ProjectAICaseStudy: React.FC = () => {
               className="md:col-span-8 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] p-8 md:p-12 flex flex-col justify-center relative overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
             >
               <div className="absolute top-0 left-0 w-64 h-64 bg-[#6C63FF]/10 blur-[100px] -z-10 group-hover:bg-[#6C63FF]/20 transition-all duration-700"></div>
-              <h2 className="text-[20px] md:text-[52px] font-bold text-white mb-5 leading-[1.1] tracking-tighter relative z-10">
+              <h2 className="text-[18px] md:text-[52px] font-bold text-white mb-5 leading-[1.1] tracking-tighter relative z-10">
                 Teams are drowning in <br /><span className="text-gray-500">management overhead</span>
               </h2>
               <p className="text-[14px] md:text-[17px] font-light text-gray-400 max-w-2xl leading-[1.7] tracking-tight relative z-10">
@@ -159,7 +159,7 @@ const ProjectAICaseStudy: React.FC = () => {
                 <div className="w-10 h-10 rounded-xl bg-[#FF6584]/10 flex items-center justify-center border border-[#FF6584]/20">
                   <Zap className="w-5 h-5 text-[#FF6584]" />
                 </div>
-                <h3 className="text-xl font-bold text-white tracking-tight">AI not integrated</h3>
+                <h3 className="text-[18px] md:text-xl font-bold text-white tracking-tight">AI not integrated</h3>
               </div>
               <p className="text-base text-gray-300 leading-relaxed font-light mb-12">
                 Existing PM tools bolt AI on top. It doesn’t understand your team structure, project context, or past decisions — making it useless in practice.
@@ -210,7 +210,7 @@ const ProjectAICaseStudy: React.FC = () => {
                 <div className="w-10 h-10 rounded-xl bg-[#43E97B]/10 flex items-center justify-center border border-[#43E97B]/20">
                   <Mic className="w-5 h-5 text-[#43E97B]" />
                 </div>
-                <h3 className="text-xl font-bold text-white tracking-tight">No voice interface</h3>
+                <h3 className="text-[18px] md:text-xl font-bold text-white tracking-tight">No voice interface</h3>
               </div>
               <p className="text-[14px] text-gray-400 leading-relaxed font-light">
                 Managers can’t query their team’s status, deadlines, or blockers hands-free. Everything requires clicking through dashboards and menus.
@@ -281,7 +281,7 @@ const ProjectAICaseStudy: React.FC = () => {
                   <Users className="w-6 h-6 text-[#6C63FF]" />
                 </div>
                 <div>
-                  <h4 className="text-[16px] md:text-[18px] font-bold text-white tracking-tight">Arjun, 34</h4>
+                  <h4 className="text-[18px] font-bold text-white tracking-tight">Arjun, 34</h4>
                   <p className="text-[10px] font-medium text-[#6C63FF] uppercase tracking-widest leading-none mt-1">Engineering manager</p>
                 </div>
               </div>
@@ -313,7 +313,7 @@ const ProjectAICaseStudy: React.FC = () => {
                     <Layout className="w-5 h-5 text-[#FF6584]" />
                   </div>
                   <div>
-                    <h4 className="text-[15px] md:text-[17px] font-bold text-white tracking-tight">Priya, 28</h4>
+                    <h4 className="text-[18px] md:text-[17px] font-bold text-white tracking-tight">Priya, 28</h4>
                     <p className="text-[10px] font-medium text-[#FF6584] uppercase tracking-widest leading-none mt-1">Design team lead</p>
                   </div>
                 </div>
@@ -338,7 +338,7 @@ const ProjectAICaseStudy: React.FC = () => {
                   <Zap className="w-5 h-5 text-[#43E97B]" />
                 </div>
                 <div>
-                  <h4 className="text-[15px] md:text-[17px] font-bold text-white tracking-tight">Rohan, 26</h4>
+                  <h4 className="text-[18px] md:text-[17px] font-bold text-white tracking-tight">Rohan, 26</h4>
                   <p className="text-[10px] font-medium text-[#43E97B] uppercase tracking-widest leading-none mt-1">Backend developer</p>
                 </div>
               </div>
@@ -410,7 +410,7 @@ const ProjectAICaseStudy: React.FC = () => {
                 <div className="w-10 h-10 rounded-xl bg-[#6C63FF]/10 flex items-center justify-center border border-[#6C63FF]/20">
                   <Search className="w-5 h-5 text-[#6C63FF]" />
                 </div>
-                <h4 className="text-[15px] md:text-[17px] font-bold text-white tracking-tight leading-none">Qualitative Insights</h4>
+                <h4 className="text-[18px] md:text-[17px] font-bold text-white tracking-tight leading-none">Qualitative Insights</h4>
               </div>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-[12px] md:text-[13px] text-gray-400 font-light">
                 {[
@@ -613,7 +613,7 @@ const ProjectAICaseStudy: React.FC = () => {
                   <Mic className="w-5 h-5 md:w-7 md:h-7 text-white" />
                 </div>
               </div>
-              <h3 className="text-[15px] md:text-[18px] font-semibold text-white mb-1.5 tracking-tight leading-tight">AI Voice assistant</h3>
+              <h3 className="text-[18px] font-semibold text-white mb-1.5 tracking-tight leading-tight">AI Voice assistant</h3>
               <p className="text-[12px] md:text-[13px] text-gray-500 font-light leading-relaxed mt-auto">Ask about team history, capacity, or deadlines using voice naturally.</p>
             </motion.div>
 
@@ -630,7 +630,7 @@ const ProjectAICaseStudy: React.FC = () => {
                   <Layout className="w-5 h-5 md:w-7 md:h-7 text-white" />
                 </div>
               </div>
-              <h3 className="text-[15px] md:text-[18px] font-semibold text-white mb-1.5 tracking-tight leading-tight">Unified dashboard</h3>
+              <h3 className="text-[18px] font-semibold text-white mb-1.5 tracking-tight leading-tight">Unified dashboard</h3>
               <p className="text-[12px] md:text-[13px] text-gray-500 font-light leading-relaxed mt-auto">See statuses, tasks, and leave in a single real-time company view.</p>
             </motion.div>
 
@@ -647,7 +647,7 @@ const ProjectAICaseStudy: React.FC = () => {
                   <FileText className="w-5 h-5 md:w-7 md:h-7 text-white" />
                 </div>
               </div>
-              <h3 className="text-[15px] md:text-[18px] font-semibold text-white mb-1.5 tracking-tight leading-tight">Universal file intel</h3>
+              <h3 className="text-[18px] font-semibold text-white mb-1.5 tracking-tight leading-tight">Universal file intel</h3>
               <p className="text-[12px] md:text-[13px] text-gray-500 font-light leading-relaxed mt-auto">AI reads and understands Figma files, code bugs, and design links.</p>
             </motion.div>
 
@@ -669,7 +669,7 @@ const ProjectAICaseStudy: React.FC = () => {
                   <Clock className="w-5 h-5 md:w-8 md:h-8 text-white" />
                 </div>
               </div>
-              <h3 className="text-[16px] md:text-2xl font-bold text-white mb-2 tracking-tight leading-tight">Attendance tracker</h3>
+              <h3 className="text-[18px] md:text-2xl font-bold text-white mb-2 tracking-tight leading-tight">Attendance tracker</h3>
               <p className="text-[12px] md:text-[14px] text-gray-500 font-light leading-relaxed max-w-sm">WFH, WFO, and leave tracked automatically. Proactive HR flagging.</p>
             </motion.div>
 
@@ -686,7 +686,7 @@ const ProjectAICaseStudy: React.FC = () => {
                   <Zap className="w-5 h-5 md:w-7 md:h-7 text-white" />
                 </div>
               </div>
-              <h3 className="text-[16px] md:text-[20px] font-bold text-white mb-2 tracking-tight leading-tight">Smart task engine</h3>
+              <h3 className="text-[18px] md:text-[20px] font-bold text-white mb-2 tracking-tight leading-tight">Smart task engine</h3>
               <p className="text-[12px] md:text-[13px] text-gray-500 font-light leading-relaxed">Assigned based on capacity, velocity, and individual skill sets.</p>
             </motion.div>
 
@@ -719,7 +719,7 @@ const ProjectAICaseStudy: React.FC = () => {
                     <MessageSquare className="w-5 h-5 md:w-8 md:h-8 text-white" />
                   </div>
                 </div>
-                <h3 className="text-[16px] md:text-3xl font-bold text-white mb-2 tracking-tight leading-tight">Team chat + context</h3>
+                <h3 className="text-[18px] md:text-3xl font-bold text-white mb-2 tracking-tight leading-tight">Team chat + context</h3>
                 <p className="text-[14px] text-gray-500 font-light leading-relaxed max-w-md">@AI participant to summarize threads and create tasks inline.</p>
               </div>
             </motion.div>
@@ -781,7 +781,7 @@ const ProjectAICaseStudy: React.FC = () => {
                       style={{ borderColor: `${step.col}30` }}
                     >
                       <div className="flex items-center justify-between mb-1">
-                        <div className="text-[13px] font-bold text-white tracking-tight">{step.name}</div>
+                        <div className="text-[18px] font-bold text-white tracking-tight">{step.name}</div>
                         <span className="text-[10px] font-bold px-2 py-0.5 rounded-full" style={{ background: `${step.col}15`, color: step.col }}>{step.tag}</span>
                       </div>
                       <div className="text-[11px] text-gray-500 font-light">{step.desc}</div>
@@ -928,7 +928,7 @@ const ProjectAICaseStudy: React.FC = () => {
               className="md:col-span-8 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
             >
               <div className="p-8 pb-0">
-                <h3 className="text-xl font-bold text-white mb-2">Command Center</h3>
+                <h3 className="text-[18px] md:text-xl font-bold text-white mb-2">Command Center</h3>
                 <p className="text-sm text-gray-400 font-light mb-6">The primary workspace where AI analyzes team velocity and blocks in real-time.</p>
               </div>
               <div className="px-8 pb-8">
@@ -945,7 +945,7 @@ const ProjectAICaseStudy: React.FC = () => {
               className="md:col-span-4 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] overflow-hidden group hover:border-[#FF6584]/30 transition-all duration-500 flex flex-col"
             >
               <div className="p-8">
-                <h3 className="text-xl font-bold text-white mb-2">AI Interface</h3>
+                <h3 className="text-[18px] md:text-xl font-bold text-white mb-2">AI Interface</h3>
                 <p className="text-sm text-gray-400 font-light">Minimalist interaction patterns.</p>
               </div>
               <div className="mt-auto px-4 pb-4">
@@ -964,7 +964,7 @@ const ProjectAICaseStudy: React.FC = () => {
               <div className="relative h-full min-h-[300px]">
                 <img src="/images/cs-ai-orb-center.png" alt="AI Assistant Orb" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-8 flex flex-col justify-end">
-                  <h3 className="text-xl font-bold text-white mb-2">Dynamic Core</h3>
+                  <h3 className="text-[18px] md:text-xl font-bold text-white mb-2">Dynamic Core</h3>
                   <p className="text-sm text-gray-300 font-light">Visualizing AI thought processes.</p>
                 </div>
               </div>
@@ -977,7 +977,7 @@ const ProjectAICaseStudy: React.FC = () => {
               className="md:col-span-8 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] overflow-hidden group hover:border-[#F7971E]/30 transition-all duration-500"
             >
               <div className="p-8 pb-0">
-                <h3 className="text-xl font-bold text-white mb-2">Intelligent Board</h3>
+                <h3 className="text-[18px] md:text-xl font-bold text-white mb-2">Intelligent Board</h3>
                 <p className="text-sm text-gray-400 font-light mb-6">Kanban views augmented with AI prioritization markers.</p>
               </div>
               <div className="px-8 pb-8">
@@ -994,7 +994,7 @@ const ProjectAICaseStudy: React.FC = () => {
               className="md:col-span-7 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] overflow-hidden group hover:border-[#6C63FF]/30 transition-all duration-500"
             >
               <div className="p-8 pb-0">
-                <h3 className="text-xl font-bold text-white mb-2">Deep Analysis</h3>
+                <h3 className="text-[18px] md:text-xl font-bold text-white mb-2">Deep Analysis</h3>
                 <p className="text-sm text-gray-400 font-light mb-6">Drill down into individual task blockers and context.</p>
               </div>
               <div className="px-8 pb-8">
@@ -1045,7 +1045,7 @@ const ProjectAICaseStudy: React.FC = () => {
               className="md:col-span-6 bg-[#0a0a0a] border border-white/10 rounded-[2.5rem] overflow-hidden group hover:border-[#F7971E]/30 transition-all duration-500"
             >
               <div className="p-8 pb-0">
-                <h3 className="text-xl font-bold text-white mb-2">Team Overview</h3>
+                <h3 className="text-[18px] md:text-xl font-bold text-white mb-2">Team Overview</h3>
                 <p className="text-sm text-gray-400 font-light mb-6">Company-wide visibility.</p>
               </div>
               <div className="px-8 pb-8">
@@ -1099,7 +1099,7 @@ const ProjectAICaseStudy: React.FC = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h4 className="text-[16px] md:text-[18px] font-semibold text-white mb-2 tracking-tight">Data density</h4>
+                <h4 className="text-[18px] font-semibold text-white mb-2 tracking-tight">Data density</h4>
                 <p className="text-[13px] text-gray-500 font-light leading-relaxed">Show maximum information without overwhelming user.</p>
               </div>
             </motion.div>
@@ -1131,7 +1131,7 @@ const ProjectAICaseStudy: React.FC = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h4 className="text-[16px] md:text-[18px] font-semibold text-white mb-2 tracking-tight">AI-first UI</h4>
+                <h4 className="text-[18px] font-semibold text-white mb-2 tracking-tight">AI-first UI</h4>
                 <p className="text-[13px] text-gray-500 font-light leading-relaxed">Chat and voice are primary navigation patterns.</p>
               </div>
             </motion.div>
@@ -1167,7 +1167,7 @@ const ProjectAICaseStudy: React.FC = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h4 className="text-[16px] md:text-[18px] font-semibold text-white mb-2 tracking-tight">Calm palette</h4>
+                <h4 className="text-[18px] font-semibold text-white mb-2 tracking-tight">Calm palette</h4>
                 <p className="text-[13px] text-gray-500 font-light leading-relaxed">Dark background with strict color use for hierarchy.</p>
               </div>
             </motion.div>
@@ -1195,7 +1195,7 @@ const ProjectAICaseStudy: React.FC = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h4 className="text-[16px] md:text-[18px] font-semibold text-white mb-2 tracking-tight">Role aware</h4>
+                <h4 className="text-[18px] font-semibold text-white mb-2 tracking-tight">Role aware</h4>
                 <p className="text-[13px] text-gray-500 font-light leading-relaxed">UI adapts instantly based on CEO, Manager, or Dev role.</p>
               </div>
             </motion.div>
