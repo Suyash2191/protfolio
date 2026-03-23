@@ -53,7 +53,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="font-serif italic text-[40px] md:text-[64px] text-white/90 leading-tight tracking-tight"
+            className="font-sans font-light text-[40px] md:text-[64px] text-white/90 leading-tight tracking-tight"
           >
             Hi, I am
           </motion.p>
@@ -61,7 +61,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-serif font-semibold text-[45px] md:text-[110px] text-white leading-tight tracking-tight"
+            className="font-sans font-bold text-[30px] md:text-[96px] text-white leading-tight tracking-tighter"
           >
             Suyash Shirsat
           </motion.h1>
@@ -336,9 +336,9 @@ const Typewriter = ({ words }: { words: string[] }) => {
   }, [currentText, isDeleting, currentWordIndex, words, typingSpeed]);
 
   return (
-    <span className="font-serif italic text-[30px] md:text-[52px] bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 inline-block min-h-[1.2em] whitespace-nowrap">
+    <span className="font-sans font-bold text-[30px] md:text-[48px] bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500 inline-block min-h-[1.2em] whitespace-nowrap">
       {currentText}
-      <span className="text-purple-400 animate-pulse ml-1">|</span>
+      <span className="text-pink-500 animate-pulse ml-1">|</span>
     </span>
   );
 };
